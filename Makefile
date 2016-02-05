@@ -32,6 +32,7 @@ APP=src/game/Components.gs \
 		src/game/MovementSystem.gs \
 		src/game/RenderPositionSystem.gs \
 		src/game/ViewManagerSystem.gs \
+		src/game/PlayerInputSystem.gs \
 		src/game/Game.gs
 
 

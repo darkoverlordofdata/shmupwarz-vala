@@ -1,7 +1,7 @@
   "cmd": "make"
   "args": [ ]
   "sh": true
-  "cwd": "/home/bruce/Git/GameFoo"
+  "cwd": "/home/bruce/Git/shmupwars-vala"
   "errorMatch": [
     "^(?<filename>(?:[A-Z]:)?[^:]+):(?<line>[0-9]+).(?<column>[0-9]+)[^:]+: (?<message>.+)"
   ]

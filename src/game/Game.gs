@@ -4,6 +4,9 @@ uses
     Bosco.ECS
     SDL
 
+const SCREEN_WIDTH:int = 640
+const SCREEN_HEIGHT:int = 480
+
 init
     print "Application started"
 
@@ -13,18 +16,10 @@ init
 class Game : AbstractGame
 
     world : World
-    components: array of string = {
-        "PositionComponent",
-        "MovementComponent",
-        "ResourceComponent",
-        "AnimationComponent"
-    }
 
-    const WALKING_ANIMATION_FRAMES:int = 4
-    const SCREEN_WIDTH:int = 640
-    const SCREEN_HEIGHT:int = 480
     frame : int = 0
     showFps : bool = true
+    player : PlayerInputSystem
 
     construct()
         name = "GameFoo"
@@ -39,6 +34,7 @@ class Game : AbstractGame
      */
     def override OnLoop()
         pass
+
     /**
      *  OnRender
      *
@@ -63,9 +59,11 @@ class Game : AbstractGame
             world.add(new MovementSystem())
             world.add(new RenderPositionSystem(renderer))
             world.add(new ViewManagerSystem(renderer))
+            world.add(player = new PlayerInputSystem(this))
             world.initialize()
 
             createBackground()
+            createPlayer()
 
         return true
 
@@ -75,9 +73,17 @@ class Game : AbstractGame
      * Handle events
      */
     def override OnEvent(e:SDL.Event)
-        if e.type == SDL.EventType.QUIT
 
+        if e.type == SDL.EventType.QUIT
             running = false
+
+        if e.type != EventType.MOUSEMOTION && e.type != EventType.MOUSEBUTTONDOWN && e.type != EventType.MOUSEBUTTONUP
+            return
+        /* Mouse Events*/
+        x:int
+        y:int
+        SDL.Cursor.get_state(out x, out y)
+        player.onMouseEvent(e.type, x, y)
 
     /**
      *  OnCleanup

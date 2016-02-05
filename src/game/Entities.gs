@@ -2,21 +2,33 @@
 uses
     Bosco
     Bosco.ECS
+    Component
 
+/**
+ *  Create Background
+ */
 def createBackground():Entity
-
-    var res = new ResourceComponent()
-    res.path = "resources/background.png"
-    res.image = null
-
-    var pos = new PositionComponent()
-    pos.x = 0
-    pos.y = 0
-
     var entity = World.instance.createEntity("background")
     try
-        entity.addComponent(Components.ResourceComponent, res)
-        entity.addComponent(Components.PositionComponent, pos)
+        entity.addComponent(Resource, new ResourceComponent("resources/Images/BackdropBlackLittleSparkBlack.png", true))
+        entity.addComponent(Component.Position, new PositionComponent(0, 0))
+    except e:Exception
+        print e.message
+    return entity
+
+/**
+ *  Create Player
+ */
+def createPlayer():Entity
+    var entity = World.instance.createEntity("player")
+    try
+        entity.addComponent(Component.Player,   new PlayerComponent())
+        entity.addComponent(Component.Resource, new ResourceComponent("resources/res/images/fighter.png"))
+        entity.addComponent(Component.Position, new PositionComponent(SCREEN_WIDTH/2, SCREEN_HEIGHT-80))
+        entity.addComponent(Component.Bounds,   new BoundsComponent(43))
+        entity.addComponent(Component.Health,   new HealthComponent(100))
+        entity.addComponent(Component.Velocity, new VelocityComponent(0, 0))
+        entity.addComponent(Component.Layer,    new LayerComponent(3))
     except e:Exception
         print e.message
     return entity

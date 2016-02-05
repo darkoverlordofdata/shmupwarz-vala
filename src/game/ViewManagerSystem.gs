@@ -21,7 +21,7 @@ class ViewManagerSystem : DarkMatter implements ISystem, IInitializeSystem, ISet
      * and then load them in from the file
      */
     def initialize()
-        _group = _world.getGroup(Matcher.AllOf({Components.ResourceComponent}))
+        _group = _world.getGroup(Matcher.AllOf({Component.Resource}))
         _group.onEntityAdded.add(onEntityAdded)
 
     /**

@@ -12,15 +12,18 @@ class RenderPositionSystem : DarkMatter implements ISystem, ISetWorld, IExecuteS
         _renderer = renderer
 
     def setWorld(world:World)
-        _group = world.getGroup(Matcher.AllOf({Components.ResourceComponent, Components.PositionComponent}))
+        _group = world.getGroup(Matcher.AllOf({Component.Resource, Component.Position}))
 
     def execute()
-        for entity in _group.getEntities()
+        for var entity in _group.getEntities()
             // TODO: Shouldn't need try/catch inside of a loop...
             try
-                var res = (ResourceComponent)entity.getComponent(Components.ResourceComponent)
-                var pos = (PositionComponent)entity.getComponent(Components.PositionComponent)
-                res.image.render(_renderer, pos.x, pos.y)
+                var res = (ResourceComponent)entity.getComponent(Component.Resource)
+                var pos = (PositionComponent)entity.getComponent(Component.Position)
+                if res.bgd
+                    res.image.render(_renderer, (int)pos.x, (int)pos.y, {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT})
+                else
+                    res.image.render(_renderer, (int)pos.x, (int)pos.y)
 
             except e:Exception
                 print e.message

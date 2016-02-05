@@ -10,6 +10,7 @@ namespace Bosco
         running : bool
         window : Window
         renderer : Renderer
+        currentKeyStates : array of uint8
 
         prop readonly delta : double
         prop readonly ticks : int
@@ -33,6 +34,9 @@ namespace Bosco
             while running
                 while Event.poll(out e) != 0
                     OnEvent(e)
+
+                currentKeyStates = Keyboard.get_state()
+
                 _ticks = (int)SDL.Timer.get_ticks()
                 _delta = (_ticks - _lasttick)/1000.0
                 _lasttick = _ticks
@@ -121,4 +125,4 @@ namespace Bosco
             // if frametimesindex == 0
             var s = "%2.2f".printf(_framespersecond)
             _frameticklast = ticks
-            return Bosco.Texture.fromRenderedText(renderer, _framefont, s.substring(0, 5), {0, 0, 0})
+            return Bosco.Texture.fromRenderedText(renderer, _framefont, s.substring(0, 5), {250, 250, 250})

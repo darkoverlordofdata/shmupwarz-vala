@@ -70,13 +70,13 @@ namespace Bosco.ECS
          * @param number totalComponents
          * @constructor
          */
-        construct(componentsEnum : array of string, totalComponents : int = 16)
+        construct(componentsEnum : array of string, totalComponents : int = 32)
             _onEntityReleased = new EntityReleased()
             _onComponentAdded = new EntityChanged()
             _onComponentRemoved = new EntityChanged()
             _onComponentReplaced = new ComponentReplaced()
-            _components = new array of IComponent[16]
-            _componentIndicesCache = new array of int[16]
+            _components = new array of IComponent[32]
+            _componentIndicesCache = new array of int[32]
             _componentsEnum = componentsEnum
             _world = World.instance
 
@@ -274,10 +274,11 @@ namespace Bosco.ECS
             if _toStringCache == null
                 var sb = new StringBuilder()
                 var seperator = ", "
-                var components = getComponents()
+
+                var components = getComponentIndices()
                 var lastSeperator = components.length - 1
                 for var i = 0 to (lastSeperator)
-                    sb.append(_componentsEnum[i].replace("Component", ""))
+                    sb.append(_componentsEnum[components[i]].replace("Component", ""))
                     if i < lastSeperator
                         sb.append(seperator)
                 _toStringCache = sb.str
