@@ -1,4 +1,9 @@
-# build GameFoo
+# build shmupwarz
+
+#
+# Application NAME
+#
+NAME=shmupwarz
 
 # vala compiler
 VC=valac
@@ -29,10 +34,15 @@ TST=test/src/Vunny.gs \
 
 APP=src/game/Components.gs \
 		src/game/Entities.gs \
-		src/game/MovementSystem.gs \
-		src/game/RenderPositionSystem.gs \
-		src/game/ViewManagerSystem.gs \
-		src/game/PlayerInputSystem.gs \
+		src/game/systems/DestroySystem.gs \
+		src/game/systems/ExpiringSystem.gs \
+		src/game/systems/MovementSystem.gs \
+		src/game/systems/RenderPositionSystem.gs \
+		src/game/systems/ViewManagerSystem.gs \
+		src/game/systems/PlayerInputSystem.gs \
+		src/game/systems/EntitySpawningTimerSystem.gs \
+		src/game/systems/CollisionSystem.gs \
+		src/game/systems/ScaleAnimationSystem.gs \
 		src/game/Game.gs
 
 
@@ -57,7 +67,7 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/ECS/Matcher.gs \
 			src/Bosco/ECS/World.gs \
 			src/Bosco/Timer.gs \
-			src/Bosco/Texture.gs \
+			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs
 
 OLD=src/DarkMatter.vala \
@@ -82,11 +92,6 @@ CFLAGS=-X -w \
 #
 BIN=build
 .PHONY: build
-
-#
-# Application NAME
-#
-NAME=gamefoo
 
 #
 # Resouce location

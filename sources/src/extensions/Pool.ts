@@ -159,13 +159,13 @@ module schmupwarz.extensions {
     sprite.width = window.innerWidth;
     sprite['layer'] = Layer.BACKGROUND;
     bosco.viewContainer.addChild(sprite);
-    
+
     return this.createEntity("Background")
       .addPosition(0, 0)
       .addLayer(Layer.BACKGROUND)
       .addSprite(Layer.BACKGROUND, sprite)
       .addBackground(shader);
-    
+
   };
 
   /**
@@ -202,7 +202,7 @@ module schmupwarz.extensions {
       .setMine(true);
 
   }
-  
+
   /**
    * Status Bar
    * 100% = all yellow
@@ -211,7 +211,7 @@ module schmupwarz.extensions {
   Pool.prototype.createStatus = function() {
     var x = (bosco.config.width/2);
     var y = 120;
-    
+
     this.setStatus(100, 0)
       .addPosition(~~x, ~~y)
       .addLayer(Layer.LIVES)

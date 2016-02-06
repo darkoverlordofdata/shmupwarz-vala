@@ -3,95 +3,90 @@ uses
     Bosco
     Bosco.ECS
 
+enum Layer
+    DEFAULT
+    BACKGROUND
+    TEXT
+    LIVES
+    MINES
+    ACTORS_1
+    ACTORS_2
+    ACTORS_3
+    PLAYER
+    BULLET
+    PARTICLE
+
+enum Effect
+    PEW
+    ASPLODE
+    SMALLASPLODE
+
+
+
 enum Component
-    Position
-    Velocity
-    Resource
+    Background
     Bounds
     Bullet
     ColorAnimation
+    Destroy
     Enemy
     Expires
     Firing
     Health
-    Player
-    ScaleAnimation
-    SoundEffect
-    Score
-    Destroy
-    Mouse
-    Scale
     Layer
-    Background
-    Mine
-    Status
     Life
+    Mine
+    Mouse
+    Player
+    Position
+    Resource
+    ScaleAnimation
+    Scale
+    Score
+    SoundEffect
+    Status
+    Velocity
     TotalComponents
 
 const components: array of string = {
-    "PositionComponent",
-    "VelocityComponent",
-    "ResourceComponent",
+    "BackgroundComponent",
     "BoundsComponent",
     "BulletComponent",
     "ColorAnimationComponent",
+    "DestroyComponent",
     "EnemyComponent",
     "ExpiresComponent",
     "FiringComponent",
     "HealthComponent",
-    "PlayerComponent",
-    "ScaleAnimationComponent",
-    "SoundEffectComponent",
-    "ScoreComponent",
-    "DestroyComponent",
-    "MouseComponent",
-    "ScaleComponent",
     "LayerComponent",
-    "BackgroundComponent",
+    "LifeComponent",
     "MineComponent",
+    "MouseComponent",
+    "PlayerComponent",
+    "PositionComponent",
+    "ResourceComponent",
+    "ScaleAnimationComponent",
+    "ScaleComponent",
+    "ScoreComponent",
+    "SoundEffectComponent",
     "StatusComponent",
-    "LifeComponent"
-
+    "VelocityComponent"
 }
 
-[Compact]
-class PositionComponent  : DarkMatter implements IComponent
-    construct(x : double, y : double)
-        this.x = x
-        this.y = y
-    x:double
-    y:double
 
-[Compact]
-class VelocityComponent  : DarkMatter implements  IComponent
-    construct(x : double, y : double)
-        this.x = x
-        this.y = y
-    x:double
-    y:double
 
-[Compact]
-class ResourceComponent : DarkMatter implements IComponent
-    construct(path:string, bgd:bool=false)
-        this.path = path
-        this.bgd = bgd
-    path:string
-    image:Texture
-    bgd:bool
-
-[Compact]
 class BoundsComponent : DarkMatter implements IComponent
     construct(radius:double)
         this.radius = radius
     radius:double
 
-[Compact]
+
 class BulletComponent : DarkMatter implements IComponent
     construct()
         this.bullet = true
     bullet:bool
 
-[Compact]
+
 class ColorAnimationComponent : DarkMatter implements IComponent
     redMin:double
     redMax:double
@@ -111,25 +106,29 @@ class ColorAnimationComponent : DarkMatter implements IComponent
     alphaAnimate:bool
     repeat:bool
 
-[Compact]
+class DestroyComponent : DarkMatter implements IComponent
+    construct()
+        this.destroy = true
+    destroy:bool
+
 class EnemyComponent : DarkMatter implements IComponent
     construct()
         this.enemy = true
     enemy:bool
 
-[Compact]
+
 class ExpiresComponent : DarkMatter implements IComponent
     construct(delay:double)
         this.delay = delay
     delay:double
 
-[Compact]
+
 class FiringComponent : DarkMatter implements IComponent
     construct()
         this.firing = true
     firing:bool
 
-[Compact]
+
 class HealthComponent : DarkMatter implements IComponent
     construct(health:double)
         this.health = health
@@ -138,39 +137,21 @@ class HealthComponent : DarkMatter implements IComponent
     health:double
     maximumHealth:double
 
-[Compact]
-class PlayerComponent : DarkMatter implements IComponent
+class LayerComponent : DarkMatter implements IComponent
+    construct(ordinal:Layer)
+        this.ordinal = ordinal
+    ordinal:Layer
+
+class LifeComponent : DarkMatter implements IComponent
+    construct(count:int)
+        this.count = count
+    count:int
+
+class MineComponent : DarkMatter implements IComponent
     construct()
-        this.player = true
-    player:bool
+        this.mine = true
+    mine:bool
 
-[Compact]
-class ScaleAnimationComponent : DarkMatter implements IComponent
-    min:double
-    max:double
-    speed:double
-    repeat:bool
-    active:bool
-
-[Compact]
-class SoundEffectComponent : DarkMatter implements IComponent
-    construct(effect:double)
-        this.effect = effect
-    effect:double
-
-[Compact]
-class ScoreComponent : DarkMatter implements IComponent
-    construct(value:double)
-        this.value = value
-    value:double
-
-[Compact]
-class DestroyComponent : DarkMatter implements IComponent
-    construct()
-        this.destroy = true
-    destroy:bool
-
-[Compact]
 class MouseComponent : DarkMatter implements IComponent
     construct(x : double, y : double)
         this.x = x
@@ -178,7 +159,26 @@ class MouseComponent : DarkMatter implements IComponent
     x:double
     y:double
 
-[Compact]
+class PlayerComponent : DarkMatter implements IComponent
+    construct()
+        this.player = true
+    player:bool
+
+class PositionComponent  : DarkMatter implements IComponent
+    construct(x : double, y : double)
+        this.x = x
+        this.y = y
+    x:double
+    y:double
+
+class ResourceComponent : DarkMatter implements IComponent
+    construct(path:string, bgd:bool=false)
+        this.path = path
+        this.bgd = bgd
+    path:string
+    sprite:Sprite
+    bgd:bool
+
 class ScaleComponent : DarkMatter implements IComponent
     construct(x : double, y : double)
         this.x = x
@@ -186,19 +186,29 @@ class ScaleComponent : DarkMatter implements IComponent
     x:double
     y:double
 
-[Compact]
-class LayerComponent : DarkMatter implements IComponent
-    construct(ordinal:double)
-        this.ordinal = ordinal
-    ordinal:double
+class ScaleAnimationComponent : DarkMatter implements IComponent
+    construct(min:double, max:double, speed:double, repeat:bool, active:bool)
+        this.min = min
+        this.max = max
+        this.speed = speed
+        this.repeat =repeat
+        this.active = active
+    min:double
+    max:double
+    speed:double
+    repeat:bool
+    active:bool
 
-[Compact]
-class MineComponent : DarkMatter implements IComponent
-    construct()
-        this.mine = true
-    mine:bool
+class SoundEffectComponent : DarkMatter implements IComponent
+    construct(effect:Effect)
+        this.effect = effect
+    effect:Effect
 
-[Compact]
+class ScoreComponent : DarkMatter implements IComponent
+    construct(value:double)
+        this.value = value
+    value:double
+
 class StatusComponent : DarkMatter implements IComponent
     construct(percent:double, immunity:double)
         this.percent = percent
@@ -206,8 +216,9 @@ class StatusComponent : DarkMatter implements IComponent
     percent:double
     immunity:double
 
-[Compact]
-class LifeComponent : DarkMatter implements IComponent
-    construct(count:int)
-        this.count = count
-    count:int
+class VelocityComponent  : DarkMatter implements  IComponent
+    construct(x : double, y : double)
+        this.x = x
+        this.y = y
+    x:double
+    y:double

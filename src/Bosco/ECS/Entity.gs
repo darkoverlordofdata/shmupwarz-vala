@@ -107,7 +107,7 @@ namespace Bosco.ECS
                 raise new Exception.EntityIsNotEnabledException("Cannot add component!")
 
             if hasComponent(index)
-                var errorMsg = @"Cannot add component at index $index"
+                var errorMsg = @"EntityAlreadyHasComponentException - Cannot add component at index $index"
                 raise new Exception.EntityAlreadyHasComponentException(errorMsg)
 
             _components[index] = component

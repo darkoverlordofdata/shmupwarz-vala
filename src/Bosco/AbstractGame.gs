@@ -10,7 +10,9 @@ namespace Bosco
         running : bool
         window : Window
         renderer : Renderer
+        sprites : GenericArray of Sprite
         currentKeyStates : array of uint8
+        showFps : bool = true
 
         prop readonly delta : double
         prop readonly ticks : int
@@ -53,6 +55,16 @@ namespace Bosco
             pass
 
         def virtual OnRender()
+            renderer.set_draw_color(0x0, 0x0, 0x0, SDL.Alpha.OPAQUE)
+            renderer.clear()
+
+            for var i=0 to (sprites.length-1)
+                var sprite = sprites[i]
+                sprite.render(renderer, sprite.x, sprite.y)
+
+            if showFps do fpsTexture().render(renderer, 0, 0)
+
+            renderer.present()
             pass
 
         def virtual OnCleanup()
@@ -97,7 +109,7 @@ namespace Bosco
 
             return true
 
-        def fpsTexture() : Bosco.Texture
+        def fpsTexture() : Sprite
             count : int
             // frametimesindex is the position in the array. It ranges from 0 to 10.
             // This value rotates back to 0 after it hits 10.
@@ -125,4 +137,6 @@ namespace Bosco
             // if frametimesindex == 0
             var s = "%2.2f".printf(_framespersecond)
             _frameticklast = ticks
-            return Bosco.Texture.fromRenderedText(renderer, _framefont, s.substring(0, 5), {250, 250, 250})
+            var texture = Sprite.fromRenderedText(renderer, _framefont, s.substring(0, 5), {250, 250, 250})
+            texture.centered = false
+            return texture

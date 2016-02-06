@@ -1,10 +1,10 @@
 namespace Utils {
   public class UUID {
-    public Rand random;
+    public static Rand random = new Rand();
 
 
 
-    public string[] hex = { // hex identity values 0-255
+    public static string[] hex = { // hex identity values 0-255
         "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0a", "0b", "0c", "0d", "0e", "0f",
         "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "1a", "1b", "1c", "1d", "1e", "1f",
         "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "2a", "2b", "2c", "2d", "2e", "2f",
@@ -32,11 +32,11 @@ namespace Utils {
      * @link http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript/21963136#21963136
      **/
 
-    public string randomUUID() {
+    public static string randomUUID() {
 
-      if (random == null) {
+      /*if (random == null) {
         random = new Rand();
-      }
+      }*/
 
       int d0 = random.int_range(0, 0xffff);
       int d1 = random.int_range(0, 0xffff);

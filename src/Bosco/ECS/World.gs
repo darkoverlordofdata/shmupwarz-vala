@@ -1,4 +1,5 @@
 [indent=4]
+uses Utils
 
 namespace Bosco.ECS
 
@@ -85,7 +86,7 @@ namespace Bosco.ECS
         _totalComponents : int = 0
         _creationIndex : int = 0
         _entitiesCache : array of Entity
-        _uuid : Utils.UUID
+        //_uuid : Utils.UUID
 
         _initializeSystems : array of IInitializeSystem
         _executeSystems : array of IExecuteSystem
@@ -116,7 +117,8 @@ namespace Bosco.ECS
             _executeSystems = new array of IExecuteSystem[0]
             World.componentsEnum = components
             World.totalComponents = _totalComponents
-            _uuid = new Utils.UUID()
+            new UUID()
+            //_uuid = new Utils.UUID()
 
 
         /**
@@ -126,7 +128,7 @@ namespace Bosco.ECS
          */
         def createEntity(name : string) : Entity
             var entity = _reusableEntities.length > 0 ? _reusableEntities.pop_head() : new Entity(_componentsEnum, _totalComponents)
-            entity.initialize(name, _uuid.randomUUID(), _creationIndex++)
+            entity.initialize(name, UUID.randomUUID(), _creationIndex++)
             _entities[entity.id] = entity
             _entitiesCache = new array of Entity[0]
             entity.onComponentAdded.add(updateGroupsComponentAddedOrRemoved)
