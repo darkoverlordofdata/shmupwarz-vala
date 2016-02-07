@@ -117,8 +117,7 @@ namespace Bosco.ECS
             _executeSystems = new array of IExecuteSystem[0]
             World.componentsEnum = components
             World.totalComponents = _totalComponents
-            new UUID()
-            //_uuid = new Utils.UUID()
+            new UUID() /* initialize static fields */
 
 
         /**
@@ -146,7 +145,7 @@ namespace Bosco.ECS
          */
         def destroyEntity(entity : Entity) raises Exception
             if !_entities.has_key(entity.id)
-                raise new Exception.WorldDoesNotContainEntityException("Could not destroy entity!")
+                raise new Exception.ECS("WorldDoesNotContainEntityException - Could not destroy entity!")
 
             _entities.unset(entity.id)
             _entitiesCache = new array of Entity[0]

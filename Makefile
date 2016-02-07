@@ -43,6 +43,7 @@ APP=src/game/Components.gs \
 		src/game/systems/EntitySpawningTimerSystem.gs \
 		src/game/systems/CollisionSystem.gs \
 		src/game/systems/ScaleAnimationSystem.gs \
+		src/game/systems/HudRenderSystem.gs \
 		src/game/Game.gs
 
 
@@ -51,7 +52,6 @@ APP=src/game/Components.gs \
 #
 SOURCES=src/DarkMatter.vala \
 			src/Utils/UUID.vala \
-			src/Bosco/ECS/Exception.vala \
 			src/Bosco/Events/EntityReleased.gs \
 			src/Bosco/Events/ComponentReplaced.gs \
 			src/Bosco/Events/EntityChanged.gs \

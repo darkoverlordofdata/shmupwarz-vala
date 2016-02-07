@@ -11,6 +11,7 @@ class PlayerInputSystem : DarkMatter implements ISystem, ISetWorld, IInitializeS
     _mouseDown : bool
     _mouseDefined : bool = false
     _timeToFire : double = 0
+    _fire : bool
     FireRate : static double = 0.1
 
     construct(game : Game)

@@ -1,6 +1,9 @@
 [indent=4]
 namespace Bosco.ECS
 
+    exception Exception
+        ECS
+
     class Entity : DarkMatter
 
         /**
@@ -75,8 +78,8 @@ namespace Bosco.ECS
             _onComponentAdded = new EntityChanged()
             _onComponentRemoved = new EntityChanged()
             _onComponentReplaced = new ComponentReplaced()
-            _components = new array of IComponent[32]
-            _componentIndicesCache = new array of int[32]
+            _components = new array of IComponent[totalComponents]
+            _componentIndicesCache = new array of int[totalComponents]
             _componentsEnum = componentsEnum
             _world = World.instance
 
@@ -104,11 +107,10 @@ namespace Bosco.ECS
           */
         def addComponent(index : int, component : IComponent) : Entity raises Exception
             if !_isEnabled
-                raise new Exception.EntityIsNotEnabledException("Cannot add component!")
+                raise new Exception.ECS("EntityIsNotEnabledException - Cannot add component!")
 
             if hasComponent(index)
-                var errorMsg = @"EntityAlreadyHasComponentException - Cannot add component at index $index"
-                raise new Exception.EntityAlreadyHasComponentException(errorMsg)
+                raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add component at index %d", index)
 
             _components[index] = component
             _componentsCache = null
@@ -125,11 +127,10 @@ namespace Bosco.ECS
          */
         def removeComponent(index : int) : Entity raises Exception
             if !_isEnabled
-                raise new Exception.EntityIsNotEnabledException("Cannot remove component!")
+                raise new Exception.ECS("EntityIsNotEnabledException - Cannot remove component!")
 
             if !hasComponent(index)
-                var errorMsg = @"Cannot remove component at index $index"
-                raise new Exception.EntityDoesNotHaveComponentException(errorMsg)
+                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove component at index %d", index)
 
             _replaceComponent(index, null)
             return this
@@ -143,7 +144,7 @@ namespace Bosco.ECS
          */
         def replaceComponent(index : int, component : IComponent) : Entity raises Exception
             if !_isEnabled
-                raise new Exception.EntityIsNotEnabledException("Cannot replace component!")
+                raise new Exception.ECS("Exception.EntityIsNotEnabledException -Cannot replace component!")
 
             if hasComponent(index)
                 _replaceComponent(index, component)
@@ -177,8 +178,7 @@ namespace Bosco.ECS
          */
         def getComponent(index : int) : IComponent raises Exception
             if !hasComponent(index)
-                var errorMsg = @"Cannot get component at index $index"
-                raise new Exception.EntityDoesNotHaveComponentException(errorMsg)
+                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get component at index %d", index)
 
             return _components[index]
 
@@ -303,4 +303,4 @@ namespace Bosco.ECS
             if _refCount == 0
                 _onEntityReleased.dispatch(this)
             else if _refCount < 0
-                raise new Exception.EntityIsAlreadyReleasedException("")
+                raise new Exception.ECS("EntityIsAlreadyReleasedException")

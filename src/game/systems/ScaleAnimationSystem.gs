@@ -25,13 +25,16 @@ class ScaleAnimationSystem : DarkMatter implements ISystem, ISetWorld, IInitiali
                 var scale = res.sprite.scale
 
                 if scaleAnimation.active
-                  res.sprite.scale += scaleAnimation.speed * _game.delta
+                  res.sprite.scale.x += scaleAnimation.speed * _game.delta
+                  res.sprite.scale.y += scaleAnimation.speed * _game.delta
 
-                  if scale > scaleAnimation.max
-                    res.sprite.scale = scaleAnimation.max
+                  if scale.x > scaleAnimation.max
+                    res.sprite.scale.x = scaleAnimation.max
+                    res.sprite.scale.y = scaleAnimation.max
                     scaleAnimation.active = false
-                  else if scale < scaleAnimation.min
-                    res.sprite.scale = scaleAnimation.min
+                  else if scale.x < scaleAnimation.min
+                    res.sprite.scale.x = scaleAnimation.min
+                    res.sprite.scale.y = scaleAnimation.min
                     scaleAnimation.active = false
 
         except e:Exception

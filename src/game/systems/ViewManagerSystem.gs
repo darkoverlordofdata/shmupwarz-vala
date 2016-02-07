@@ -45,7 +45,8 @@ class ViewManagerSystem : DarkMatter implements ISystem, IInitializeSystem, ISet
         try
             if e.hasComponent(Component.Scale)
                 scale = (ScaleComponent)e.getComponent(Component.Scale)
-                res.sprite.scale = scale.x
+                res.sprite.scale.x = scale.x
+                res.sprite.scale.y = scale.y
 
             if e.hasComponent(Component.Layer)
                 layer = (LayerComponent)e.getComponent(Component.Layer)
@@ -61,17 +62,17 @@ class ViewManagerSystem : DarkMatter implements ISystem, IInitializeSystem, ISet
             if res.bgd
                 res.sprite.centered = false
 
-            _sprites.add(res.sprite)
+            //_sprites.add(res.sprite)
             /**
              * Insert sprite in layer order
              */
-            // if _sprites.length == 0
-            //     _sprites.add(res.sprite)
-            // else
-            //     for var i=0 to (_sprites.length-1)
-            //         print "Sprite? %d) %d/%d", i, ordinal, _sprites[i].layer
-            //         if ordinal <= _sprites[i].layer
-            //             _sprites.insert(i, res.sprite)
-            //             break
+            if _sprites.length == 0
+                _sprites.add(res.sprite)
+            else
+                for var i=0 to (_sprites.length-1)
+                    if ordinal <= _sprites[i].layer
+                        _sprites.insert(i, res.sprite)
+                        return
+                _sprites.add(res.sprite)
 
         // Add res.sprite to _game.sprites

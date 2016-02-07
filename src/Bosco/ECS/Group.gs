@@ -171,7 +171,7 @@ namespace Bosco.ECS
                 else if c == 0
                     return null
                 else
-                    raise new Exception.SingleEntityException(_matcher.toString())
+                    raise new Exception.ECS("SingleEntityException %s", _matcher.toString())
             return _singleEntityCache
 
         /**

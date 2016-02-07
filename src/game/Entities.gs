@@ -21,6 +21,17 @@ def createBackground() : Entity
         print e.message
     return entity
 
+// def createText(x : int, y : int, text : string, font : string, size : int) : Entity
+//     var font = SDLTTF.Font.open(font, size)
+//     var entity = World.instance.createEntity("text")
+//     try
+//         entity.addComponent(Component.Position, new PositionComponent(x, y))
+//     except e:Exception
+//         print e.message
+//     return entity
+//
+//
+
 /**
  *  Create Player
  */

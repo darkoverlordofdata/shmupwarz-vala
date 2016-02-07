@@ -8,6 +8,10 @@
 [indent=4]
 namespace Bosco
 
+    struct Scale
+        x : double
+        y : double
+
     class Sprite : DarkMatter
         uniqueId : static int = 0
 
@@ -16,13 +20,16 @@ namespace Bosco
         height : int
         x : int
         y : int
-        scale : double = 1.0
+        scale : Scale = Scale() {
+          x = 1.0,
+          y = 1.0
+        }
         centered : bool = true
         layer : int = 0
-        id : int
+        id : int = ++uniqueId
 
-        construct()
-            id = ++uniqueId
+        // construct()
+        //     id = ++uniqueId
 
         def static fromRenderedText(renderer : SDL.Renderer, font : SDLTTF.Font, text : string, color : SDL.Color) : Sprite?
             var mt = new Sprite()
@@ -41,6 +48,19 @@ namespace Bosco
                     mt.height = textSurface.h
             return mt
 
+        def setText(renderer : SDL.Renderer, font : SDLTTF.Font, text : string, color : SDL.Color)
+            var textSurface = font.render(text, color)
+
+            if textSurface == null
+                print "Unable to render text surface! SDL_ttf Error: %s", SDLTTF.get_error()
+
+            else
+                this.texture = SDL.Texture.create_from_surface(renderer, textSurface)
+                if this.texture == null
+                    print "Unable to create texture from rendered text! SDL Error: %s", SDL.get_error()
+                else
+                    this.width = textSurface.w
+                    this.height = textSurface.h
 
 
         def static fromFile(renderer : SDL.Renderer, path : string) : Sprite?
@@ -63,8 +83,8 @@ namespace Bosco
             return mt
 
         def render(renderer : SDL.Renderer, x : int, y : int, clip : SDL.Rectangle? = null)
-            var w = (int)((clip == null ? width : clip.w) * scale)
-            var h = (int)((clip == null ? height : clip.h) * scale)
+            var w = (int)((clip == null ? width : clip.w) * scale.x)
+            var h = (int)((clip == null ? height : clip.h) * scale.y)
 
             x = centered ? x-(w/2) : x
             y = centered ? y-(h/2) : y

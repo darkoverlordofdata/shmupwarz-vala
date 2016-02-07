@@ -179,7 +179,7 @@ namespace Bosco.ECS
 
             for var matcher in matchers
                 if matcher.indices.length != 1
-                    raise new Exception.MatcherException(matcher.toString())
+                    raise new Exception.ECS("MatcherException - %s", matcher.toString())
 
                 indices.add(matcher.indices[0])
             return listToArray(indices)

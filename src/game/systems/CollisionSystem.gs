@@ -51,7 +51,7 @@ class CollisionPair : CollisionHandler
             health.health -= 1
             if health.health < 0
               ship.addComponent(Component.Destroy, new DestroyComponent())
-              createExplosion(position.x, position.y, 0.5)
+              createExplosion(position.x, position.y, 0.2)
 
         except e : Exception
             print e.message

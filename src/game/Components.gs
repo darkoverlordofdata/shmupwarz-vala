@@ -15,6 +15,7 @@ enum Layer
     PLAYER
     BULLET
     PARTICLE
+    HUD
 
 enum Effect
     PEW
@@ -45,6 +46,7 @@ enum Component
     Score
     SoundEffect
     Status
+    // Text
     Velocity
     TotalComponents
 
@@ -215,6 +217,14 @@ class StatusComponent : DarkMatter implements IComponent
         this.immunity = immunity
     percent:double
     immunity:double
+
+// class TextComponent : DarkMatter implements IComponent
+//     construct(font : string, text : string)
+//         this.font = font
+//         this.text = text
+//     text:string
+//     font:SDLTTF.Font
+//     sprite:Sprite
 
 class VelocityComponent  : DarkMatter implements  IComponent
     construct(x : double, y : double)

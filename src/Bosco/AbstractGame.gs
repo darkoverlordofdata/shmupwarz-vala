@@ -12,21 +12,20 @@ namespace Bosco
         renderer : Renderer
         sprites : GenericArray of Sprite
         currentKeyStates : array of uint8
-        showFps : bool = true
 
         prop readonly delta : double
         prop readonly ticks : int
 
+        showFps : bool = true
         _lasttick : int
-        _frametimes : array of int = {0,0,0,0,0,0,0,0,0,0}
-        _frametimelast : int = 0
-        _framecount : int = 0
-        _framespersecond : double = 0.0
-        _frameticklast : int
-        _framedelta : double = 0.0
-        _framefont: SDLTTF.Font
-
-
+        _fpsTimes : array of int = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+        _fpsTimeLast : int = 0
+        _fpsCount : int = 0
+        _fpsValue : double = 0.0
+        _fpsTickLast : int
+        _fpsDelta : double = 0.0
+        _fpsFont: SDLTTF.Font
+        _fpsSprite : Sprite
 
         def OnExecute() : int
             if OnInit() == false
@@ -62,10 +61,8 @@ namespace Bosco
                 var sprite = sprites[i]
                 sprite.render(renderer, sprite.x, sprite.y)
 
-            if showFps do fpsTexture().render(renderer, 0, 0)
-
+            if showFps do fpsSprite().render(renderer, 0, 0)
             renderer.present()
-            pass
 
         def virtual OnCleanup()
             pass
@@ -102,41 +99,42 @@ namespace Bosco
                 print "SDL_ttf could not initialize! SDL_ttf Error: %s", SDLTTF.get_error()
                 return false
 
-            _frameticklast = _frametimelast = (int)SDL.Timer.get_ticks()
-            _framefont = SDLTTF.Font.open("resources/Starjedi.ttf", 16)
-            if _framefont == null
+            _fpsTickLast = _fpsTimeLast = (int)SDL.Timer.get_ticks()
+            _fpsFont = SDLTTF.Font.open("resources/Starjedi.ttf", 16)
+            if _fpsFont == null
                 print "Failed to load font!, SDL_ttf Error: %s", SDLTTF.get_error()
 
             return true
 
-        def fpsTexture() : Sprite
+        def fpsSprite() : Sprite
             count : int
             // frametimesindex is the position in the array. It ranges from 0 to 10.
             // This value rotates back to 0 after it hits 10.
-            var frametimesindex = _framecount % 10
+            var frametimesindex = _fpsCount % _fpsTimes.length
             // save the frame time value
-            _frametimes[frametimesindex] = ticks - _frametimelast
+            _fpsTimes[frametimesindex] = ticks - _fpsTimeLast
             // save the last frame time for the next fpsthink
-            _frametimelast = ticks
+            _fpsTimeLast = ticks
             // increment the frame count
-            _framecount++
-            if _framecount < 10
-                count = _framecount
+            _fpsCount++
+            if _fpsCount < _fpsTimes.length
+                count = _fpsCount
             else
                 count = 10
 
             // add up all the values and divide to get the average frame time.
-            _framespersecond = 0
+            _fpsValue = 0
             for var i = 0 to (count-1)
-                _framespersecond += _frametimes[i]
-            _framespersecond /= count
+                _fpsValue += _fpsTimes[i]
+            _fpsValue /= count
             // now to make it an actual frames per second value...
-            _framespersecond = 1000.0 / _framespersecond
+            _fpsValue = 1000.0 / _fpsValue
 
-            _framedelta = (ticks - _frameticklast)/1000.0
+            _fpsDelta = (ticks - _fpsTickLast)/1000.0
             // if frametimesindex == 0
-            var s = "%2.2f".printf(_framespersecond)
-            _frameticklast = ticks
-            var texture = Sprite.fromRenderedText(renderer, _framefont, s.substring(0, 5), {250, 250, 250})
-            texture.centered = false
-            return texture
+            var s = "%2.2f".printf(_fpsValue)
+            _fpsTickLast = ticks
+            if _fpsCount % _fpsTimes.length == 0 || _fpsSprite == null
+                _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, s.substring(0, 5), {250, 250, 250})
+                _fpsSprite.centered = false
+            return _fpsSprite

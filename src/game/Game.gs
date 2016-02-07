@@ -33,23 +33,6 @@ class Game : AbstractGame
         world.execute()
 
     /**
-     *  OnRender
-     *
-     * Render the screen
-     */
-    // def override OnRender()
-        // renderer.set_draw_color(0x0, 0x0, 0x0, SDL.Alpha.OPAQUE)
-        // renderer.clear()
-        //
-        // for var i=0 to (sprites.length-1)
-        //     var sprite = sprites[i]
-        //     sprite.render(renderer, sprite.x, sprite.y)
-        //
-        // if showFps do fpsTexture().render(renderer, 0, 0)
-        //
-        // renderer.present()
-
-    /**
      *  OnInit
      *
      * load assets
@@ -71,7 +54,7 @@ class Game : AbstractGame
             world.add(new ViewManagerSystem(this))
             world.add(new RenderPositionSystem(this))
             // world.add(HealthRenderSystem())
-            // world.add(HudRenderSystem())
+            world.add(new HudRenderSystem(this))
             world.add(new DestroySystem(this))
             world.initialize()
 
