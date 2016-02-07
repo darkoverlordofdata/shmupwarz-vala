@@ -62,7 +62,8 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/Interfaces/IComponent.vala \
 			src/Bosco/Interfaces/ISystem.vala \
 			src/Bosco/Interfaces/IMatcher.vala \
-			src/Bosco/ECS/Entity.gs \
+			src/Bosco/ECS/BaseEntity.gs \
+			src/Bosco/ECS/Entity.vala \
 			src/Bosco/ECS/Group.gs \
 			src/Bosco/ECS/Matcher.gs \
 			src/Bosco/ECS/World.gs \

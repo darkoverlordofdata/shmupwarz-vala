@@ -28,9 +28,6 @@ namespace Bosco
         layer : int = 0
         id : int = ++uniqueId
 
-        // construct()
-        //     id = ++uniqueId
-
         def static fromRenderedText(renderer : SDL.Renderer, font : SDLTTF.Font, text : string, color : SDL.Color) : Sprite?
             var mt = new Sprite()
             var textSurface = font.render(text, color)

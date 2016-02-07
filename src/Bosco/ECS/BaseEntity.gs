@@ -4,7 +4,7 @@ namespace Bosco.ECS
     exception Exception
         ECS
 
-    class Entity : DarkMatter
+    class abstract BaseEntity : DarkMatter
 
         /**
          * @static
@@ -116,8 +116,8 @@ namespace Bosco.ECS
             _componentsCache = null
             _componentIndicesCache = null
             _toStringCache = null
-            _onComponentAdded.dispatch(this, index, component)
-            return this
+            _onComponentAdded.dispatch((Entity)this, index, component)
+            return (Entity)this
 
         /**
          * RemoveComponent
@@ -133,7 +133,7 @@ namespace Bosco.ECS
                 raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove component at index %d", index)
 
             _replaceComponent(index, null)
-            return this
+            return (Entity)this
 
         /**
          * ReplaceComponent
@@ -151,13 +151,13 @@ namespace Bosco.ECS
              else if component != null
                 addComponent(index, component)
 
-            return this
+            return (Entity)this
 
 
         def _replaceComponent(index : int, replacement : IComponent?)
             var previousComponent = _components[index]
             if previousComponent == replacement
-                _onComponentReplaced.dispatch(this, index, previousComponent, replacement)
+                _onComponentReplaced.dispatch((Entity)this, index, previousComponent, replacement)
              else
                 _components[index] = replacement
                 _componentsCache = null
@@ -165,10 +165,10 @@ namespace Bosco.ECS
                     _components[index] = null
                     _componentIndicesCache = null
                     _toStringCache = null
-                    _onComponentRemoved.dispatch(this, index, previousComponent)
+                    _onComponentRemoved.dispatch((Entity)this, index, previousComponent)
 
                  else
-                    _onComponentReplaced.dispatch(this, index, previousComponent, replacement)
+                    _onComponentReplaced.dispatch((Entity)this, index, previousComponent, replacement)
 
         /**
          * GetComponent
@@ -291,7 +291,7 @@ namespace Bosco.ECS
          */
         def addRef() : Entity
             _refCount += 1
-            return this
+            return (Entity)this
 
 
         /**
@@ -301,6 +301,6 @@ namespace Bosco.ECS
         def release() raises Exception
             _refCount -= 1
             if _refCount == 0
-                _onEntityReleased.dispatch(this)
+                _onEntityReleased.dispatch((Entity)this)
             else if _refCount < 0
                 raise new Exception.ECS("EntityIsAlreadyReleasedException")
