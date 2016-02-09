@@ -4,7 +4,7 @@ namespace Bosco.ECS
     exception Exception
         ECS
 
-    class abstract BaseEntity : DarkMatter
+    class abstract EntityBase : DarkMatter
 
         /**
          * @static
@@ -176,7 +176,7 @@ namespace Bosco.ECS
          * @param number index
          * @param entitas.IComponent component
          */
-        def getComponent(index : int) : IComponent raises Exception
+        def getComponent(index : int) : unowned IComponent raises Exception
             if !hasComponent(index)
                 raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get component at index %d", index)
 

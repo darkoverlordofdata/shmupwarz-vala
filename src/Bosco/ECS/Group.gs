@@ -161,7 +161,7 @@ namespace Bosco.ECS
          *
          * @returns entitas.Entity
          */
-        def getSingleEntity() : Entity? raises Exception
+        def getSingleEntity() : unowned Entity? raises Exception
             if _singleEntityCache == null
                 var values = _entities.values
                 var c = values.size

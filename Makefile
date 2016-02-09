@@ -11,7 +11,7 @@ VC=valac
 # vala flags
 # -g debug
 # -w
-FLAGS=
+FLAGS=--disable-warnings
 DEBUG=-g --save-temps
 
 #
@@ -32,7 +32,7 @@ TST=test/src/Vunny.gs \
 		test/src/To.gs \
 		test/TestFX.gs
 
-APP=src/game/Components.gs \
+APP=gen/GeneratedComponents.gs \
 		src/game/Entities.gs \
 		src/game/systems/DestroySystem.gs \
 		src/game/systems/ExpiringSystem.gs \
@@ -52,6 +52,7 @@ APP=src/game/Components.gs \
 #
 SOURCES=src/DarkMatter.vala \
 			src/Utils/UUID.vala \
+			src/Bosco/Bag.gs \
 			src/Bosco/Events/EntityReleased.gs \
 			src/Bosco/Events/ComponentReplaced.gs \
 			src/Bosco/Events/EntityChanged.gs \
@@ -62,11 +63,35 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/Interfaces/IComponent.vala \
 			src/Bosco/Interfaces/ISystem.vala \
 			src/Bosco/Interfaces/IMatcher.vala \
-			src/Bosco/ECS/BaseEntity.gs \
+			src/Bosco/ECS/EntityBase.gs \
+			gen/Entity.gs \
+			src/Bosco/ECS/Group.gs \
+			gen/Matching.gs \
+			src/Bosco/ECS/Matcher.gs \
+			src/Bosco/ECS/WorldBase.gs \
+			gen/World.gs \
+			src/Bosco/Timer.gs \
+			src/Bosco/Sprite.gs \
+			src/Bosco/AbstractGame.gs
+
+ORIGINAL=src/DarkMatter.vala \
+			src/Utils/UUID.vala \
+			src/Bosco/Events/EntityReleased.gs \
+			src/Bosco/Events/ComponentReplaced.gs \
+			src/Bosco/Events/EntityChanged.gs \
+			src/Bosco/Events/WorldChanged.gs \
+			src/Bosco/Events/GroupsChanged.gs \
+			src/Bosco/Events/GroupChanged.gs \
+			src/Bosco/Events/GroupUpdated.gs \
+			src/Bosco/Interfaces/IComponent.vala \
+			src/Bosco/Interfaces/ISystem.vala \
+			src/Bosco/Interfaces/IMatcher.vala \
+			src/Bosco/ECS/EntityBase.gs \
 			src/Bosco/ECS/Entity.vala \
 			src/Bosco/ECS/Group.gs \
 			src/Bosco/ECS/Matcher.gs \
-			src/Bosco/ECS/World.gs \
+			src/Bosco/ECS/WorldBase.gs \
+			src/Bosco/ECS/World.vala \
 			src/Bosco/Timer.gs \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs

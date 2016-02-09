@@ -3,26 +3,6 @@ uses
     Bosco
     Bosco.ECS
 
-enum Layer
-    DEFAULT
-    BACKGROUND
-    TEXT
-    LIVES
-    MINES
-    ACTORS_1
-    ACTORS_2
-    ACTORS_3
-    PLAYER
-    BULLET
-    PARTICLE
-    HUD
-
-enum Effect
-    PEW
-    ASPLODE
-    SMALLASPLODE
-
-
 
 enum Component
     Background

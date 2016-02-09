@@ -13,174 +13,86 @@
   },
   "components": {
     "Bounds": [
-      "radius:number"
+      "radius:double"
     ],
     "Bullet": false,
     "ColorAnimation": [
-      "redMin:number",
-      "redMax:number",
-      "redSpeed:number",
-      "greenMin:number",
-      "greenMax:number",
-      "greenSpeed:number",
-      "blueMin:number",
-      "blueMax:number",
-      "blueSpeed:number",
-      "alphaMin:number",
-      "alphaMax:number",
-      "alphaSpeed:number",
-      "redAnimate:boolean",
-      "greenAnimate:boolean",
-      "blueAnimate:boolean",
-      "alphaAnimate:boolean",
-      "repeat:boolean"
+      "redMin:double",
+      "redMax:double",
+      "redSpeed:double",
+      "greenMin:double",
+      "greenMax:double",
+      "greenSpeed:double",
+      "blueMin:double",
+      "blueMax:double",
+      "blueSpeed:double",
+      "alphaMin:double",
+      "alphaMax:double",
+      "alphaSpeed:double",
+      "redAnimate:bool",
+      "greenAnimate:bool",
+      "blueAnimate:bool",
+      "alphaAnimate:bool",
+      "repeat:bool"
     ],
+    "Destroy": false,
     "Enemy": false,
     "Expires": [
-      "delay:number"
+      "delay:double"
     ],
     "Firing": false,
     "Health": [
-      "health:number",
-      "maximumHealth:number"
-    ],
-    "ParallaxStar": false,
-    "Player": false,
-    "Position": [
-      "x:number",
-      "y:number"
-    ],
-    "ScaleAnimation": [
-      "min:number",
-      "max:number",
-      "speed:number",
-      "repeat:boolean",
-      "active:boolean"
-    ],
-    "SoundEffect": [
-      "effect:number"
-    ],
-    "Sprite": [
-      "layer:number",
-      "object:Object"
-    ],
-    "Velocity": [
-      "x:number",
-      "y:number"
-    ],
-    "Score": [
-      "value:number"
-    ],
-    "Destroy": false,
-    "Mouse": [
-      "x:number",
-      "y:number"
-    ],
-    "Scale": [
-      "x:number",
-      "y:number"
-    ],
-    "Resource": [
-      "name:string"
+      "health:double",
+      "maximumHealth:double"
     ],
     "Layer": [
-      "ordinal:number"
+      "ordinal:int"
+    ],
+    "Life": [
+      "count:int"
+    ],
+    "Mine" : false,
+    "Mouse": [
+      "x:double",
+      "y:double"
+    ],
+    "Player": false,
+    "Position": [
+      "x:double",
+      "y:double"
+    ],
+    "Resource": [
+      "path:string",
+      "sprite:Sprite?",
+      "bgd:bool=false"
+    ],
+    "ScaleAnimation": [
+      "min:double",
+      "max:double",
+      "speed:double",
+      "repeat:bool",
+      "active:bool"
+    ],
+    "Scale": [
+      "x:double",
+      "y:double"
+    ],
+    "Score": [
+      "value:double"
+    ],
+    "SoundEffect": [
+      "effect:int"
+    ],
+    "Velocity": [
+      "x:double",
+      "y:double"
     ]
   },
-  "systems": {
-    "MovementSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "PlayerInputSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "SoundEffectSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "CollisionSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "ExpiringSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "EntitySpawningTimerSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "ParallaxStarRepeatingSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "ColorAnimationSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "ScaleAnimationSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "RemoveOffscreenShipsSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "SpriteRenderSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "HealthRenderSystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "HudRenderSystem": [
-      "IInitializeSystem",
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "DestroySystem": [
-      "IExecuteSystem",
-      "ISetPool"
-    ],
-    "AddViewSystem": [
-      "ISetPool"
-    ]
-  },
+  "systems": {},
   "entities": {
     "Score": true,
     "Mouse": true,
     "Firing": true
   },
-  "extensions": {
-    "Pool": {
-      "createPlayer:void": [],
-      "createBullet:void": [
-        "x:number",
-        "y:number"
-      ],
-      "createParticle:void": [
-        "x:number",
-        "y:number"
-      ],
-      "createSmallExplosion:void": [
-        "x:number",
-        "y:number"
-      ],
-      "createBigExplosion:void": [
-        "x:number",
-        "y:number"
-      ],
-      "createEnemy1:void": [],
-      "createEnemy2:void": [],
-      "createEnemy3:void": []
-    }
-  }
+  "extensions": {}
 }

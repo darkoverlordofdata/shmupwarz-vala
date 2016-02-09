@@ -3,7 +3,7 @@ uses Utils
 
 namespace Bosco.ECS
 
-    class World : DarkMatter
+    class abstract WorldBase : DarkMatter
 
         /**
          * The total number of components in this pool
@@ -62,21 +62,21 @@ namespace Bosco.ECS
          * @type string */
         prop readonly name : string
 
-        /**
-         * An enum of valid component types
-         * @type Object<string,number> */
-        componentsEnum : static array of string
-
-        /**
-         * Count of components
-         * @`type` number */
-        totalComponents : static int = 0
-
-        /**
-         * Global reference to pool instance
-         * @type entitas.Pool */
-        instance : static World
-
+        // /**
+        //  * An enum of valid component types
+        //  * @type Object<string,number> */
+        // componentsEnum : static array of string
+        //
+        // /**
+        //  * Count of components
+        //  * @`type` number */
+        // totalComponents : static int = 0
+        //
+        // /**
+        //  * Global reference to pool instance
+        //  * @type entitas.Pool */
+        // instance : static World
+        //
         _entities : dict of string, Entity
         _groups : dict of string, Group
         _groupsForIndex : array of Gee.ArrayList of Group
@@ -97,7 +97,7 @@ namespace Bosco.ECS
          * @param number startCreationIndex
          */
         construct(components : array of string, startCreationIndex : int=0)
-            World.instance = this
+            World.instance = (World)this
             _onGroupCreated = new GroupsChanged()
             _onEntityCreated = new WorldChanged()
             _onEntityDestroyed = new WorldChanged()
@@ -135,7 +135,7 @@ namespace Bosco.ECS
             entity.onComponentReplaced.add(updateGroupsComponentReplaced)
             entity.onEntityReleased.add(onEntityReleased)
 
-            onEntityCreated.dispatch(this, entity)
+            onEntityCreated.dispatch((World)this, entity)
             return entity
 
 
@@ -149,10 +149,10 @@ namespace Bosco.ECS
 
             _entities.unset(entity.id)
             _entitiesCache = new array of Entity[0]
-            _onEntityWillBeDestroyed.dispatch(this, entity)
+            _onEntityWillBeDestroyed.dispatch((World)this, entity)
             entity.destroy()
 
-            _onEntityDestroyed.dispatch(this, entity)
+            _onEntityDestroyed.dispatch((World)this, entity)
 
             if entity.refCount == 1
                 entity.onEntityReleased.remove(onEntityReleased)
@@ -202,7 +202,7 @@ namespace Bosco.ECS
          */
         def add(system : ISystem) : World
             if system isa ISetWorld
-                ((ISetWorld)system).setWorld(this)
+                ((ISetWorld)system).setWorld((World)this)
 
             if system isa IInitializeSystem
                 _initializeSystems += (IInitializeSystem)system
@@ -210,7 +210,7 @@ namespace Bosco.ECS
             if system isa IExecuteSystem
                 _executeSystems += (IExecuteSystem)system
 
-            return this
+            return (World)this
 
         /**
          * Initialize Systems
@@ -254,7 +254,7 @@ namespace Bosco.ECS
                     if _groupsForIndex[index] == null
                         _groupsForIndex[index] = new Gee.ArrayList of Group
                     _groupsForIndex[index].add(group)
-                _onGroupCreated.dispatch(this, group)
+                _onGroupCreated.dispatch((World)this, group)
             return group
 
 
