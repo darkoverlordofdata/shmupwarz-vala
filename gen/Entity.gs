@@ -17,52 +17,52 @@ namespace Bosco.ECS
 
             _boundsComponentPool = new Bag of BoundsComponent
             for var i=1 to POOL_SIZE
-                _boundsComponentPool.push_head(new BoundsComponent())
+                _boundsComponentPool.push(new BoundsComponent())
             _bulletComponent = new BulletComponent()
             _colorAnimationComponentPool = new Bag of ColorAnimationComponent
             for var i=1 to POOL_SIZE
-                _colorAnimationComponentPool.push_head(new ColorAnimationComponent())
+                _colorAnimationComponentPool.push(new ColorAnimationComponent())
             _destroyComponent = new DestroyComponent()
             _enemyComponent = new EnemyComponent()
             _expiresComponentPool = new Bag of ExpiresComponent
             for var i=1 to POOL_SIZE
-                _expiresComponentPool.push_head(new ExpiresComponent())
+                _expiresComponentPool.push(new ExpiresComponent())
             _firingComponent = new FiringComponent()
             _healthComponentPool = new Bag of HealthComponent
             for var i=1 to POOL_SIZE
-                _healthComponentPool.push_head(new HealthComponent())
+                _healthComponentPool.push(new HealthComponent())
             _layerComponentPool = new Bag of LayerComponent
             for var i=1 to POOL_SIZE
-                _layerComponentPool.push_head(new LayerComponent())
+                _layerComponentPool.push(new LayerComponent())
             _lifeComponentPool = new Bag of LifeComponent
             for var i=1 to POOL_SIZE
-                _lifeComponentPool.push_head(new LifeComponent())
+                _lifeComponentPool.push(new LifeComponent())
             _mineComponent = new MineComponent()
             _mouseComponentPool = new Bag of MouseComponent
             for var i=1 to POOL_SIZE
-                _mouseComponentPool.push_head(new MouseComponent())
+                _mouseComponentPool.push(new MouseComponent())
             _playerComponent = new PlayerComponent()
             _positionComponentPool = new Bag of PositionComponent
             for var i=1 to POOL_SIZE
-                _positionComponentPool.push_head(new PositionComponent())
+                _positionComponentPool.push(new PositionComponent())
             _resourceComponentPool = new Bag of ResourceComponent
             for var i=1 to POOL_SIZE
-                _resourceComponentPool.push_head(new ResourceComponent())
+                _resourceComponentPool.push(new ResourceComponent())
             _scaleAnimationComponentPool = new Bag of ScaleAnimationComponent
             for var i=1 to POOL_SIZE
-                _scaleAnimationComponentPool.push_head(new ScaleAnimationComponent())
+                _scaleAnimationComponentPool.push(new ScaleAnimationComponent())
             _scaleComponentPool = new Bag of ScaleComponent
             for var i=1 to POOL_SIZE
-                _scaleComponentPool.push_head(new ScaleComponent())
+                _scaleComponentPool.push(new ScaleComponent())
             _scoreComponentPool = new Bag of ScoreComponent
             for var i=1 to POOL_SIZE
-                _scoreComponentPool.push_head(new ScoreComponent())
+                _scoreComponentPool.push(new ScoreComponent())
             _soundEffectComponentPool = new Bag of SoundEffectComponent
             for var i=1 to POOL_SIZE
-                _soundEffectComponentPool.push_head(new SoundEffectComponent())
+                _soundEffectComponentPool.push(new SoundEffectComponent())
             _velocityComponentPool = new Bag of VelocityComponent
             for var i=1 to POOL_SIZE
-                _velocityComponentPool.push_head(new VelocityComponent())
+                _velocityComponentPool.push(new VelocityComponent())
 
 
         def clearBoundsComponentPool()
@@ -83,7 +83,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addBounds(radius:double) : Entity
-            var component = _boundsComponentPool.length > 0 ? _boundsComponentPool.pop_head() : new BoundsComponent()
+            var component = _boundsComponentPool.length > 0 ? _boundsComponentPool.pop() : new BoundsComponent()
             component.radius = radius
             addComponent(Component.Bounds, component)
             return this
@@ -94,11 +94,11 @@ namespace Bosco.ECS
          */
         def replaceBounds(radius:double) : Entity
             var previousComponent = hasBounds ? this.bounds : null
-            var component = _boundsComponentPool.length > 0 ? _boundsComponentPool.pop_head() : new BoundsComponent()
+            var component = _boundsComponentPool.length > 0 ? _boundsComponentPool.pop() : new BoundsComponent()
             component.radius = radius
             replaceComponent(Component.Bounds, component)
             if previousComponent != null
-                _boundsComponentPool.push_head(previousComponent)
+                _boundsComponentPool.push(previousComponent)
 
             return this;
 
@@ -108,7 +108,7 @@ namespace Bosco.ECS
         def removeBounds() : Entity
             var component = bounds
             removeComponent(Component.Bounds)
-            _boundsComponentPool.push_head(component)
+            _boundsComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -165,7 +165,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addColorAnimation(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
-            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop_head() : new ColorAnimationComponent()
+            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop() : new ColorAnimationComponent()
             component.redMin = redMin
             component.redMax = redMax
             component.redSpeed = redSpeed
@@ -208,7 +208,7 @@ namespace Bosco.ECS
          */
         def replaceColorAnimation(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
             var previousComponent = hasColorAnimation ? this.colorAnimation : null
-            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop_head() : new ColorAnimationComponent()
+            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop() : new ColorAnimationComponent()
             component.redMin = redMin
             component.redMax = redMax
             component.redSpeed = redSpeed
@@ -228,7 +228,7 @@ namespace Bosco.ECS
             component.repeat = repeat
             replaceComponent(Component.ColorAnimation, component)
             if previousComponent != null
-                _colorAnimationComponentPool.push_head(previousComponent)
+                _colorAnimationComponentPool.push(previousComponent)
 
             return this;
 
@@ -238,7 +238,7 @@ namespace Bosco.ECS
         def removeColorAnimation() : Entity
             var component = colorAnimation
             removeComponent(Component.ColorAnimation)
-            _colorAnimationComponentPool.push_head(component)
+            _colorAnimationComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -298,7 +298,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addExpires(delay:double) : Entity
-            var component = _expiresComponentPool.length > 0 ? _expiresComponentPool.pop_head() : new ExpiresComponent()
+            var component = _expiresComponentPool.length > 0 ? _expiresComponentPool.pop() : new ExpiresComponent()
             component.delay = delay
             addComponent(Component.Expires, component)
             return this
@@ -309,11 +309,11 @@ namespace Bosco.ECS
          */
         def replaceExpires(delay:double) : Entity
             var previousComponent = hasExpires ? this.expires : null
-            var component = _expiresComponentPool.length > 0 ? _expiresComponentPool.pop_head() : new ExpiresComponent()
+            var component = _expiresComponentPool.length > 0 ? _expiresComponentPool.pop() : new ExpiresComponent()
             component.delay = delay
             replaceComponent(Component.Expires, component)
             if previousComponent != null
-                _expiresComponentPool.push_head(previousComponent)
+                _expiresComponentPool.push(previousComponent)
 
             return this;
 
@@ -323,7 +323,7 @@ namespace Bosco.ECS
         def removeExpires() : Entity
             var component = expires
             removeComponent(Component.Expires)
-            _expiresComponentPool.push_head(component)
+            _expiresComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -365,7 +365,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addHealth(health:double, maximumHealth:double) : Entity
-            var component = _healthComponentPool.length > 0 ? _healthComponentPool.pop_head() : new HealthComponent()
+            var component = _healthComponentPool.length > 0 ? _healthComponentPool.pop() : new HealthComponent()
             component.health = health
             component.maximumHealth = maximumHealth
             addComponent(Component.Health, component)
@@ -378,12 +378,12 @@ namespace Bosco.ECS
          */
         def replaceHealth(health:double, maximumHealth:double) : Entity
             var previousComponent = hasHealth ? this.health : null
-            var component = _healthComponentPool.length > 0 ? _healthComponentPool.pop_head() : new HealthComponent()
+            var component = _healthComponentPool.length > 0 ? _healthComponentPool.pop() : new HealthComponent()
             component.health = health
             component.maximumHealth = maximumHealth
             replaceComponent(Component.Health, component)
             if previousComponent != null
-                _healthComponentPool.push_head(previousComponent)
+                _healthComponentPool.push(previousComponent)
 
             return this;
 
@@ -393,7 +393,7 @@ namespace Bosco.ECS
         def removeHealth() : Entity
             var component = health
             removeComponent(Component.Health)
-            _healthComponentPool.push_head(component)
+            _healthComponentPool.push(component)
             return this
 
 
@@ -415,7 +415,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addLayer(ordinal:int) : Entity
-            var component = _layerComponentPool.length > 0 ? _layerComponentPool.pop_head() : new LayerComponent()
+            var component = _layerComponentPool.length > 0 ? _layerComponentPool.pop() : new LayerComponent()
             component.ordinal = ordinal
             addComponent(Component.Layer, component)
             return this
@@ -426,11 +426,11 @@ namespace Bosco.ECS
          */
         def replaceLayer(ordinal:int) : Entity
             var previousComponent = hasLayer ? this.layer : null
-            var component = _layerComponentPool.length > 0 ? _layerComponentPool.pop_head() : new LayerComponent()
+            var component = _layerComponentPool.length > 0 ? _layerComponentPool.pop() : new LayerComponent()
             component.ordinal = ordinal
             replaceComponent(Component.Layer, component)
             if previousComponent != null
-                _layerComponentPool.push_head(previousComponent)
+                _layerComponentPool.push(previousComponent)
 
             return this;
 
@@ -440,7 +440,7 @@ namespace Bosco.ECS
         def removeLayer() : Entity
             var component = layer
             removeComponent(Component.Layer)
-            _layerComponentPool.push_head(component)
+            _layerComponentPool.push(component)
             return this
 
 
@@ -462,7 +462,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addLife(count:int) : Entity
-            var component = _lifeComponentPool.length > 0 ? _lifeComponentPool.pop_head() : new LifeComponent()
+            var component = _lifeComponentPool.length > 0 ? _lifeComponentPool.pop() : new LifeComponent()
             component.count = count
             addComponent(Component.Life, component)
             return this
@@ -473,11 +473,11 @@ namespace Bosco.ECS
          */
         def replaceLife(count:int) : Entity
             var previousComponent = hasLife ? this.life : null
-            var component = _lifeComponentPool.length > 0 ? _lifeComponentPool.pop_head() : new LifeComponent()
+            var component = _lifeComponentPool.length > 0 ? _lifeComponentPool.pop() : new LifeComponent()
             component.count = count
             replaceComponent(Component.Life, component)
             if previousComponent != null
-                _lifeComponentPool.push_head(previousComponent)
+                _lifeComponentPool.push(previousComponent)
 
             return this;
 
@@ -487,7 +487,7 @@ namespace Bosco.ECS
         def removeLife() : Entity
             var component = life
             removeComponent(Component.Life)
-            _lifeComponentPool.push_head(component)
+            _lifeComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -529,7 +529,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addMouse(x:double, y:double) : Entity
-            var component = _mouseComponentPool.length > 0 ? _mouseComponentPool.pop_head() : new MouseComponent()
+            var component = _mouseComponentPool.length > 0 ? _mouseComponentPool.pop() : new MouseComponent()
             component.x = x
             component.y = y
             addComponent(Component.Mouse, component)
@@ -542,12 +542,12 @@ namespace Bosco.ECS
          */
         def replaceMouse(x:double, y:double) : Entity
             var previousComponent = hasMouse ? this.mouse : null
-            var component = _mouseComponentPool.length > 0 ? _mouseComponentPool.pop_head() : new MouseComponent()
+            var component = _mouseComponentPool.length > 0 ? _mouseComponentPool.pop() : new MouseComponent()
             component.x = x
             component.y = y
             replaceComponent(Component.Mouse, component)
             if previousComponent != null
-                _mouseComponentPool.push_head(previousComponent)
+                _mouseComponentPool.push(previousComponent)
 
             return this;
 
@@ -557,7 +557,7 @@ namespace Bosco.ECS
         def removeMouse() : Entity
             var component = mouse
             removeComponent(Component.Mouse)
-            _mouseComponentPool.push_head(component)
+            _mouseComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -599,7 +599,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addPosition(x:double, y:double) : Entity
-            var component = _positionComponentPool.length > 0 ? _positionComponentPool.pop_head() : new PositionComponent()
+            var component = _positionComponentPool.length > 0 ? _positionComponentPool.pop() : new PositionComponent()
             component.x = x
             component.y = y
             addComponent(Component.Position, component)
@@ -612,12 +612,12 @@ namespace Bosco.ECS
          */
         def replacePosition(x:double, y:double) : Entity
             var previousComponent = hasPosition ? this.position : null
-            var component = _positionComponentPool.length > 0 ? _positionComponentPool.pop_head() : new PositionComponent()
+            var component = _positionComponentPool.length > 0 ? _positionComponentPool.pop() : new PositionComponent()
             component.x = x
             component.y = y
             replaceComponent(Component.Position, component)
             if previousComponent != null
-                _positionComponentPool.push_head(previousComponent)
+                _positionComponentPool.push(previousComponent)
 
             return this;
 
@@ -627,7 +627,7 @@ namespace Bosco.ECS
         def removePosition() : Entity
             var component = position
             removeComponent(Component.Position)
-            _positionComponentPool.push_head(component)
+            _positionComponentPool.push(component)
             return this
 
 
@@ -651,7 +651,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addResource(path:string, sprite:Sprite?, bgd:bool=false) : Entity
-            var component = _resourceComponentPool.length > 0 ? _resourceComponentPool.pop_head() : new ResourceComponent()
+            var component = _resourceComponentPool.length > 0 ? _resourceComponentPool.pop() : new ResourceComponent()
             component.path = path
             component.sprite = sprite
             component.bgd = bgd
@@ -666,13 +666,13 @@ namespace Bosco.ECS
          */
         def replaceResource(path:string, sprite:Sprite?, bgd:bool=false) : Entity
             var previousComponent = hasResource ? this.resource : null
-            var component = _resourceComponentPool.length > 0 ? _resourceComponentPool.pop_head() : new ResourceComponent()
+            var component = _resourceComponentPool.length > 0 ? _resourceComponentPool.pop() : new ResourceComponent()
             component.path = path
             component.sprite = sprite
             component.bgd = bgd
             replaceComponent(Component.Resource, component)
             if previousComponent != null
-                _resourceComponentPool.push_head(previousComponent)
+                _resourceComponentPool.push(previousComponent)
 
             return this;
 
@@ -682,7 +682,7 @@ namespace Bosco.ECS
         def removeResource() : Entity
             var component = resource
             removeComponent(Component.Resource)
-            _resourceComponentPool.push_head(component)
+            _resourceComponentPool.push(component)
             return this
 
 
@@ -708,7 +708,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addScaleAnimation(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
-            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop_head() : new ScaleAnimationComponent()
+            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop() : new ScaleAnimationComponent()
             component.min = min
             component.max = max
             component.speed = speed
@@ -727,7 +727,7 @@ namespace Bosco.ECS
          */
         def replaceScaleAnimation(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
             var previousComponent = hasScaleAnimation ? this.scaleAnimation : null
-            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop_head() : new ScaleAnimationComponent()
+            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop() : new ScaleAnimationComponent()
             component.min = min
             component.max = max
             component.speed = speed
@@ -735,7 +735,7 @@ namespace Bosco.ECS
             component.active = active
             replaceComponent(Component.ScaleAnimation, component)
             if previousComponent != null
-                _scaleAnimationComponentPool.push_head(previousComponent)
+                _scaleAnimationComponentPool.push(previousComponent)
 
             return this;
 
@@ -745,7 +745,7 @@ namespace Bosco.ECS
         def removeScaleAnimation() : Entity
             var component = scaleAnimation
             removeComponent(Component.ScaleAnimation)
-            _scaleAnimationComponentPool.push_head(component)
+            _scaleAnimationComponentPool.push(component)
             return this
 
 
@@ -768,7 +768,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addScale(x:double, y:double) : Entity
-            var component = _scaleComponentPool.length > 0 ? _scaleComponentPool.pop_head() : new ScaleComponent()
+            var component = _scaleComponentPool.length > 0 ? _scaleComponentPool.pop() : new ScaleComponent()
             component.x = x
             component.y = y
             addComponent(Component.Scale, component)
@@ -781,12 +781,12 @@ namespace Bosco.ECS
          */
         def replaceScale(x:double, y:double) : Entity
             var previousComponent = hasScale ? this.scale : null
-            var component = _scaleComponentPool.length > 0 ? _scaleComponentPool.pop_head() : new ScaleComponent()
+            var component = _scaleComponentPool.length > 0 ? _scaleComponentPool.pop() : new ScaleComponent()
             component.x = x
             component.y = y
             replaceComponent(Component.Scale, component)
             if previousComponent != null
-                _scaleComponentPool.push_head(previousComponent)
+                _scaleComponentPool.push(previousComponent)
 
             return this;
 
@@ -796,7 +796,7 @@ namespace Bosco.ECS
         def removeScale() : Entity
             var component = scale
             removeComponent(Component.Scale)
-            _scaleComponentPool.push_head(component)
+            _scaleComponentPool.push(component)
             return this
 
 
@@ -818,7 +818,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addScore(value:double) : Entity
-            var component = _scoreComponentPool.length > 0 ? _scoreComponentPool.pop_head() : new ScoreComponent()
+            var component = _scoreComponentPool.length > 0 ? _scoreComponentPool.pop() : new ScoreComponent()
             component.value = value
             addComponent(Component.Score, component)
             return this
@@ -829,11 +829,11 @@ namespace Bosco.ECS
          */
         def replaceScore(value:double) : Entity
             var previousComponent = hasScore ? this.score : null
-            var component = _scoreComponentPool.length > 0 ? _scoreComponentPool.pop_head() : new ScoreComponent()
+            var component = _scoreComponentPool.length > 0 ? _scoreComponentPool.pop() : new ScoreComponent()
             component.value = value
             replaceComponent(Component.Score, component)
             if previousComponent != null
-                _scoreComponentPool.push_head(previousComponent)
+                _scoreComponentPool.push(previousComponent)
 
             return this;
 
@@ -843,7 +843,7 @@ namespace Bosco.ECS
         def removeScore() : Entity
             var component = score
             removeComponent(Component.Score)
-            _scoreComponentPool.push_head(component)
+            _scoreComponentPool.push(component)
             return this
 
 
@@ -865,7 +865,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addSoundEffect(effect:int) : Entity
-            var component = _soundEffectComponentPool.length > 0 ? _soundEffectComponentPool.pop_head() : new SoundEffectComponent()
+            var component = _soundEffectComponentPool.length > 0 ? _soundEffectComponentPool.pop() : new SoundEffectComponent()
             component.effect = effect
             addComponent(Component.SoundEffect, component)
             return this
@@ -876,11 +876,11 @@ namespace Bosco.ECS
          */
         def replaceSoundEffect(effect:int) : Entity
             var previousComponent = hasSoundEffect ? this.soundEffect : null
-            var component = _soundEffectComponentPool.length > 0 ? _soundEffectComponentPool.pop_head() : new SoundEffectComponent()
+            var component = _soundEffectComponentPool.length > 0 ? _soundEffectComponentPool.pop() : new SoundEffectComponent()
             component.effect = effect
             replaceComponent(Component.SoundEffect, component)
             if previousComponent != null
-                _soundEffectComponentPool.push_head(previousComponent)
+                _soundEffectComponentPool.push(previousComponent)
 
             return this;
 
@@ -890,7 +890,7 @@ namespace Bosco.ECS
         def removeSoundEffect() : Entity
             var component = soundEffect
             removeComponent(Component.SoundEffect)
-            _soundEffectComponentPool.push_head(component)
+            _soundEffectComponentPool.push(component)
             return this
 
 
@@ -913,7 +913,7 @@ namespace Bosco.ECS
          * @returns {entitas.Entity}
          */
         def addVelocity(x:double, y:double) : Entity
-            var component = _velocityComponentPool.length > 0 ? _velocityComponentPool.pop_head() : new VelocityComponent()
+            var component = _velocityComponentPool.length > 0 ? _velocityComponentPool.pop() : new VelocityComponent()
             component.x = x
             component.y = y
             addComponent(Component.Velocity, component)
@@ -926,12 +926,12 @@ namespace Bosco.ECS
          */
         def replaceVelocity(x:double, y:double) : Entity
             var previousComponent = hasVelocity ? this.velocity : null
-            var component = _velocityComponentPool.length > 0 ? _velocityComponentPool.pop_head() : new VelocityComponent()
+            var component = _velocityComponentPool.length > 0 ? _velocityComponentPool.pop() : new VelocityComponent()
             component.x = x
             component.y = y
             replaceComponent(Component.Velocity, component)
             if previousComponent != null
-                _velocityComponentPool.push_head(previousComponent)
+                _velocityComponentPool.push(previousComponent)
 
             return this;
 
@@ -941,7 +941,7 @@ namespace Bosco.ECS
         def removeVelocity() : Entity
             var component = velocity
             removeComponent(Component.Velocity)
-            _velocityComponentPool.push_head(component)
+            _velocityComponentPool.push(component)
             return this
 
         /** @type {entitas.utils.Bag} */

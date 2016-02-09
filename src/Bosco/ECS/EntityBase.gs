@@ -57,6 +57,11 @@ namespace Bosco.ECS
          * @type entitas.ISignal */
         prop readonly onComponentReplaced : ComponentReplaced
 
+        db : static array of IComponent
+        first : static bool = true
+        db_index : static int = 0
+        ic : int = 0
+        index : int = 0
 
         _world : World
         _toStringCache : string
@@ -74,6 +79,15 @@ namespace Bosco.ECS
          * @constructor
          */
         construct(componentsEnum : array of string, totalComponents : int = 32)
+
+            if first
+                db = new array of IComponent[componentsEnum.length * 512]
+                first = false
+
+            index = db_index++
+            ic = index * componentsEnum.length
+
+
             _onEntityReleased = new EntityReleased()
             _onComponentAdded = new EntityChanged()
             _onComponentRemoved = new EntityChanged()

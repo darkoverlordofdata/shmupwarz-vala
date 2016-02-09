@@ -18,6 +18,8 @@ class CollisionSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
     def initialize()
         var bullets = _world.getGroup(Matcher.AllOf({Component.Bullet}))
         var enemies = _world.getGroup(Matcher.AllOf({Component.Enemy}))
+        // var bullets = _world.getGroup(Matching.Bullet)
+        // var enemies = _world.getGroup(Matching.Enemy)
 
         _collisionPairs = {
             new CollisionPair(bullets, enemies)

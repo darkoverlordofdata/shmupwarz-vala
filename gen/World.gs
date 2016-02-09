@@ -6,17 +6,18 @@
 [indent=4]
 uses Bosco
 uses Bosco.ECS
-namespace Bosco.ECS 
-    class World : WorldBase 
+namespace Bosco.ECS
+    class World : WorldBase
 
 
 
         componentsEnum : static array of string
         totalComponents : static int = 0
-        instance : static World 
+        instance : static World
 
         construct(componentsEnum : array of string, startCreationIndex : int=0)
             super(componentsEnum, startCreationIndex)
+
 
         /** @type {entitas.Entity} */
         prop scoreEntity : Entity
@@ -127,5 +128,3 @@ namespace Bosco.ECS
                         createEntity("Firing").isFiring = true
                     else
                         destroyEntity(entity)
-
-
