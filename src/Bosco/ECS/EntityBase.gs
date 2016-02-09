@@ -57,18 +57,21 @@ namespace Bosco.ECS
          * @type entitas.ISignal */
         prop readonly onComponentReplaced : ComponentReplaced
 
-        db : static array of IComponent
         first : static bool = true
+        maxEntities : static int = 128
+        incEntities : static int = 64
         db_index : static int = 0
         ic : int = 0
-        index : int = 0
+        db_id : int = 0
+        _components : static array of IComponent
 
         _world : World
         _toStringCache : string
-        _components : array of IComponent
         _componentsCache : array of IComponent
         _componentIndicesCache : array of int
         _componentsEnum : unowned array of string
+        _totalComponents : int
+        _componentCount : int
 
         /**
          * The basic game object. Everything is an entity with components that
@@ -80,19 +83,24 @@ namespace Bosco.ECS
          */
         construct(componentsEnum : array of string, totalComponents : int = 32)
 
+            _totalComponents = totalComponents
+            _componentCount = componentsEnum.length
+
             if first
-                db = new array of IComponent[componentsEnum.length * 512]
+                _components = new array of IComponent[_componentCount * maxEntities]
                 first = false
 
-            index = db_index++
-            ic = index * componentsEnum.length
+            if db_index >= maxEntities
+                maxEntities += incEntities
+                _components.resize(_componentCount * maxEntities)
 
+            db_id = db_index++
+            ic = db_id * _componentCount
 
             _onEntityReleased = new EntityReleased()
             _onComponentAdded = new EntityChanged()
             _onComponentRemoved = new EntityChanged()
             _onComponentReplaced = new ComponentReplaced()
-            _components = new array of IComponent[totalComponents]
             _componentIndicesCache = new array of int[totalComponents]
             _componentsEnum = componentsEnum
             _world = World.instance
@@ -126,7 +134,7 @@ namespace Bosco.ECS
             if hasComponent(index)
                 raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add component at index %d", index)
 
-            _components[index] = component
+            _components[ic+index] = component
             _componentsCache = null
             _componentIndicesCache = null
             _toStringCache = null
@@ -169,14 +177,14 @@ namespace Bosco.ECS
 
 
         def _replaceComponent(index : int, replacement : IComponent?)
-            var previousComponent = _components[index]
+            var previousComponent = _components[ic+index]
             if previousComponent == replacement
                 _onComponentReplaced.dispatch((Entity)this, index, previousComponent, replacement)
              else
-                _components[index] = replacement
+                _components[ic+index] = replacement
                 _componentsCache = null
                 if replacement == null
-                    _components[index] = null
+                    _components[ic+index] = null
                     _componentIndicesCache = null
                     _toStringCache = null
                     _onComponentRemoved.dispatch((Entity)this, index, previousComponent)
@@ -194,7 +202,7 @@ namespace Bosco.ECS
             if !hasComponent(index)
                 raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get component at index %d", index)
 
-            return _components[index]
+            return _components[ic+index]
 
         /**
          * GetComponents
@@ -204,9 +212,10 @@ namespace Bosco.ECS
         def getComponents() : array of IComponent
             if _componentsCache == null
                 var components = new array of IComponent[0]
-                for var component in _components
-                    if component != null
-                        components+= component
+                //for var component in _components
+                for var i = ic to (ic+_componentCount-1)
+                    if _components[i] != null
+                        components+= _components[i]
                 _componentsCache = components
             return _componentsCache
 
@@ -218,9 +227,11 @@ namespace Bosco.ECS
         def getComponentIndices() : array of int
             if _componentIndicesCache == null
                 var indices = new array of int[0]
-                for var i = 0 to (_components.length-1)
+                var index = 0
+                for var i = ic to (ic+_componentCount-1)
                     if _components[i] != null
-                        indices+= i
+                        indices+= index
+                    index++
                 _componentIndicesCache = indices
             return _componentIndicesCache
 
@@ -231,7 +242,7 @@ namespace Bosco.ECS
           * @returns boolean
           */
         def hasComponent(index : int) : bool
-            return _components[index] != null
+            return _components[ic+index] != null
 
         /**
          * HasComponents
@@ -241,7 +252,7 @@ namespace Bosco.ECS
          */
         def hasComponents(indices : array of int) : bool
             for var index in indices
-                if _components[index] == null
+                if _components[ic+index] == null
                     return false
             return true
 
@@ -253,7 +264,7 @@ namespace Bosco.ECS
          */
         def hasAnyComponent(indices : array of int) : bool
             for var index in indices
-                if _components[index] != null
+                if _components[ic+index] != null
                     return true
             return false
 
@@ -263,9 +274,11 @@ namespace Bosco.ECS
          */
         def removeAllComponents()
             _toStringCache = ""
-            for var i = 0 to (_components.length-1)
+            var index = 0
+            for var i = ic to (ic+_componentCount-1)
                 if _components[i] != null
-                    _replaceComponent(i, null)
+                    _replaceComponent(index, null)
+                index++
 
         /**
          * Destroy
