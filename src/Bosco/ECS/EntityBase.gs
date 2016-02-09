@@ -61,8 +61,8 @@ namespace Bosco.ECS
         maxEntities : static int = 128
         incEntities : static int = 64
         db_index : static int = 0
-        ic : int = 0
         db_id : int = 0
+        ic : int = 0
         _components : static array of IComponent
 
         _world : World
@@ -132,7 +132,7 @@ namespace Bosco.ECS
                 raise new Exception.ECS("EntityIsNotEnabledException - Cannot add component!")
 
             if hasComponent(index)
-                raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add component at index %d", index)
+                raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add %s at index %d", _componentsEnum[index], index)
 
             _components[ic+index] = component
             _componentsCache = null
@@ -152,7 +152,7 @@ namespace Bosco.ECS
                 raise new Exception.ECS("EntityIsNotEnabledException - Cannot remove component!")
 
             if !hasComponent(index)
-                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove component at index %d", index)
+                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove %s at index %d", _componentsEnum[index], index)
 
             _replaceComponent(index, null)
             return (Entity)this
@@ -200,7 +200,7 @@ namespace Bosco.ECS
          */
         def getComponent(index : int) : unowned IComponent raises Exception
             if !hasComponent(index)
-                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get component at index %d", index)
+                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get %s at index %d", _componentsEnum[index], index)
 
             return _components[ic+index]
 

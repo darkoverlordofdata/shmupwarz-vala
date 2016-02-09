@@ -7,7 +7,8 @@ NAME=shmupwarz
 
 # vala compiler
 VC=valac
-
+# mingw for windows executables
+CC=--cc=i586-mingw32msvc-gcc --vapidir=./vapi
 # vala flags
 # -g debug
 # -w
