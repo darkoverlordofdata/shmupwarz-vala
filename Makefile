@@ -6,9 +6,9 @@
 NAME=shmupwarz
 
 # vala compiler
-VC=valac
+VC=valac --vapidir=./vapi
 # mingw for windows executables
-CC=--cc=i586-mingw32msvc-gcc --vapidir=./vapi
+CC=--cc=i586-mingw32msvc-gcc
 # vala flags
 # -g debug
 # -w
@@ -21,7 +21,7 @@ DEBUG=-g --save-temps
 #
 LIBS=--pkg glib-2.0 \
 			--pkg gobject-2.0 \
-			--pkg gee-1.0 \
+			--pkg gee-0.8 \
 			--pkg sdl2 \
 			--pkg SDL2_gfx \
 			--pkg SDL2_image \
@@ -112,7 +112,7 @@ CLIBS=-X -lm \
 # c flags needed for the gcc compiler
 #
 CFLAGS=-X -w \
-			-X -I/usr/include/SDL
+			-X -I/usr/include/SDL2
 
 #
 # Folder for finished binaries
@@ -129,7 +129,7 @@ default: $(BIN)/$(NAME)
 $(BIN)/$(NAME): $(SOURCES) $(APP)
 	-mkdir -p $(BIN)
 	cp -R --force $(RESOURCES) $(BIN)
-	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
+	$(VC) $(DEBUG) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
 # default: $(BIN)/$(NAME)
 # $(BIN)/$(NAME): $(OLD)
@@ -153,14 +153,9 @@ clean:
 
 debug: debug/$(BIN)/$(NAME)
 debug/$(BIN)/$(NAME): $(SOURCES) $(TST)
-	-mkdir -p test/$(BIN)
-	cp -R --force $(RESOURCES) test/$(BIN)
-	$(VC) $(DEBUG) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(TST) -o test/$(BIN)/$(NAME)
-	env GTK_THEME=elementary:light nemiver test/$(BIN)/$(NAME)
-	rm --force test/$(BIN)/$(NAME)
-	rm -rf src/*.c
-	rm -rf src/**/*.c
-	rm -rf src/**/**/*.c
+	-mkdir -p $(BIN)
+	cp -R --force $(RESOURCES) $(BIN)
+	$(VC) $(DEBUG) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
 # install:
 # 	cp -f bin/webkat /usr/local/bin
