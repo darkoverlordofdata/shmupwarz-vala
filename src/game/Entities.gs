@@ -37,7 +37,7 @@ def createBackground() : Entity
         //entity.addPosition, new PositionComponent(0, 0))
         entity.addPosition(0, 0)
         entity.addScale(2, 1)
-        entity.addResource("resources/Images/BackdropBlackLittleSparkBlack.png", null, true)
+        entity.addResource("res/images/BackdropBlackLittleSparkBlack.png", null, true)
     except e:Exception
         print e.message
     return entity
@@ -54,7 +54,7 @@ def createPlayer() : Entity
         entity.addVelocity(0, 0)
         entity.addLayer(Layer.PLAYER)
         entity.addPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT-80)
-        entity.addResource("resources/res/images/fighter.png", null, false)
+        entity.addResource("res/images/fighter.png", null, false)
     except e:Exception
         print e.message
     return entity
@@ -71,7 +71,7 @@ def createBullet(x : double, y : double) : Entity
         entity.addBounds(5)
         entity.addExpires(1)
         entity.addLayer(Layer.BULLET)
-        entity.addResource("resources/res/images/bullet.png", null, false)
+        entity.addResource("res/images/bullet.png", null, false)
         entity.addSoundEffect(Effect.PEW)
     except e:Exception
         print e.message
@@ -93,7 +93,7 @@ def createParticle(x : double, y : double) : Entity
         entity.addExpires(1)
         entity.addLayer(Layer.PARTICLE)
         entity.addScale(scale, scale)
-        entity.addResource("resources/res/images/particle.png", null, false)
+        entity.addResource("res/images/particle.png", null, false)
     except e:Exception
         print e.message
     return entity
@@ -110,7 +110,7 @@ def createExplosion(x: double, y: double, scale:double) : Entity
         entity.addScale(scale, scale)
         entity.addSoundEffect(scale < 0.5 ? Effect.SMALLASPLODE : Effect.ASPLODE)
         entity.addScaleAnimation(scale / 100, scale, -3, false, true)
-        entity.addResource("resources/res/images/explosion.png", null, false)
+        entity.addResource("res/images/explosion.png", null, false)
     except e:Exception
         print e.message
     return entity
@@ -126,7 +126,7 @@ def createEnemy1() : Entity
         entity.addVelocity(0, 40)
         entity.addLayer(Layer.ACTORS_1)
         entity.addPosition(x, y)
-        entity.addResource("resources/res/images/enemy1.png", null, false)
+        entity.addResource("res/images/enemy1.png", null, false)
     except e:Exception
         print e.message
     return entity
@@ -142,7 +142,7 @@ def createEnemy2() : Entity
         entity.addVelocity(0, 30)
         entity.addLayer(Layer.ACTORS_2)
         entity.addPosition(x, y)
-        entity.addResource("resources/res/images/enemy2.png", null, false)
+        entity.addResource("res/images/enemy2.png", null, false)
     except e:Exception
         print e.message
     return entity
@@ -158,7 +158,7 @@ def createEnemy3() : Entity
         entity.addVelocity(0, 20)
         entity.addLayer(Layer.ACTORS_3)
         entity.addPosition(x, y)
-        entity.addResource("resources/res/images/enemy3.png", null, false)
+        entity.addResource("res/images/enemy3.png", null, false)
     except e:Exception
         print e.message
     return entity

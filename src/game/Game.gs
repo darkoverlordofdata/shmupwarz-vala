@@ -8,8 +8,6 @@ const SCREEN_WIDTH:int = 640
 const SCREEN_HEIGHT:int = 480
 
 init
-    print "Application started"
-
     var game = new Game()
     game.OnExecute()
 
@@ -50,7 +48,7 @@ class Game : AbstractGame
             // world.add(ParallaxStarRepeatingSystem())
             // world.add(ColorAnimationSystem())
             world.add(new ScaleAnimationSystem(this))
-            // world.add(RemoveOffscreenShipsSystem())
+            //world.add(new RemoveOffscreenShipsSystem())
             world.add(new ViewManagerSystem(this))
             world.add(new RenderPositionSystem(this))
             // world.add(HealthRenderSystem())
@@ -69,6 +67,10 @@ class Game : AbstractGame
      * Handle events
      */
     def override OnEvent(e:SDL.Event)
+
+        if currentKeyStates[SDL.Scancode.ESCAPE] != 0
+            running = false
+
 
         if e.type == SDL.EventType.QUIT
             running = false

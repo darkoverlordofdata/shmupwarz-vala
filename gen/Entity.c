@@ -768,814 +768,814 @@ BoscoECSEntity* bosco_ecs_entity_construct (GType object_type, gchar** component
 	BoscoECSBag* _tmp74_ = NULL;
 	BoscoECSBag* _tmp80_ = NULL;
 	BoscoECSBag* _tmp86_ = NULL;
-#line 15 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 15 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = componentsEnum;
-#line 15 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 15 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0__length1 = componentsEnum_length1;
-#line 15 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 15 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = totalComponents;
-#line 15 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 15 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self = (BoscoECSEntity*) bosco_ecs_entity_base_construct (object_type, _tmp0_, _tmp0__length1, _tmp1_);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_new (TYPE_BOUNDS_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_boundsComponentPool);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_boundsComponentPool = _tmp2_;
 #line 786 "Entity.c"
 	{
 		gint i = 0;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 791 "Entity.c"
 		{
 			gboolean _tmp3_ = FALSE;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp3_ = TRUE;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 798 "Entity.c"
 				BoscoECSBag* _tmp5_ = NULL;
 				BoundsComponent* _tmp6_ = NULL;
 				BoundsComponent* _tmp7_ = NULL;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp3_) {
 #line 804 "Entity.c"
 					gint _tmp4_ = 0;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp4_ = i;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp4_ + 1;
 #line 810 "Entity.c"
 				}
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp3_ = FALSE;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 818 "Entity.c"
 				}
-#line 20 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 20 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp5_ = self->priv->_boundsComponentPool;
-#line 20 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 20 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp6_ = bounds_component_new ();
-#line 20 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 20 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp7_ = _tmp6_;
-#line 20 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 20 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) _tmp7_);
-#line 20 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 20 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp7_);
 #line 830 "Entity.c"
 			}
 		}
 	}
-#line 21 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 21 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bullet_component_new ();
-#line 21 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 21 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_bulletComponent);
-#line 21 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 21 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_bulletComponent = _tmp8_;
-#line 22 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 22 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_bag_new (TYPE_COLOR_ANIMATION_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 22 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 22 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_colorAnimationComponentPool);
-#line 22 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 22 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_colorAnimationComponentPool = _tmp9_;
 #line 846 "Entity.c"
 	{
 		gint i = 0;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 851 "Entity.c"
 		{
 			gboolean _tmp10_ = FALSE;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp10_ = TRUE;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 858 "Entity.c"
 				BoscoECSBag* _tmp12_ = NULL;
 				ColorAnimationComponent* _tmp13_ = NULL;
 				ColorAnimationComponent* _tmp14_ = NULL;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp10_) {
 #line 864 "Entity.c"
 					gint _tmp11_ = 0;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp11_ = i;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp11_ + 1;
 #line 870 "Entity.c"
 				}
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp10_ = FALSE;
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 23 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 23 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 878 "Entity.c"
 				}
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp12_ = self->priv->_colorAnimationComponentPool;
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp13_ = color_animation_component_new ();
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp14_ = _tmp13_;
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp12_, (BoscoECSIComponent*) _tmp14_);
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp14_);
 #line 890 "Entity.c"
 			}
 		}
 	}
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = destroy_component_new ();
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_destroyComponent);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_destroyComponent = _tmp15_;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = enemy_component_new ();
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_enemyComponent);
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_enemyComponent = _tmp16_;
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = bosco_ecs_bag_new (TYPE_EXPIRES_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_expiresComponentPool);
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_expiresComponentPool = _tmp17_;
 #line 912 "Entity.c"
 	{
 		gint i = 0;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 917 "Entity.c"
 		{
 			gboolean _tmp18_ = FALSE;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp18_ = TRUE;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 924 "Entity.c"
 				BoscoECSBag* _tmp20_ = NULL;
 				ExpiresComponent* _tmp21_ = NULL;
 				ExpiresComponent* _tmp22_ = NULL;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp18_) {
 #line 930 "Entity.c"
 					gint _tmp19_ = 0;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp19_ = i;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp19_ + 1;
 #line 936 "Entity.c"
 				}
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp18_ = FALSE;
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 28 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 28 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 944 "Entity.c"
 				}
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp20_ = self->priv->_expiresComponentPool;
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp21_ = expires_component_new ();
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp22_ = _tmp21_;
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp20_, (BoscoECSIComponent*) _tmp22_);
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp22_);
 #line 956 "Entity.c"
 			}
 		}
 	}
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp23_ = firing_component_new ();
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_firingComponent);
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_firingComponent = _tmp23_;
-#line 31 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 31 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp24_ = bosco_ecs_bag_new (TYPE_HEALTH_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 31 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 31 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_healthComponentPool);
-#line 31 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 31 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_healthComponentPool = _tmp24_;
 #line 972 "Entity.c"
 	{
 		gint i = 0;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 977 "Entity.c"
 		{
 			gboolean _tmp25_ = FALSE;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp25_ = TRUE;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 984 "Entity.c"
 				BoscoECSBag* _tmp27_ = NULL;
 				HealthComponent* _tmp28_ = NULL;
 				HealthComponent* _tmp29_ = NULL;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp25_) {
 #line 990 "Entity.c"
 					gint _tmp26_ = 0;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp26_ = i;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp26_ + 1;
 #line 996 "Entity.c"
 				}
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp25_ = FALSE;
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 32 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 32 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1004 "Entity.c"
 				}
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp27_ = self->priv->_healthComponentPool;
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp28_ = health_component_new ();
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp29_ = _tmp28_;
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp27_, (BoscoECSIComponent*) _tmp29_);
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp29_);
 #line 1016 "Entity.c"
 			}
 		}
 	}
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp30_ = bosco_ecs_bag_new (TYPE_LAYER_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_layerComponentPool);
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_layerComponentPool = _tmp30_;
 #line 1026 "Entity.c"
 	{
 		gint i = 0;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1031 "Entity.c"
 		{
 			gboolean _tmp31_ = FALSE;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp31_ = TRUE;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1038 "Entity.c"
 				BoscoECSBag* _tmp33_ = NULL;
 				LayerComponent* _tmp34_ = NULL;
 				LayerComponent* _tmp35_ = NULL;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp31_) {
 #line 1044 "Entity.c"
 					gint _tmp32_ = 0;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp32_ = i;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp32_ + 1;
 #line 1050 "Entity.c"
 				}
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp31_ = FALSE;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1058 "Entity.c"
 				}
-#line 36 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 36 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp33_ = self->priv->_layerComponentPool;
-#line 36 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 36 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp34_ = layer_component_new ();
-#line 36 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 36 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp35_ = _tmp34_;
-#line 36 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 36 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp33_, (BoscoECSIComponent*) _tmp35_);
-#line 36 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 36 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp35_);
 #line 1070 "Entity.c"
 			}
 		}
 	}
-#line 37 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 37 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp36_ = bosco_ecs_bag_new (TYPE_LIFE_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 37 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 37 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_lifeComponentPool);
-#line 37 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 37 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_lifeComponentPool = _tmp36_;
 #line 1080 "Entity.c"
 	{
 		gint i = 0;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1085 "Entity.c"
 		{
 			gboolean _tmp37_ = FALSE;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp37_ = TRUE;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1092 "Entity.c"
 				BoscoECSBag* _tmp39_ = NULL;
 				LifeComponent* _tmp40_ = NULL;
 				LifeComponent* _tmp41_ = NULL;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp37_) {
 #line 1098 "Entity.c"
 					gint _tmp38_ = 0;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp38_ = i;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp38_ + 1;
 #line 1104 "Entity.c"
 				}
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp37_ = FALSE;
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 38 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 38 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1112 "Entity.c"
 				}
-#line 39 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 39 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp39_ = self->priv->_lifeComponentPool;
-#line 39 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 39 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp40_ = life_component_new ();
-#line 39 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 39 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp41_ = _tmp40_;
-#line 39 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 39 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp39_, (BoscoECSIComponent*) _tmp41_);
-#line 39 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 39 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp41_);
 #line 1124 "Entity.c"
 			}
 		}
 	}
-#line 40 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 40 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp42_ = mine_component_new ();
-#line 40 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 40 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_mineComponent);
-#line 40 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 40 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_mineComponent = _tmp42_;
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp43_ = bosco_ecs_bag_new (TYPE_MOUSE_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_mouseComponentPool);
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_mouseComponentPool = _tmp43_;
 #line 1140 "Entity.c"
 	{
 		gint i = 0;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1145 "Entity.c"
 		{
 			gboolean _tmp44_ = FALSE;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp44_ = TRUE;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1152 "Entity.c"
 				BoscoECSBag* _tmp46_ = NULL;
 				MouseComponent* _tmp47_ = NULL;
 				MouseComponent* _tmp48_ = NULL;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp44_) {
 #line 1158 "Entity.c"
 					gint _tmp45_ = 0;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp45_ = i;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp45_ + 1;
 #line 1164 "Entity.c"
 				}
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp44_ = FALSE;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1172 "Entity.c"
 				}
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp46_ = self->priv->_mouseComponentPool;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp47_ = mouse_component_new ();
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp48_ = _tmp47_;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp46_, (BoscoECSIComponent*) _tmp48_);
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp48_);
 #line 1184 "Entity.c"
 			}
 		}
 	}
-#line 44 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 44 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp49_ = player_component_new ();
-#line 44 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 44 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_playerComponent);
-#line 44 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 44 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_playerComponent = _tmp49_;
-#line 45 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 45 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp50_ = bosco_ecs_bag_new (TYPE_POSITION_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 45 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 45 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_positionComponentPool);
-#line 45 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 45 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_positionComponentPool = _tmp50_;
 #line 1200 "Entity.c"
 	{
 		gint i = 0;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1205 "Entity.c"
 		{
 			gboolean _tmp51_ = FALSE;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp51_ = TRUE;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1212 "Entity.c"
 				BoscoECSBag* _tmp53_ = NULL;
 				PositionComponent* _tmp54_ = NULL;
 				PositionComponent* _tmp55_ = NULL;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp51_) {
 #line 1218 "Entity.c"
 					gint _tmp52_ = 0;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp52_ = i;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp52_ + 1;
 #line 1224 "Entity.c"
 				}
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp51_ = FALSE;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1232 "Entity.c"
 				}
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp53_ = self->priv->_positionComponentPool;
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp54_ = position_component_new ();
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp55_ = _tmp54_;
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp53_, (BoscoECSIComponent*) _tmp55_);
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp55_);
 #line 1244 "Entity.c"
 			}
 		}
 	}
-#line 48 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 48 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp56_ = bosco_ecs_bag_new (TYPE_RESOURCE_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 48 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 48 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_resourceComponentPool);
-#line 48 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 48 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_resourceComponentPool = _tmp56_;
 #line 1254 "Entity.c"
 	{
 		gint i = 0;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1259 "Entity.c"
 		{
 			gboolean _tmp57_ = FALSE;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp57_ = TRUE;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1266 "Entity.c"
 				BoscoECSBag* _tmp59_ = NULL;
 				ResourceComponent* _tmp60_ = NULL;
 				ResourceComponent* _tmp61_ = NULL;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp57_) {
 #line 1272 "Entity.c"
 					gint _tmp58_ = 0;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp58_ = i;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp58_ + 1;
 #line 1278 "Entity.c"
 				}
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp57_ = FALSE;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1286 "Entity.c"
 				}
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp59_ = self->priv->_resourceComponentPool;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp60_ = resource_component_new ();
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp61_ = _tmp60_;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp59_, (BoscoECSIComponent*) _tmp61_);
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp61_);
 #line 1298 "Entity.c"
 			}
 		}
 	}
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp62_ = bosco_ecs_bag_new (TYPE_SCALE_ANIMATION_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scaleAnimationComponentPool);
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_scaleAnimationComponentPool = _tmp62_;
 #line 1308 "Entity.c"
 	{
 		gint i = 0;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1313 "Entity.c"
 		{
 			gboolean _tmp63_ = FALSE;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp63_ = TRUE;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1320 "Entity.c"
 				BoscoECSBag* _tmp65_ = NULL;
 				ScaleAnimationComponent* _tmp66_ = NULL;
 				ScaleAnimationComponent* _tmp67_ = NULL;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp63_) {
 #line 1326 "Entity.c"
 					gint _tmp64_ = 0;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp64_ = i;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp64_ + 1;
 #line 1332 "Entity.c"
 				}
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp63_ = FALSE;
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 52 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 52 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1340 "Entity.c"
 				}
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp65_ = self->priv->_scaleAnimationComponentPool;
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp66_ = scale_animation_component_new ();
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp67_ = _tmp66_;
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp65_, (BoscoECSIComponent*) _tmp67_);
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp67_);
 #line 1352 "Entity.c"
 			}
 		}
 	}
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp68_ = bosco_ecs_bag_new (TYPE_SCALE_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scaleComponentPool);
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_scaleComponentPool = _tmp68_;
 #line 1362 "Entity.c"
 	{
 		gint i = 0;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1367 "Entity.c"
 		{
 			gboolean _tmp69_ = FALSE;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp69_ = TRUE;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1374 "Entity.c"
 				BoscoECSBag* _tmp71_ = NULL;
 				ScaleComponent* _tmp72_ = NULL;
 				ScaleComponent* _tmp73_ = NULL;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp69_) {
 #line 1380 "Entity.c"
 					gint _tmp70_ = 0;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp70_ = i;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp70_ + 1;
 #line 1386 "Entity.c"
 				}
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp69_ = FALSE;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1394 "Entity.c"
 				}
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp71_ = self->priv->_scaleComponentPool;
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp72_ = scale_component_new ();
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp73_ = _tmp72_;
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp71_, (BoscoECSIComponent*) _tmp73_);
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp73_);
 #line 1406 "Entity.c"
 			}
 		}
 	}
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp74_ = bosco_ecs_bag_new (TYPE_SCORE_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scoreComponentPool);
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_scoreComponentPool = _tmp74_;
 #line 1416 "Entity.c"
 	{
 		gint i = 0;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1421 "Entity.c"
 		{
 			gboolean _tmp75_ = FALSE;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp75_ = TRUE;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1428 "Entity.c"
 				BoscoECSBag* _tmp77_ = NULL;
 				ScoreComponent* _tmp78_ = NULL;
 				ScoreComponent* _tmp79_ = NULL;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp75_) {
 #line 1434 "Entity.c"
 					gint _tmp76_ = 0;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp76_ = i;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp76_ + 1;
 #line 1440 "Entity.c"
 				}
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp75_ = FALSE;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1448 "Entity.c"
 				}
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp77_ = self->priv->_scoreComponentPool;
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp78_ = score_component_new ();
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp79_ = _tmp78_;
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp77_, (BoscoECSIComponent*) _tmp79_);
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp79_);
 #line 1460 "Entity.c"
 			}
 		}
 	}
-#line 60 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 60 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp80_ = bosco_ecs_bag_new (TYPE_SOUND_EFFECT_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 60 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 60 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_soundEffectComponentPool);
-#line 60 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 60 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_soundEffectComponentPool = _tmp80_;
 #line 1470 "Entity.c"
 	{
 		gint i = 0;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1475 "Entity.c"
 		{
 			gboolean _tmp81_ = FALSE;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp81_ = TRUE;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1482 "Entity.c"
 				BoscoECSBag* _tmp83_ = NULL;
 				SoundEffectComponent* _tmp84_ = NULL;
 				SoundEffectComponent* _tmp85_ = NULL;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp81_) {
 #line 1488 "Entity.c"
 					gint _tmp82_ = 0;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp82_ = i;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp82_ + 1;
 #line 1494 "Entity.c"
 				}
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp81_ = FALSE;
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 61 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 61 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1502 "Entity.c"
 				}
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp83_ = self->priv->_soundEffectComponentPool;
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp84_ = sound_effect_component_new ();
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp85_ = _tmp84_;
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp83_, (BoscoECSIComponent*) _tmp85_);
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp85_);
 #line 1514 "Entity.c"
 			}
 		}
 	}
-#line 63 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 63 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp86_ = bosco_ecs_bag_new (TYPE_VELOCITY_COMPONENT, (GBoxedCopyFunc) dark_matter_ref, dark_matter_unref, BOSCO_ECS_POOL_SIZE);
-#line 63 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 63 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_velocityComponentPool);
-#line 63 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 63 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv->_velocityComponentPool = _tmp86_;
 #line 1524 "Entity.c"
 	{
 		gint i = 0;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		i = 1;
 #line 1529 "Entity.c"
 		{
 			gboolean _tmp87_ = FALSE;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp87_ = TRUE;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			while (TRUE) {
 #line 1536 "Entity.c"
 				BoscoECSBag* _tmp89_ = NULL;
 				VelocityComponent* _tmp90_ = NULL;
 				VelocityComponent* _tmp91_ = NULL;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!_tmp87_) {
 #line 1542 "Entity.c"
 					gint _tmp88_ = 0;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					_tmp88_ = i;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					i = _tmp88_ + 1;
 #line 1548 "Entity.c"
 				}
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp87_ = FALSE;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				if (!(i <= BOSCO_ECS_POOL_SIZE)) {
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 					break;
 #line 1556 "Entity.c"
 				}
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp89_ = self->priv->_velocityComponentPool;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp90_ = velocity_component_new ();
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_tmp91_ = _tmp90_;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				bosco_ecs_bag_push (_tmp89_, (BoscoECSIComponent*) _tmp91_);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				_dark_matter_unref0 (_tmp91_);
 #line 1568 "Entity.c"
 			}
 		}
 	}
-#line 14 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 14 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return self;
 #line 1574 "Entity.c"
 }
 
 
 BoscoECSEntity* bosco_ecs_entity_new (gchar** componentsEnum, int componentsEnum_length1, gint totalComponents) {
-#line 14 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 14 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return bosco_ecs_entity_construct (BOSCO_ECS_TYPE_ENTITY, componentsEnum, componentsEnum_length1, totalComponents);
 #line 1581 "Entity.c"
 }
@@ -1583,11 +1583,11 @@ BoscoECSEntity* bosco_ecs_entity_new (gchar** componentsEnum, int componentsEnum
 
 void bosco_ecs_entity_clearBoundsComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 68 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 68 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 69 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 69 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_boundsComponentPool;
-#line 69 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 69 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 1593 "Entity.c"
 }
@@ -1598,7 +1598,7 @@ void bosco_ecs_entity_clearBoundsComponentPool (BoscoECSEntity* self) {
          * @returns {entitas.Entity}
          */
 static gpointer _dark_matter_ref0 (gpointer self) {
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return self ? dark_matter_ref (self) : NULL;
 #line 1604 "Entity.c"
 }
@@ -1617,75 +1617,75 @@ BoscoECSEntity* bosco_ecs_entity_addBounds (BoscoECSEntity* self, gdouble radius
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 85 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 85 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_boundsComponentPool;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 1631 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_boundsComponentPool;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (BoundsComponent*) _tmp5_;
 #line 1642 "Entity.c"
 	} else {
 		BoundsComponent* _tmp6_ = NULL;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = bounds_component_new ();
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 1651 "Entity.c"
 	}
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 87 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 87 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = radius;
-#line 87 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 87 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->radius = _tmp8_;
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bounds, (BoscoECSIComponent*) component, &_inner_error_);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 1679 "Entity.c"
 	}
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 1691 "Entity.c"
 }
@@ -1714,119 +1714,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceBounds (BoscoECSEntity* self, gdouble ra
 	BoundsComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 95 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 95 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasBounds (self);
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 1726 "Entity.c"
 		BoundsComponent* _tmp3_ = NULL;
 		BoundsComponent* _tmp4_ = NULL;
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_bounds (self);
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 1735 "Entity.c"
 	} else {
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 1739 "Entity.c"
 	}
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 96 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 96 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_boundsComponentPool;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 1753 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_boundsComponentPool;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (BoundsComponent*) _tmp11_;
 #line 1764 "Entity.c"
 	} else {
 		BoundsComponent* _tmp12_ = NULL;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = bounds_component_new ();
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 1773 "Entity.c"
 	}
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = radius;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->radius = _tmp14_;
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bounds, (BoscoECSIComponent*) component, &_inner_error_);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 1803 "Entity.c"
 	}
-#line 100 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 100 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 100 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 100 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 1809 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		BoundsComponent* _tmp19_ = NULL;
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_boundsComponentPool;
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 1818 "Entity.c"
 	}
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 1832 "Entity.c"
 }
@@ -1846,45 +1846,45 @@ BoscoECSEntity* bosco_ecs_entity_removeBounds (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 108 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 108 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 109 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 109 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_bounds (self);
-#line 109 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 109 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 109 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 109 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 109 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 109 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bounds, &_inner_error_);
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 110 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 110 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 1876 "Entity.c"
 	}
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_boundsComponentPool;
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 1890 "Entity.c"
 }
@@ -1898,17 +1898,17 @@ BoscoECSEntity* bosco_ecs_entity_setBullet (BoscoECSEntity* self, gboolean value
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 129 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 129 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isBullet (self, _tmp0_);
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 1914 "Entity.c"
 }
@@ -1916,11 +1916,11 @@ BoscoECSEntity* bosco_ecs_entity_setBullet (BoscoECSEntity* self, gboolean value
 
 void bosco_ecs_entity_clearColorAnimationComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 134 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 134 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 135 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 135 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_colorAnimationComponentPool;
-#line 135 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 135 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 1926 "Entity.c"
 }
@@ -1975,139 +1975,139 @@ BoscoECSEntity* bosco_ecs_entity_addColorAnimation (BoscoECSEntity* self, gdoubl
 	BoscoECSEntity* _tmp26_ = NULL;
 	BoscoECSEntity* _tmp27_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 167 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 167 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_colorAnimationComponentPool;
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 1989 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_colorAnimationComponentPool;
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ColorAnimationComponent*) _tmp5_;
 #line 2000 "Entity.c"
 	} else {
 		ColorAnimationComponent* _tmp6_ = NULL;
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = color_animation_component_new ();
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 2009 "Entity.c"
 	}
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 168 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 168 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 169 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 169 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = redMin;
-#line 169 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 169 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redMin = _tmp8_;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = redMax;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redMax = _tmp9_;
-#line 171 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 171 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = redSpeed;
-#line 171 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 171 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redSpeed = _tmp10_;
-#line 172 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 172 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = greenMin;
-#line 172 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 172 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenMin = _tmp11_;
-#line 173 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 173 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = greenMax;
-#line 173 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 173 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenMax = _tmp12_;
-#line 174 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 174 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = greenSpeed;
-#line 174 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 174 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenSpeed = _tmp13_;
-#line 175 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 175 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = blueMin;
-#line 175 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 175 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueMin = _tmp14_;
-#line 176 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 176 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = blueMax;
-#line 176 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 176 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueMax = _tmp15_;
-#line 177 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 177 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = blueSpeed;
-#line 177 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 177 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueSpeed = _tmp16_;
-#line 178 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 178 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = alphaMin;
-#line 178 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 178 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaMin = _tmp17_;
-#line 179 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 179 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = alphaMax;
-#line 179 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 179 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaMax = _tmp18_;
-#line 180 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 180 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp19_ = alphaSpeed;
-#line 180 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 180 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaSpeed = _tmp19_;
-#line 181 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 181 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = redAnimate;
-#line 181 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 181 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redAnimate = _tmp20_;
-#line 182 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 182 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = greenAnimate;
-#line 182 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 182 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenAnimate = _tmp21_;
-#line 183 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 183 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp22_ = blueAnimate;
-#line 183 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 183 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueAnimate = _tmp22_;
-#line 184 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 184 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp23_ = alphaAnimate;
-#line 184 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 184 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaAnimate = _tmp23_;
-#line 185 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 185 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp24_ = repeat;
-#line 185 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 185 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->repeat = _tmp24_;
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp25_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ColorAnimation, (BoscoECSIComponent*) component, &_inner_error_);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp26_ = _tmp25_;
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp26_);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 186 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 186 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2101 "Entity.c"
 	}
-#line 187 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 187 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp27_ = _dark_matter_ref0 (self);
-#line 187 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 187 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp27_;
-#line 187 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 187 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 187 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 187 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 187 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 187 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2113 "Entity.c"
 }
@@ -2168,183 +2168,183 @@ BoscoECSEntity* bosco_ecs_entity_replaceColorAnimation (BoscoECSEntity* self, gd
 	ColorAnimationComponent* _tmp33_ = NULL;
 	BoscoECSEntity* _tmp36_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 209 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 209 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasColorAnimation (self);
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 2180 "Entity.c"
 		ColorAnimationComponent* _tmp3_ = NULL;
 		ColorAnimationComponent* _tmp4_ = NULL;
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_colorAnimation (self);
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 2189 "Entity.c"
 	} else {
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 2193 "Entity.c"
 	}
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 210 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 210 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_colorAnimationComponentPool;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 2207 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_colorAnimationComponentPool;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ColorAnimationComponent*) _tmp11_;
 #line 2218 "Entity.c"
 	} else {
 		ColorAnimationComponent* _tmp12_ = NULL;
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = color_animation_component_new ();
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 2227 "Entity.c"
 	}
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 211 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 211 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 212 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 212 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = redMin;
-#line 212 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 212 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redMin = _tmp14_;
-#line 213 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 213 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = redMax;
-#line 213 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 213 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redMax = _tmp15_;
-#line 214 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 214 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = redSpeed;
-#line 214 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 214 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redSpeed = _tmp16_;
-#line 215 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 215 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = greenMin;
-#line 215 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 215 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenMin = _tmp17_;
-#line 216 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 216 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = greenMax;
-#line 216 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 216 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenMax = _tmp18_;
-#line 217 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 217 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp19_ = greenSpeed;
-#line 217 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 217 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenSpeed = _tmp19_;
-#line 218 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 218 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = blueMin;
-#line 218 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 218 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueMin = _tmp20_;
-#line 219 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 219 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = blueMax;
-#line 219 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 219 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueMax = _tmp21_;
-#line 220 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 220 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp22_ = blueSpeed;
-#line 220 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 220 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueSpeed = _tmp22_;
-#line 221 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 221 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp23_ = alphaMin;
-#line 221 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 221 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaMin = _tmp23_;
-#line 222 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 222 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp24_ = alphaMax;
-#line 222 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 222 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaMax = _tmp24_;
-#line 223 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 223 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp25_ = alphaSpeed;
-#line 223 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 223 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaSpeed = _tmp25_;
-#line 224 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 224 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp26_ = redAnimate;
-#line 224 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 224 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->redAnimate = _tmp26_;
-#line 225 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 225 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp27_ = greenAnimate;
-#line 225 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 225 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->greenAnimate = _tmp27_;
-#line 226 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 226 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp28_ = blueAnimate;
-#line 226 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 226 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->blueAnimate = _tmp28_;
-#line 227 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 227 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp29_ = alphaAnimate;
-#line 227 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 227 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->alphaAnimate = _tmp29_;
-#line 228 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 228 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp30_ = repeat;
-#line 228 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 228 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->repeat = _tmp30_;
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp31_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ColorAnimation, (BoscoECSIComponent*) component, &_inner_error_);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp32_ = _tmp31_;
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp32_);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 229 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 229 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2321 "Entity.c"
 	}
-#line 230 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 230 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp33_ = previousComponent;
-#line 230 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 230 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp33_ != NULL) {
 #line 2327 "Entity.c"
 		BoscoECSBag* _tmp34_ = NULL;
 		ColorAnimationComponent* _tmp35_ = NULL;
-#line 231 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 231 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp34_ = self->priv->_colorAnimationComponentPool;
-#line 231 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 231 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp35_ = previousComponent;
-#line 231 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 231 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp34_, (BoscoECSIComponent*) _tmp35_);
 #line 2336 "Entity.c"
 	}
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp36_ = _dark_matter_ref0 (self);
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp36_;
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 233 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 233 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2350 "Entity.c"
 }
@@ -2364,45 +2364,45 @@ BoscoECSEntity* bosco_ecs_entity_removeColorAnimation (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 238 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 238 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 239 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 239 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_colorAnimation (self);
-#line 239 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 239 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 239 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 239 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 239 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 239 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ColorAnimation, &_inner_error_);
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 240 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 240 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2394 "Entity.c"
 	}
-#line 241 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 241 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_colorAnimationComponentPool;
-#line 241 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 241 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 242 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 242 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 242 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 242 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 242 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 242 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 242 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 242 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2408 "Entity.c"
 }
@@ -2416,17 +2416,17 @@ BoscoECSEntity* bosco_ecs_entity_setDestroy (BoscoECSEntity* self, gboolean valu
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 259 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 259 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 260 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 260 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 260 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 260 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isDestroy (self, _tmp0_);
-#line 261 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 261 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 261 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 261 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 261 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 261 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2432 "Entity.c"
 }
@@ -2440,17 +2440,17 @@ BoscoECSEntity* bosco_ecs_entity_setEnemy (BoscoECSEntity* self, gboolean value)
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 278 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 278 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 279 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 279 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 279 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 279 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isEnemy (self, _tmp0_);
-#line 280 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 280 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 280 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 280 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 280 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 280 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2456 "Entity.c"
 }
@@ -2458,11 +2458,11 @@ BoscoECSEntity* bosco_ecs_entity_setEnemy (BoscoECSEntity* self, gboolean value)
 
 void bosco_ecs_entity_clearExpiresComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 283 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 283 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 284 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 284 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_expiresComponentPool;
-#line 284 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 284 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 2468 "Entity.c"
 }
@@ -2485,75 +2485,75 @@ BoscoECSEntity* bosco_ecs_entity_addExpires (BoscoECSEntity* self, gdouble delay
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 300 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 300 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_expiresComponentPool;
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 2499 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_expiresComponentPool;
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ExpiresComponent*) _tmp5_;
 #line 2510 "Entity.c"
 	} else {
 		ExpiresComponent* _tmp6_ = NULL;
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = expires_component_new ();
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 2519 "Entity.c"
 	}
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 301 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 301 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 302 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 302 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = delay;
-#line 302 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 302 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->delay = _tmp8_;
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Expires, (BoscoECSIComponent*) component, &_inner_error_);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 303 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 303 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2547 "Entity.c"
 	}
-#line 304 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 304 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 304 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 304 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 304 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 304 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 304 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 304 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 304 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 304 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2559 "Entity.c"
 }
@@ -2582,119 +2582,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceExpires (BoscoECSEntity* self, gdouble d
 	ExpiresComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 310 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 310 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasExpires (self);
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 2594 "Entity.c"
 		ExpiresComponent* _tmp3_ = NULL;
 		ExpiresComponent* _tmp4_ = NULL;
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_expires (self);
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 2603 "Entity.c"
 	} else {
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 2607 "Entity.c"
 	}
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 311 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 311 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_expiresComponentPool;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 2621 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_expiresComponentPool;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ExpiresComponent*) _tmp11_;
 #line 2632 "Entity.c"
 	} else {
 		ExpiresComponent* _tmp12_ = NULL;
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = expires_component_new ();
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 2641 "Entity.c"
 	}
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 312 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 312 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 313 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 313 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = delay;
-#line 313 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 313 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->delay = _tmp14_;
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Expires, (BoscoECSIComponent*) component, &_inner_error_);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 314 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 314 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2671 "Entity.c"
 	}
-#line 315 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 315 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 315 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 315 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 2677 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		ExpiresComponent* _tmp19_ = NULL;
-#line 316 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 316 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_expiresComponentPool;
-#line 316 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 316 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 316 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 316 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 2686 "Entity.c"
 	}
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 318 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 318 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2700 "Entity.c"
 }
@@ -2714,45 +2714,45 @@ BoscoECSEntity* bosco_ecs_entity_removeExpires (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 323 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 323 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 324 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 324 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_expires (self);
-#line 324 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 324 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 324 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 324 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 324 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 324 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Expires, &_inner_error_);
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 325 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 325 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2744 "Entity.c"
 	}
-#line 326 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 326 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_expiresComponentPool;
-#line 326 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 326 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 327 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 327 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 327 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 327 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 327 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 327 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 327 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 327 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2758 "Entity.c"
 }
@@ -2766,17 +2766,17 @@ BoscoECSEntity* bosco_ecs_entity_setFiring (BoscoECSEntity* self, gboolean value
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 344 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 344 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 345 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 345 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 345 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 345 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isFiring (self, _tmp0_);
-#line 346 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 346 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 346 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 346 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 346 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 346 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2782 "Entity.c"
 }
@@ -2784,11 +2784,11 @@ BoscoECSEntity* bosco_ecs_entity_setFiring (BoscoECSEntity* self, gboolean value
 
 void bosco_ecs_entity_clearHealthComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 349 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 349 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 350 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 350 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_healthComponentPool;
-#line 350 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 350 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 2794 "Entity.c"
 }
@@ -2813,79 +2813,79 @@ BoscoECSEntity* bosco_ecs_entity_addHealth (BoscoECSEntity* self, gdouble health
 	BoscoECSEntity* _tmp11_ = NULL;
 	BoscoECSEntity* _tmp12_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 367 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 367 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_healthComponentPool;
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 2827 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_healthComponentPool;
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (HealthComponent*) _tmp5_;
 #line 2838 "Entity.c"
 	} else {
 		HealthComponent* _tmp6_ = NULL;
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = health_component_new ();
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 2847 "Entity.c"
 	}
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 368 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 368 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 369 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 369 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = health;
-#line 369 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 369 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->health = _tmp8_;
-#line 370 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 370 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = maximumHealth;
-#line 370 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 370 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->maximumHealth = _tmp9_;
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Health, (BoscoECSIComponent*) component, &_inner_error_);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _tmp10_;
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp11_);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 371 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 371 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 2879 "Entity.c"
 	}
-#line 372 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 372 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = _dark_matter_ref0 (self);
-#line 372 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 372 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp12_;
-#line 372 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 372 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 372 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 372 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 372 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 372 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 2891 "Entity.c"
 }
@@ -2916,123 +2916,123 @@ BoscoECSEntity* bosco_ecs_entity_replaceHealth (BoscoECSEntity* self, gdouble he
 	HealthComponent* _tmp18_ = NULL;
 	BoscoECSEntity* _tmp21_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 379 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 379 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasHealth (self);
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 2928 "Entity.c"
 		HealthComponent* _tmp3_ = NULL;
 		HealthComponent* _tmp4_ = NULL;
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_health (self);
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 2937 "Entity.c"
 	} else {
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 2941 "Entity.c"
 	}
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 380 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 380 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_healthComponentPool;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 2955 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_healthComponentPool;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (HealthComponent*) _tmp11_;
 #line 2966 "Entity.c"
 	} else {
 		HealthComponent* _tmp12_ = NULL;
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = health_component_new ();
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 2975 "Entity.c"
 	}
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 381 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 381 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 382 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 382 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = health;
-#line 382 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 382 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->health = _tmp14_;
-#line 383 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 383 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = maximumHealth;
-#line 383 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 383 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->maximumHealth = _tmp15_;
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Health, (BoscoECSIComponent*) component, &_inner_error_);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _tmp16_;
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp17_);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 384 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 384 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3009 "Entity.c"
 	}
-#line 385 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 385 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = previousComponent;
-#line 385 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 385 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp18_ != NULL) {
 #line 3015 "Entity.c"
 		BoscoECSBag* _tmp19_ = NULL;
 		HealthComponent* _tmp20_ = NULL;
-#line 386 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 386 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = self->priv->_healthComponentPool;
-#line 386 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 386 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp20_ = previousComponent;
-#line 386 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 386 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp19_, (BoscoECSIComponent*) _tmp20_);
 #line 3024 "Entity.c"
 	}
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = _dark_matter_ref0 (self);
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp21_;
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 388 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 388 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3038 "Entity.c"
 }
@@ -3052,45 +3052,45 @@ BoscoECSEntity* bosco_ecs_entity_removeHealth (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 393 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 393 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 394 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 394 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_health (self);
-#line 394 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 394 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 394 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 394 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 394 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 394 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Health, &_inner_error_);
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 395 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 395 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3082 "Entity.c"
 	}
-#line 396 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 396 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_healthComponentPool;
-#line 396 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 396 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 397 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 397 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 397 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 397 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 397 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 397 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 397 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 397 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3096 "Entity.c"
 }
@@ -3098,11 +3098,11 @@ BoscoECSEntity* bosco_ecs_entity_removeHealth (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearLayerComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 400 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 400 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 401 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 401 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_layerComponentPool;
-#line 401 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 401 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 3108 "Entity.c"
 }
@@ -3125,75 +3125,75 @@ BoscoECSEntity* bosco_ecs_entity_addLayer (BoscoECSEntity* self, gint ordinal) {
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 417 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 417 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_layerComponentPool;
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 3139 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_layerComponentPool;
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (LayerComponent*) _tmp5_;
 #line 3150 "Entity.c"
 	} else {
 		LayerComponent* _tmp6_ = NULL;
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = layer_component_new ();
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 3159 "Entity.c"
 	}
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 418 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 418 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 419 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 419 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = ordinal;
-#line 419 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 419 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->ordinal = _tmp8_;
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Layer, (BoscoECSIComponent*) component, &_inner_error_);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 420 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 420 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3187 "Entity.c"
 	}
-#line 421 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 421 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 421 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 421 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 421 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 421 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 421 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 421 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 421 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 421 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3199 "Entity.c"
 }
@@ -3222,119 +3222,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceLayer (BoscoECSEntity* self, gint ordina
 	LayerComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 427 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 427 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasLayer (self);
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 3234 "Entity.c"
 		LayerComponent* _tmp3_ = NULL;
 		LayerComponent* _tmp4_ = NULL;
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_layer (self);
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 3243 "Entity.c"
 	} else {
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 3247 "Entity.c"
 	}
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 428 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 428 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_layerComponentPool;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 3261 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_layerComponentPool;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (LayerComponent*) _tmp11_;
 #line 3272 "Entity.c"
 	} else {
 		LayerComponent* _tmp12_ = NULL;
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = layer_component_new ();
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 3281 "Entity.c"
 	}
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 429 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 429 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 430 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 430 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = ordinal;
-#line 430 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 430 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->ordinal = _tmp14_;
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Layer, (BoscoECSIComponent*) component, &_inner_error_);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 431 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 431 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3311 "Entity.c"
 	}
-#line 432 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 432 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 432 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 432 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 3317 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		LayerComponent* _tmp19_ = NULL;
-#line 433 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 433 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_layerComponentPool;
-#line 433 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 433 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 433 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 433 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 3326 "Entity.c"
 	}
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 435 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 435 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3340 "Entity.c"
 }
@@ -3354,45 +3354,45 @@ BoscoECSEntity* bosco_ecs_entity_removeLayer (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 440 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 440 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 441 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 441 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_layer (self);
-#line 441 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 441 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 441 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 441 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 441 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 441 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Layer, &_inner_error_);
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 442 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 442 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3384 "Entity.c"
 	}
-#line 443 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 443 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_layerComponentPool;
-#line 443 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 443 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 444 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 444 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 444 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 444 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 444 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 444 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 444 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 444 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3398 "Entity.c"
 }
@@ -3400,11 +3400,11 @@ BoscoECSEntity* bosco_ecs_entity_removeLayer (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearLifeComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 447 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 447 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 448 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 448 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_lifeComponentPool;
-#line 448 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 448 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 3410 "Entity.c"
 }
@@ -3427,75 +3427,75 @@ BoscoECSEntity* bosco_ecs_entity_addLife (BoscoECSEntity* self, gint count) {
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 464 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 464 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_lifeComponentPool;
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 3441 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_lifeComponentPool;
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (LifeComponent*) _tmp5_;
 #line 3452 "Entity.c"
 	} else {
 		LifeComponent* _tmp6_ = NULL;
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = life_component_new ();
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 3461 "Entity.c"
 	}
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 465 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 465 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 466 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 466 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = count;
-#line 466 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 466 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->count = _tmp8_;
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Life, (BoscoECSIComponent*) component, &_inner_error_);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 467 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 467 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3489 "Entity.c"
 	}
-#line 468 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 468 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 468 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 468 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 468 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 468 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 468 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 468 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 468 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 468 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3501 "Entity.c"
 }
@@ -3524,119 +3524,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceLife (BoscoECSEntity* self, gint count) 
 	LifeComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 474 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 474 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasLife (self);
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 3536 "Entity.c"
 		LifeComponent* _tmp3_ = NULL;
 		LifeComponent* _tmp4_ = NULL;
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_life (self);
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 3545 "Entity.c"
 	} else {
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 3549 "Entity.c"
 	}
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 475 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 475 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_lifeComponentPool;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 3563 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_lifeComponentPool;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (LifeComponent*) _tmp11_;
 #line 3574 "Entity.c"
 	} else {
 		LifeComponent* _tmp12_ = NULL;
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = life_component_new ();
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 3583 "Entity.c"
 	}
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 476 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 476 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 477 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 477 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = count;
-#line 477 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 477 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->count = _tmp14_;
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Life, (BoscoECSIComponent*) component, &_inner_error_);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 478 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 478 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3613 "Entity.c"
 	}
-#line 479 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 479 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 479 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 479 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 3619 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		LifeComponent* _tmp19_ = NULL;
-#line 480 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 480 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_lifeComponentPool;
-#line 480 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 480 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 480 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 480 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 3628 "Entity.c"
 	}
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 482 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 482 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3642 "Entity.c"
 }
@@ -3656,45 +3656,45 @@ BoscoECSEntity* bosco_ecs_entity_removeLife (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 487 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 487 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 488 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 488 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_life (self);
-#line 488 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 488 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 488 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 488 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 488 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 488 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Life, &_inner_error_);
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 489 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 489 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3686 "Entity.c"
 	}
-#line 490 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 490 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_lifeComponentPool;
-#line 490 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 490 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 491 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 491 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 491 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 491 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 491 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 491 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 491 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 491 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3700 "Entity.c"
 }
@@ -3708,17 +3708,17 @@ BoscoECSEntity* bosco_ecs_entity_setMine (BoscoECSEntity* self, gboolean value) 
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 508 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 508 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 509 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 509 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 509 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 509 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isMine (self, _tmp0_);
-#line 510 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 510 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 510 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 510 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 510 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 510 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3724 "Entity.c"
 }
@@ -3726,11 +3726,11 @@ BoscoECSEntity* bosco_ecs_entity_setMine (BoscoECSEntity* self, gboolean value) 
 
 void bosco_ecs_entity_clearMouseComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 513 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 513 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 514 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 514 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_mouseComponentPool;
-#line 514 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 514 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 3736 "Entity.c"
 }
@@ -3755,79 +3755,79 @@ BoscoECSEntity* bosco_ecs_entity_addMouse (BoscoECSEntity* self, gdouble x, gdou
 	BoscoECSEntity* _tmp11_ = NULL;
 	BoscoECSEntity* _tmp12_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 531 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 531 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_mouseComponentPool;
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 3769 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_mouseComponentPool;
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (MouseComponent*) _tmp5_;
 #line 3780 "Entity.c"
 	} else {
 		MouseComponent* _tmp6_ = NULL;
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = mouse_component_new ();
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 3789 "Entity.c"
 	}
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 532 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 532 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 533 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 533 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = x;
-#line 533 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 533 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp8_;
-#line 534 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 534 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = y;
-#line 534 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 534 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp9_;
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mouse, (BoscoECSIComponent*) component, &_inner_error_);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _tmp10_;
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp11_);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 535 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 535 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3821 "Entity.c"
 	}
-#line 536 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 536 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = _dark_matter_ref0 (self);
-#line 536 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 536 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp12_;
-#line 536 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 536 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 536 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 536 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 536 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 536 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3833 "Entity.c"
 }
@@ -3858,123 +3858,123 @@ BoscoECSEntity* bosco_ecs_entity_replaceMouse (BoscoECSEntity* self, gdouble x, 
 	MouseComponent* _tmp18_ = NULL;
 	BoscoECSEntity* _tmp21_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 543 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 543 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasMouse (self);
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 3870 "Entity.c"
 		MouseComponent* _tmp3_ = NULL;
 		MouseComponent* _tmp4_ = NULL;
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_mouse (self);
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 3879 "Entity.c"
 	} else {
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 3883 "Entity.c"
 	}
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 544 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 544 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_mouseComponentPool;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 3897 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_mouseComponentPool;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (MouseComponent*) _tmp11_;
 #line 3908 "Entity.c"
 	} else {
 		MouseComponent* _tmp12_ = NULL;
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = mouse_component_new ();
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 3917 "Entity.c"
 	}
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 545 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 545 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 546 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 546 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = x;
-#line 546 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 546 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp14_;
-#line 547 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 547 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = y;
-#line 547 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 547 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp15_;
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mouse, (BoscoECSIComponent*) component, &_inner_error_);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _tmp16_;
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp17_);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 548 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 548 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 3951 "Entity.c"
 	}
-#line 549 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 549 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = previousComponent;
-#line 549 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 549 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp18_ != NULL) {
 #line 3957 "Entity.c"
 		BoscoECSBag* _tmp19_ = NULL;
 		MouseComponent* _tmp20_ = NULL;
-#line 550 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 550 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = self->priv->_mouseComponentPool;
-#line 550 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 550 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp20_ = previousComponent;
-#line 550 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 550 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp19_, (BoscoECSIComponent*) _tmp20_);
 #line 3966 "Entity.c"
 	}
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = _dark_matter_ref0 (self);
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp21_;
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 552 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 552 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 3980 "Entity.c"
 }
@@ -3994,45 +3994,45 @@ BoscoECSEntity* bosco_ecs_entity_removeMouse (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 557 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 557 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 558 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 558 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_mouse (self);
-#line 558 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 558 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 558 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 558 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 558 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 558 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mouse, &_inner_error_);
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 559 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 559 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4024 "Entity.c"
 	}
-#line 560 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 560 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_mouseComponentPool;
-#line 560 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 560 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 561 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 561 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 561 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 561 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 561 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 561 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 561 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 561 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4038 "Entity.c"
 }
@@ -4046,17 +4046,17 @@ BoscoECSEntity* bosco_ecs_entity_setPlayer (BoscoECSEntity* self, gboolean value
 	BoscoECSEntity* result = NULL;
 	gboolean _tmp0_ = FALSE;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 578 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 578 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 579 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 579 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 579 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 579 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_set_isPlayer (self, _tmp0_);
-#line 580 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 580 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _dark_matter_ref0 (self);
-#line 580 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 580 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp1_;
-#line 580 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 580 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4062 "Entity.c"
 }
@@ -4064,11 +4064,11 @@ BoscoECSEntity* bosco_ecs_entity_setPlayer (BoscoECSEntity* self, gboolean value
 
 void bosco_ecs_entity_clearPositionComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 583 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 583 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 584 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 584 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_positionComponentPool;
-#line 584 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 584 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 4074 "Entity.c"
 }
@@ -4093,79 +4093,79 @@ BoscoECSEntity* bosco_ecs_entity_addPosition (BoscoECSEntity* self, gdouble x, g
 	BoscoECSEntity* _tmp11_ = NULL;
 	BoscoECSEntity* _tmp12_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 601 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 601 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_positionComponentPool;
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 4107 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_positionComponentPool;
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (PositionComponent*) _tmp5_;
 #line 4118 "Entity.c"
 	} else {
 		PositionComponent* _tmp6_ = NULL;
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = position_component_new ();
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 4127 "Entity.c"
 	}
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 602 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 602 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 603 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 603 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = x;
-#line 603 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 603 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp8_;
-#line 604 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 604 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = y;
-#line 604 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 604 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp9_;
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Position, (BoscoECSIComponent*) component, &_inner_error_);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _tmp10_;
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp11_);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 605 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 605 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4159 "Entity.c"
 	}
-#line 606 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 606 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = _dark_matter_ref0 (self);
-#line 606 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 606 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp12_;
-#line 606 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 606 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 606 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 606 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 606 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 606 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4171 "Entity.c"
 }
@@ -4196,123 +4196,123 @@ BoscoECSEntity* bosco_ecs_entity_replacePosition (BoscoECSEntity* self, gdouble 
 	PositionComponent* _tmp18_ = NULL;
 	BoscoECSEntity* _tmp21_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 613 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 613 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasPosition (self);
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 4208 "Entity.c"
 		PositionComponent* _tmp3_ = NULL;
 		PositionComponent* _tmp4_ = NULL;
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_position (self);
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 4217 "Entity.c"
 	} else {
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 4221 "Entity.c"
 	}
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 614 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 614 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_positionComponentPool;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 4235 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_positionComponentPool;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (PositionComponent*) _tmp11_;
 #line 4246 "Entity.c"
 	} else {
 		PositionComponent* _tmp12_ = NULL;
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = position_component_new ();
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 4255 "Entity.c"
 	}
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 615 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 615 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 616 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 616 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = x;
-#line 616 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 616 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp14_;
-#line 617 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 617 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = y;
-#line 617 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 617 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp15_;
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Position, (BoscoECSIComponent*) component, &_inner_error_);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _tmp16_;
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp17_);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 618 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 618 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4289 "Entity.c"
 	}
-#line 619 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 619 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = previousComponent;
-#line 619 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 619 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp18_ != NULL) {
 #line 4295 "Entity.c"
 		BoscoECSBag* _tmp19_ = NULL;
 		PositionComponent* _tmp20_ = NULL;
-#line 620 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 620 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = self->priv->_positionComponentPool;
-#line 620 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 620 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp20_ = previousComponent;
-#line 620 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 620 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp19_, (BoscoECSIComponent*) _tmp20_);
 #line 4304 "Entity.c"
 	}
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = _dark_matter_ref0 (self);
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp21_;
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 622 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 622 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4318 "Entity.c"
 }
@@ -4332,45 +4332,45 @@ BoscoECSEntity* bosco_ecs_entity_removePosition (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 627 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 627 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 628 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 628 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_position (self);
-#line 628 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 628 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 628 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 628 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 628 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 628 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Position, &_inner_error_);
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 629 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 629 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4362 "Entity.c"
 	}
-#line 630 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 630 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_positionComponentPool;
-#line 630 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 630 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 631 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 631 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 631 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 631 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 631 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 631 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 631 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 631 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4376 "Entity.c"
 }
@@ -4378,11 +4378,11 @@ BoscoECSEntity* bosco_ecs_entity_removePosition (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearResourceComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 634 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 634 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 635 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 635 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_resourceComponentPool;
-#line 635 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 635 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 4388 "Entity.c"
 }
@@ -4411,93 +4411,93 @@ BoscoECSEntity* bosco_ecs_entity_addResource (BoscoECSEntity* self, const gchar*
 	BoscoECSEntity* _tmp14_ = NULL;
 	BoscoECSEntity* _tmp15_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 653 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 653 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 653 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 653 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (path != NULL, NULL);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_resourceComponentPool;
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 4427 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_resourceComponentPool;
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ResourceComponent*) _tmp5_;
 #line 4438 "Entity.c"
 	} else {
 		ResourceComponent* _tmp6_ = NULL;
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = resource_component_new ();
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 4447 "Entity.c"
 	}
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 654 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 654 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 655 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 655 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = path;
-#line 655 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 655 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = g_strdup (_tmp8_);
-#line 655 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 655 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_g_free0 (component->path);
-#line 655 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 655 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->path = _tmp9_;
-#line 656 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 656 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = sprite;
-#line 656 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 656 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (_tmp10_);
-#line 656 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 656 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component->sprite);
-#line 656 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 656 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->sprite = _tmp11_;
-#line 657 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 657 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = bgd;
-#line 657 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 657 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->bgd = _tmp12_;
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Resource, (BoscoECSIComponent*) component, &_inner_error_);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = _tmp13_;
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp14_);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 658 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 658 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4491 "Entity.c"
 	}
-#line 659 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 659 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = _dark_matter_ref0 (self);
-#line 659 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 659 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp15_;
-#line 659 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 659 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 659 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 659 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 659 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 659 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4503 "Entity.c"
 }
@@ -4532,137 +4532,137 @@ BoscoECSEntity* bosco_ecs_entity_replaceResource (BoscoECSEntity* self, const gc
 	ResourceComponent* _tmp21_ = NULL;
 	BoscoECSEntity* _tmp24_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 667 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 667 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 667 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 667 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (path != NULL, NULL);
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasResource (self);
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 4546 "Entity.c"
 		ResourceComponent* _tmp3_ = NULL;
 		ResourceComponent* _tmp4_ = NULL;
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_resource (self);
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 4555 "Entity.c"
 	} else {
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 4559 "Entity.c"
 	}
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 668 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 668 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_resourceComponentPool;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 4573 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_resourceComponentPool;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ResourceComponent*) _tmp11_;
 #line 4584 "Entity.c"
 	} else {
 		ResourceComponent* _tmp12_ = NULL;
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = resource_component_new ();
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 4593 "Entity.c"
 	}
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 669 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 669 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 670 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 670 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = path;
-#line 670 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 670 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = g_strdup (_tmp14_);
-#line 670 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 670 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_g_free0 (component->path);
-#line 670 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 670 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->path = _tmp15_;
-#line 671 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 671 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = sprite;
-#line 671 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 671 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _dark_matter_ref0 (_tmp16_);
-#line 671 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 671 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component->sprite);
-#line 671 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 671 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->sprite = _tmp17_;
-#line 672 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 672 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = bgd;
-#line 672 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 672 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->bgd = _tmp18_;
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp19_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Resource, (BoscoECSIComponent*) component, &_inner_error_);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _tmp19_;
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp20_);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 673 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 673 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4639 "Entity.c"
 	}
-#line 674 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 674 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = previousComponent;
-#line 674 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 674 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp21_ != NULL) {
 #line 4645 "Entity.c"
 		BoscoECSBag* _tmp22_ = NULL;
 		ResourceComponent* _tmp23_ = NULL;
-#line 675 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 675 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp22_ = self->priv->_resourceComponentPool;
-#line 675 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 675 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp23_ = previousComponent;
-#line 675 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 675 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp22_, (BoscoECSIComponent*) _tmp23_);
 #line 4654 "Entity.c"
 	}
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp24_ = _dark_matter_ref0 (self);
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp24_;
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 677 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 677 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4668 "Entity.c"
 }
@@ -4682,45 +4682,45 @@ BoscoECSEntity* bosco_ecs_entity_removeResource (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 682 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 682 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 683 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 683 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_resource (self);
-#line 683 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 683 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 683 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 683 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 683 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 683 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Resource, &_inner_error_);
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 684 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 684 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4712 "Entity.c"
 	}
-#line 685 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 685 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_resourceComponentPool;
-#line 685 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 685 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 686 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 686 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 686 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 686 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 686 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 686 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 686 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 686 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4726 "Entity.c"
 }
@@ -4728,11 +4728,11 @@ BoscoECSEntity* bosco_ecs_entity_removeResource (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearScaleAnimationComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 689 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 689 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 690 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 690 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_scaleAnimationComponentPool;
-#line 690 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 690 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 4738 "Entity.c"
 }
@@ -4763,91 +4763,91 @@ BoscoECSEntity* bosco_ecs_entity_addScaleAnimation (BoscoECSEntity* self, gdoubl
 	BoscoECSEntity* _tmp14_ = NULL;
 	BoscoECSEntity* _tmp15_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 710 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 710 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_scaleAnimationComponentPool;
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 4777 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_scaleAnimationComponentPool;
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ScaleAnimationComponent*) _tmp5_;
 #line 4788 "Entity.c"
 	} else {
 		ScaleAnimationComponent* _tmp6_ = NULL;
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = scale_animation_component_new ();
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 4797 "Entity.c"
 	}
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 711 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 711 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 712 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 712 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = min;
-#line 712 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 712 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->min = _tmp8_;
-#line 713 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 713 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = max;
-#line 713 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 713 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->max = _tmp9_;
-#line 714 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 714 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = speed;
-#line 714 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 714 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->speed = _tmp10_;
-#line 715 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 715 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = repeat;
-#line 715 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 715 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->repeat = _tmp11_;
-#line 716 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 716 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = active;
-#line 716 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 716 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->active = _tmp12_;
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ScaleAnimation, (BoscoECSIComponent*) component, &_inner_error_);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = _tmp13_;
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp14_);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 717 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 717 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4841 "Entity.c"
 	}
-#line 718 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 718 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = _dark_matter_ref0 (self);
-#line 718 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 718 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp15_;
-#line 718 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 718 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 718 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 718 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 718 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 718 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 4853 "Entity.c"
 }
@@ -4884,135 +4884,135 @@ BoscoECSEntity* bosco_ecs_entity_replaceScaleAnimation (BoscoECSEntity* self, gd
 	ScaleAnimationComponent* _tmp21_ = NULL;
 	BoscoECSEntity* _tmp24_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 728 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 728 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasScaleAnimation (self);
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 4896 "Entity.c"
 		ScaleAnimationComponent* _tmp3_ = NULL;
 		ScaleAnimationComponent* _tmp4_ = NULL;
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_scaleAnimation (self);
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 4905 "Entity.c"
 	} else {
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 4909 "Entity.c"
 	}
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 729 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 729 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_scaleAnimationComponentPool;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 4923 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_scaleAnimationComponentPool;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ScaleAnimationComponent*) _tmp11_;
 #line 4934 "Entity.c"
 	} else {
 		ScaleAnimationComponent* _tmp12_ = NULL;
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = scale_animation_component_new ();
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 4943 "Entity.c"
 	}
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 730 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 730 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 731 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 731 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = min;
-#line 731 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 731 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->min = _tmp14_;
-#line 732 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 732 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = max;
-#line 732 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 732 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->max = _tmp15_;
-#line 733 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 733 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = speed;
-#line 733 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 733 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->speed = _tmp16_;
-#line 734 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 734 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = repeat;
-#line 734 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 734 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->repeat = _tmp17_;
-#line 735 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 735 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = active;
-#line 735 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 735 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->active = _tmp18_;
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp19_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ScaleAnimation, (BoscoECSIComponent*) component, &_inner_error_);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _tmp19_;
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp20_);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 736 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 736 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 4989 "Entity.c"
 	}
-#line 737 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 737 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = previousComponent;
-#line 737 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 737 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp21_ != NULL) {
 #line 4995 "Entity.c"
 		BoscoECSBag* _tmp22_ = NULL;
 		ScaleAnimationComponent* _tmp23_ = NULL;
-#line 738 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 738 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp22_ = self->priv->_scaleAnimationComponentPool;
-#line 738 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 738 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp23_ = previousComponent;
-#line 738 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 738 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp22_, (BoscoECSIComponent*) _tmp23_);
 #line 5004 "Entity.c"
 	}
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp24_ = _dark_matter_ref0 (self);
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp24_;
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 740 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 740 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5018 "Entity.c"
 }
@@ -5032,45 +5032,45 @@ BoscoECSEntity* bosco_ecs_entity_removeScaleAnimation (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 745 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 745 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 746 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 746 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_scaleAnimation (self);
-#line 746 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 746 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 746 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 746 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 746 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 746 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ScaleAnimation, &_inner_error_);
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 747 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 747 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5062 "Entity.c"
 	}
-#line 748 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 748 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_scaleAnimationComponentPool;
-#line 748 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 748 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 749 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 749 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 749 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 749 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 749 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 749 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 749 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 749 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5076 "Entity.c"
 }
@@ -5078,11 +5078,11 @@ BoscoECSEntity* bosco_ecs_entity_removeScaleAnimation (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearScaleComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 752 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 752 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 753 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 753 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_scaleComponentPool;
-#line 753 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 753 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 5088 "Entity.c"
 }
@@ -5107,79 +5107,79 @@ BoscoECSEntity* bosco_ecs_entity_addScale (BoscoECSEntity* self, gdouble x, gdou
 	BoscoECSEntity* _tmp11_ = NULL;
 	BoscoECSEntity* _tmp12_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 770 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 770 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_scaleComponentPool;
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 5121 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_scaleComponentPool;
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ScaleComponent*) _tmp5_;
 #line 5132 "Entity.c"
 	} else {
 		ScaleComponent* _tmp6_ = NULL;
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = scale_component_new ();
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 5141 "Entity.c"
 	}
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 771 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 771 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 772 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 772 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = x;
-#line 772 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 772 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp8_;
-#line 773 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 773 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = y;
-#line 773 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 773 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp9_;
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Scale, (BoscoECSIComponent*) component, &_inner_error_);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _tmp10_;
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp11_);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 774 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 774 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5173 "Entity.c"
 	}
-#line 775 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 775 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = _dark_matter_ref0 (self);
-#line 775 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 775 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp12_;
-#line 775 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 775 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 775 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 775 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 775 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 775 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5185 "Entity.c"
 }
@@ -5210,123 +5210,123 @@ BoscoECSEntity* bosco_ecs_entity_replaceScale (BoscoECSEntity* self, gdouble x, 
 	ScaleComponent* _tmp18_ = NULL;
 	BoscoECSEntity* _tmp21_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 782 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 782 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasScale (self);
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 5222 "Entity.c"
 		ScaleComponent* _tmp3_ = NULL;
 		ScaleComponent* _tmp4_ = NULL;
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_scale (self);
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 5231 "Entity.c"
 	} else {
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 5235 "Entity.c"
 	}
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 783 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 783 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_scaleComponentPool;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 5249 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_scaleComponentPool;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ScaleComponent*) _tmp11_;
 #line 5260 "Entity.c"
 	} else {
 		ScaleComponent* _tmp12_ = NULL;
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = scale_component_new ();
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 5269 "Entity.c"
 	}
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 784 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 784 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 785 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 785 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = x;
-#line 785 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 785 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp14_;
-#line 786 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 786 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = y;
-#line 786 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 786 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp15_;
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Scale, (BoscoECSIComponent*) component, &_inner_error_);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _tmp16_;
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp17_);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 787 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 787 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5303 "Entity.c"
 	}
-#line 788 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 788 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = previousComponent;
-#line 788 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 788 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp18_ != NULL) {
 #line 5309 "Entity.c"
 		BoscoECSBag* _tmp19_ = NULL;
 		ScaleComponent* _tmp20_ = NULL;
-#line 789 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 789 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = self->priv->_scaleComponentPool;
-#line 789 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 789 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp20_ = previousComponent;
-#line 789 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 789 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp19_, (BoscoECSIComponent*) _tmp20_);
 #line 5318 "Entity.c"
 	}
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = _dark_matter_ref0 (self);
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp21_;
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 791 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 791 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5332 "Entity.c"
 }
@@ -5346,45 +5346,45 @@ BoscoECSEntity* bosco_ecs_entity_removeScale (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 796 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 796 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 797 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 797 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_scale (self);
-#line 797 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 797 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 797 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 797 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 797 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 797 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Scale, &_inner_error_);
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 798 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 798 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5376 "Entity.c"
 	}
-#line 799 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 799 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_scaleComponentPool;
-#line 799 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 799 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 800 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 800 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 800 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 800 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 800 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 800 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 800 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 800 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5390 "Entity.c"
 }
@@ -5392,11 +5392,11 @@ BoscoECSEntity* bosco_ecs_entity_removeScale (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearScoreComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 803 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 803 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 804 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 804 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_scoreComponentPool;
-#line 804 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 804 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 5402 "Entity.c"
 }
@@ -5419,75 +5419,75 @@ BoscoECSEntity* bosco_ecs_entity_addScore (BoscoECSEntity* self, gdouble value) 
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 820 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 820 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_scoreComponentPool;
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 5433 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_scoreComponentPool;
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (ScoreComponent*) _tmp5_;
 #line 5444 "Entity.c"
 	} else {
 		ScoreComponent* _tmp6_ = NULL;
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = score_component_new ();
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 5453 "Entity.c"
 	}
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 821 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 821 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 822 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 822 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = value;
-#line 822 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 822 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->value = _tmp8_;
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Score, (BoscoECSIComponent*) component, &_inner_error_);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 823 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 823 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5481 "Entity.c"
 	}
-#line 824 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 824 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 824 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 824 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 824 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 824 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 824 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 824 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 824 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 824 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5493 "Entity.c"
 }
@@ -5516,119 +5516,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceScore (BoscoECSEntity* self, gdouble val
 	ScoreComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 830 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 830 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasScore (self);
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 5528 "Entity.c"
 		ScoreComponent* _tmp3_ = NULL;
 		ScoreComponent* _tmp4_ = NULL;
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_score (self);
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 5537 "Entity.c"
 	} else {
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 5541 "Entity.c"
 	}
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 831 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 831 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_scoreComponentPool;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 5555 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_scoreComponentPool;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (ScoreComponent*) _tmp11_;
 #line 5566 "Entity.c"
 	} else {
 		ScoreComponent* _tmp12_ = NULL;
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = score_component_new ();
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 5575 "Entity.c"
 	}
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 832 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 832 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 833 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 833 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = value;
-#line 833 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 833 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->value = _tmp14_;
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Score, (BoscoECSIComponent*) component, &_inner_error_);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 834 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 834 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5605 "Entity.c"
 	}
-#line 835 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 835 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 835 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 835 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 5611 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		ScoreComponent* _tmp19_ = NULL;
-#line 836 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 836 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_scoreComponentPool;
-#line 836 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 836 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 836 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 836 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 5620 "Entity.c"
 	}
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 838 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 838 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5634 "Entity.c"
 }
@@ -5648,45 +5648,45 @@ BoscoECSEntity* bosco_ecs_entity_removeScore (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 843 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 843 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 844 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 844 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_score (self);
-#line 844 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 844 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 844 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 844 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 844 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 844 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Score, &_inner_error_);
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 845 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 845 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5678 "Entity.c"
 	}
-#line 846 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 846 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_scoreComponentPool;
-#line 846 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 846 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 847 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 847 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 847 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 847 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 847 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 847 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 847 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 847 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5692 "Entity.c"
 }
@@ -5694,11 +5694,11 @@ BoscoECSEntity* bosco_ecs_entity_removeScore (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearSoundEffectComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 850 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 850 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 851 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 851 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_soundEffectComponentPool;
-#line 851 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 851 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 5704 "Entity.c"
 }
@@ -5721,75 +5721,75 @@ BoscoECSEntity* bosco_ecs_entity_addSoundEffect (BoscoECSEntity* self, gint effe
 	BoscoECSEntity* _tmp10_ = NULL;
 	BoscoECSEntity* _tmp11_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 867 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 867 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_soundEffectComponentPool;
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 5735 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_soundEffectComponentPool;
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (SoundEffectComponent*) _tmp5_;
 #line 5746 "Entity.c"
 	} else {
 		SoundEffectComponent* _tmp6_ = NULL;
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = sound_effect_component_new ();
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 5755 "Entity.c"
 	}
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 868 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 868 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 869 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 869 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = effect;
-#line 869 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 869 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->effect = _tmp8_;
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_SoundEffect, (BoscoECSIComponent*) component, &_inner_error_);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = _tmp9_;
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp10_);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 870 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 870 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5783 "Entity.c"
 	}
-#line 871 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 871 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _dark_matter_ref0 (self);
-#line 871 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 871 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp11_;
-#line 871 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 871 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 871 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 871 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 871 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 871 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5795 "Entity.c"
 }
@@ -5818,119 +5818,119 @@ BoscoECSEntity* bosco_ecs_entity_replaceSoundEffect (BoscoECSEntity* self, gint 
 	SoundEffectComponent* _tmp17_ = NULL;
 	BoscoECSEntity* _tmp20_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 877 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 877 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasSoundEffect (self);
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 5830 "Entity.c"
 		SoundEffectComponent* _tmp3_ = NULL;
 		SoundEffectComponent* _tmp4_ = NULL;
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_soundEffect (self);
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 5839 "Entity.c"
 	} else {
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 5843 "Entity.c"
 	}
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 878 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 878 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_soundEffectComponentPool;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 5857 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_soundEffectComponentPool;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (SoundEffectComponent*) _tmp11_;
 #line 5868 "Entity.c"
 	} else {
 		SoundEffectComponent* _tmp12_ = NULL;
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = sound_effect_component_new ();
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 5877 "Entity.c"
 	}
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 879 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 879 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 880 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 880 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = effect;
-#line 880 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 880 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->effect = _tmp14_;
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_SoundEffect, (BoscoECSIComponent*) component, &_inner_error_);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = _tmp15_;
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp16_);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 881 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 881 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5907 "Entity.c"
 	}
-#line 882 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 882 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = previousComponent;
-#line 882 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 882 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp17_ != NULL) {
 #line 5913 "Entity.c"
 		BoscoECSBag* _tmp18_ = NULL;
 		SoundEffectComponent* _tmp19_ = NULL;
-#line 883 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 883 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp18_ = self->priv->_soundEffectComponentPool;
-#line 883 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 883 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = previousComponent;
-#line 883 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 883 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp18_, (BoscoECSIComponent*) _tmp19_);
 #line 5922 "Entity.c"
 	}
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp20_ = _dark_matter_ref0 (self);
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp20_;
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 885 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 885 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5936 "Entity.c"
 }
@@ -5950,45 +5950,45 @@ BoscoECSEntity* bosco_ecs_entity_removeSoundEffect (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 890 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 890 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 891 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 891 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_soundEffect (self);
-#line 891 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 891 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 891 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 891 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 891 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 891 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_SoundEffect, &_inner_error_);
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 892 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 892 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 5980 "Entity.c"
 	}
-#line 893 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 893 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_soundEffectComponentPool;
-#line 893 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 893 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 894 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 894 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 894 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 894 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 894 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 894 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 894 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 894 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 5994 "Entity.c"
 }
@@ -5996,11 +5996,11 @@ BoscoECSEntity* bosco_ecs_entity_removeSoundEffect (BoscoECSEntity* self) {
 
 void bosco_ecs_entity_clearVelocityComponentPool (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp0_ = NULL;
-#line 897 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 897 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 898 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 898 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = self->priv->_velocityComponentPool;
-#line 898 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 898 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_clear (_tmp0_);
 #line 6006 "Entity.c"
 }
@@ -6025,79 +6025,79 @@ BoscoECSEntity* bosco_ecs_entity_addVelocity (BoscoECSEntity* self, gdouble x, g
 	BoscoECSEntity* _tmp11_ = NULL;
 	BoscoECSEntity* _tmp12_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 915 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 915 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = self->priv->_velocityComponentPool;
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = bosco_ecs_bag_get_length (_tmp1_);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = _tmp2_;
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp3_ > 0) {
 #line 6039 "Entity.c"
 		BoscoECSBag* _tmp4_ = NULL;
 		gpointer _tmp5_ = NULL;
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = self->priv->_velocityComponentPool;
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp5_ = bosco_ecs_bag_pop (_tmp4_);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = (VelocityComponent*) _tmp5_;
 #line 6050 "Entity.c"
 	} else {
 		VelocityComponent* _tmp6_ = NULL;
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = velocity_component_new ();
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp6_;
 #line 6059 "Entity.c"
 	}
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = _dark_matter_ref0 (_tmp0_);
-#line 916 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 916 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp7_;
-#line 917 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 917 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = x;
-#line 917 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 917 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp8_;
-#line 918 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 918 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = y;
-#line 918 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 918 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp9_;
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp10_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Velocity, (BoscoECSIComponent*) component, &_inner_error_);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp11_ = _tmp10_;
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp11_);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp0_);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 919 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 919 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6091 "Entity.c"
 	}
-#line 920 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 920 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp12_ = _dark_matter_ref0 (self);
-#line 920 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 920 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp12_;
-#line 920 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 920 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 920 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 920 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp0_);
-#line 920 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 920 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6103 "Entity.c"
 }
@@ -6128,123 +6128,123 @@ BoscoECSEntity* bosco_ecs_entity_replaceVelocity (BoscoECSEntity* self, gdouble 
 	VelocityComponent* _tmp18_ = NULL;
 	BoscoECSEntity* _tmp21_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 927 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 927 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_hasVelocity (self);
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp2_) {
 #line 6140 "Entity.c"
 		VelocityComponent* _tmp3_ = NULL;
 		VelocityComponent* _tmp4_ = NULL;
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = bosco_ecs_entity_get_velocity (self);
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp4_ = _tmp3_;
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = _tmp4_;
 #line 6149 "Entity.c"
 	} else {
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp0_ = NULL;
 #line 6153 "Entity.c"
 	}
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = _dark_matter_ref0 (_tmp0_);
-#line 928 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 928 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	previousComponent = _tmp5_;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp7_ = self->priv->_velocityComponentPool;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp8_ = bosco_ecs_bag_get_length (_tmp7_);
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp9_ = _tmp8_;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp9_ > 0) {
 #line 6167 "Entity.c"
 		BoscoECSBag* _tmp10_ = NULL;
 		gpointer _tmp11_ = NULL;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp10_ = self->priv->_velocityComponentPool;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp11_ = bosco_ecs_bag_pop (_tmp10_);
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = (VelocityComponent*) _tmp11_;
 #line 6178 "Entity.c"
 	} else {
 		VelocityComponent* _tmp12_ = NULL;
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp12_ = velocity_component_new ();
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp6_ = _tmp12_;
 #line 6187 "Entity.c"
 	}
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp13_ = _dark_matter_ref0 (_tmp6_);
-#line 929 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 929 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp13_;
-#line 930 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 930 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp14_ = x;
-#line 930 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 930 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->x = _tmp14_;
-#line 931 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 931 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp15_ = y;
-#line 931 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 931 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component->y = _tmp15_;
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp16_ = bosco_ecs_entity_base_replaceComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Velocity, (BoscoECSIComponent*) component, &_inner_error_);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp17_ = _tmp16_;
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp17_);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (_tmp6_);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (previousComponent);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 932 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 932 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6221 "Entity.c"
 	}
-#line 933 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 933 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp18_ = previousComponent;
-#line 933 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 933 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp18_ != NULL) {
 #line 6227 "Entity.c"
 		BoscoECSBag* _tmp19_ = NULL;
 		VelocityComponent* _tmp20_ = NULL;
-#line 934 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 934 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp19_ = self->priv->_velocityComponentPool;
-#line 934 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 934 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp20_ = previousComponent;
-#line 934 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 934 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		bosco_ecs_bag_push (_tmp19_, (BoscoECSIComponent*) _tmp20_);
 #line 6236 "Entity.c"
 	}
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp21_ = _dark_matter_ref0 (self);
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp21_;
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (previousComponent);
-#line 936 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 936 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6250 "Entity.c"
 }
@@ -6264,45 +6264,45 @@ BoscoECSEntity* bosco_ecs_entity_removeVelocity (BoscoECSEntity* self) {
 	BoscoECSBag* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 941 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 941 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 942 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 942 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_get_velocity (self);
-#line 942 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 942 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = _tmp0_;
-#line 942 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 942 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 942 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 942 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	component = _tmp2_;
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp3_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Velocity, &_inner_error_);
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp4_ = _tmp3_;
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_dark_matter_unref0 (component);
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 943 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 943 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6294 "Entity.c"
 	}
-#line 944 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 944 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp5_ = self->priv->_velocityComponentPool;
-#line 944 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 944 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_bag_push (_tmp5_, (BoscoECSIComponent*) component);
-#line 945 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 945 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp6_ = _dark_matter_ref0 (self);
-#line 945 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 945 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp6_;
-#line 945 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 945 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (component);
-#line 945 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 945 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6308 "Entity.c"
 }
@@ -6313,25 +6313,25 @@ BoundsComponent* bosco_ecs_entity_get_bounds (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 73 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 73 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bounds, &_inner_error_);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6331 "Entity.c"
 	}
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_BOUNDS_COMPONENT, BoundsComponent);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6337 "Entity.c"
 }
@@ -6340,13 +6340,13 @@ BoundsComponent* bosco_ecs_entity_get_bounds (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasBounds (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 78 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 78 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 79 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 79 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bounds);
-#line 79 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 79 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 79 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 79 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6352 "Entity.c"
 }
@@ -6355,13 +6355,13 @@ gboolean bosco_ecs_entity_get_hasBounds (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_isBullet (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 116 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 116 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bullet);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6367 "Entity.c"
 }
@@ -6372,60 +6372,60 @@ void bosco_ecs_entity_set_isBullet (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 118 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 118 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isBullet (self);
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 6386 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 120 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 120 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 120 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 120 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 6392 "Entity.c"
 			BulletComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_bulletComponent;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bullet, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6412 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Bullet, &_inner_error_);
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6431 "Entity.c"
 			}
@@ -6439,25 +6439,25 @@ ColorAnimationComponent* bosco_ecs_entity_get_colorAnimation (BoscoECSEntity* se
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ColorAnimation, &_inner_error_);
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6457 "Entity.c"
 	}
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_COLOR_ANIMATION_COMPONENT, ColorAnimationComponent);
-#line 140 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 140 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6463 "Entity.c"
 }
@@ -6466,13 +6466,13 @@ ColorAnimationComponent* bosco_ecs_entity_get_colorAnimation (BoscoECSEntity* se
 gboolean bosco_ecs_entity_get_hasColorAnimation (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 144 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 144 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ColorAnimation);
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6478 "Entity.c"
 }
@@ -6481,13 +6481,13 @@ gboolean bosco_ecs_entity_get_hasColorAnimation (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_isDestroy (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 246 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 246 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 247 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 247 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Destroy);
-#line 247 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 247 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 247 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 247 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6493 "Entity.c"
 }
@@ -6498,60 +6498,60 @@ void bosco_ecs_entity_set_isDestroy (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 248 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 248 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 249 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 249 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 249 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 249 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isDestroy (self);
-#line 249 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 249 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 249 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 249 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 6512 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 250 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 250 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 250 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 250 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 6518 "Entity.c"
 			DestroyComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_destroyComponent;
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Destroy, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 251 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 251 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6538 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Destroy, &_inner_error_);
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 253 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 253 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6557 "Entity.c"
 			}
@@ -6563,13 +6563,13 @@ void bosco_ecs_entity_set_isDestroy (BoscoECSEntity* self, gboolean value) {
 gboolean bosco_ecs_entity_get_isEnemy (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 265 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 265 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 266 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 266 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Enemy);
-#line 266 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 266 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 266 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 266 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6575 "Entity.c"
 }
@@ -6580,60 +6580,60 @@ void bosco_ecs_entity_set_isEnemy (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 267 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 267 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 268 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 268 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 268 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 268 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isEnemy (self);
-#line 268 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 268 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 268 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 268 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 6594 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 269 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 269 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 269 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 269 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 6600 "Entity.c"
 			EnemyComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_enemyComponent;
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Enemy, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 270 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 270 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6620 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Enemy, &_inner_error_);
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 272 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 272 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6639 "Entity.c"
 			}
@@ -6647,25 +6647,25 @@ ExpiresComponent* bosco_ecs_entity_get_expires (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 288 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 288 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Expires, &_inner_error_);
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6665 "Entity.c"
 	}
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_EXPIRES_COMPONENT, ExpiresComponent);
-#line 289 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 289 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6671 "Entity.c"
 }
@@ -6674,13 +6674,13 @@ ExpiresComponent* bosco_ecs_entity_get_expires (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasExpires (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 293 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 293 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 294 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 294 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Expires);
-#line 294 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 294 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 294 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 294 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6686 "Entity.c"
 }
@@ -6689,13 +6689,13 @@ gboolean bosco_ecs_entity_get_hasExpires (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_isFiring (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 331 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 331 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 332 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 332 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Firing);
-#line 332 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 332 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 332 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 332 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6701 "Entity.c"
 }
@@ -6706,60 +6706,60 @@ void bosco_ecs_entity_set_isFiring (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 333 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 333 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 334 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 334 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 334 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 334 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isFiring (self);
-#line 334 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 334 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 334 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 334 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 6720 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 335 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 335 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 335 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 335 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 6726 "Entity.c"
 			FiringComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_firingComponent;
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Firing, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 336 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 336 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6746 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Firing, &_inner_error_);
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 338 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 338 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6765 "Entity.c"
 			}
@@ -6773,25 +6773,25 @@ HealthComponent* bosco_ecs_entity_get_health (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 354 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 354 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Health, &_inner_error_);
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6791 "Entity.c"
 	}
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_HEALTH_COMPONENT, HealthComponent);
-#line 355 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 355 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6797 "Entity.c"
 }
@@ -6800,13 +6800,13 @@ HealthComponent* bosco_ecs_entity_get_health (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasHealth (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 359 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 359 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 360 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 360 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Health);
-#line 360 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 360 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 360 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 360 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6812 "Entity.c"
 }
@@ -6817,25 +6817,25 @@ LayerComponent* bosco_ecs_entity_get_layer (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 405 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 405 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Layer, &_inner_error_);
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6835 "Entity.c"
 	}
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_LAYER_COMPONENT, LayerComponent);
-#line 406 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 406 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6841 "Entity.c"
 }
@@ -6844,13 +6844,13 @@ LayerComponent* bosco_ecs_entity_get_layer (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasLayer (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 410 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 410 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 411 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 411 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Layer);
-#line 411 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 411 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 411 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 411 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6856 "Entity.c"
 }
@@ -6861,25 +6861,25 @@ LifeComponent* bosco_ecs_entity_get_life (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 452 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 452 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Life, &_inner_error_);
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 6879 "Entity.c"
 	}
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_LIFE_COMPONENT, LifeComponent);
-#line 453 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 453 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6885 "Entity.c"
 }
@@ -6888,13 +6888,13 @@ LifeComponent* bosco_ecs_entity_get_life (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasLife (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 457 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 457 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 458 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 458 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Life);
-#line 458 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 458 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 458 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 458 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6900 "Entity.c"
 }
@@ -6903,13 +6903,13 @@ gboolean bosco_ecs_entity_get_hasLife (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_isMine (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 495 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 495 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 496 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 496 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mine);
-#line 496 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 496 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 496 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 496 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 6915 "Entity.c"
 }
@@ -6920,60 +6920,60 @@ void bosco_ecs_entity_set_isMine (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 497 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 497 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 498 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 498 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 498 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 498 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isMine (self);
-#line 498 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 498 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 498 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 498 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 6934 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 499 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 499 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 499 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 499 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 6940 "Entity.c"
 			MineComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_mineComponent;
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mine, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 500 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 500 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6960 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mine, &_inner_error_);
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 502 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 502 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 6979 "Entity.c"
 			}
@@ -6987,25 +6987,25 @@ MouseComponent* bosco_ecs_entity_get_mouse (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 518 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 518 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mouse, &_inner_error_);
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7005 "Entity.c"
 	}
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_MOUSE_COMPONENT, MouseComponent);
-#line 519 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 519 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7011 "Entity.c"
 }
@@ -7014,13 +7014,13 @@ MouseComponent* bosco_ecs_entity_get_mouse (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasMouse (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 523 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 523 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 524 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 524 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Mouse);
-#line 524 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 524 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 524 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 524 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7026 "Entity.c"
 }
@@ -7029,13 +7029,13 @@ gboolean bosco_ecs_entity_get_hasMouse (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_isPlayer (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 565 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 565 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 566 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 566 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Player);
-#line 566 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 566 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 566 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 566 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7041 "Entity.c"
 }
@@ -7046,60 +7046,60 @@ void bosco_ecs_entity_set_isPlayer (BoscoECSEntity* self, gboolean value) {
 	gboolean _tmp1_ = FALSE;
 	gboolean _tmp2_ = FALSE;
 	GError * _inner_error_ = NULL;
-#line 567 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 567 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_if_fail (self != NULL);
-#line 568 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 568 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = value;
-#line 568 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 568 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_get_isPlayer (self);
-#line 568 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 568 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp2_ = _tmp1_;
-#line 568 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 568 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (_tmp0_ != _tmp2_) {
 #line 7060 "Entity.c"
 		gboolean _tmp3_ = FALSE;
-#line 569 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 569 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		_tmp3_ = value;
-#line 569 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 569 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		if (_tmp3_) {
 #line 7066 "Entity.c"
 			PlayerComponent* _tmp4_ = NULL;
 			BoscoECSEntity* _tmp5_ = NULL;
 			BoscoECSEntity* _tmp6_ = NULL;
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp4_ = self->priv->_playerComponent;
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp5_ = bosco_ecs_entity_base_addComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Player, (BoscoECSIComponent*) _tmp4_, &_inner_error_);
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp6_ = _tmp5_;
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp6_);
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 570 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 570 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 7086 "Entity.c"
 			}
 		} else {
 			BoscoECSEntity* _tmp7_ = NULL;
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp7_ = bosco_ecs_entity_base_removeComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Player, &_inner_error_);
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_tmp8_ = _tmp7_;
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			_dark_matter_unref0 (_tmp8_);
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				g_clear_error (&_inner_error_);
-#line 572 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 572 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 				return;
 #line 7105 "Entity.c"
 			}
@@ -7113,25 +7113,25 @@ PositionComponent* bosco_ecs_entity_get_position (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 588 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 588 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Position, &_inner_error_);
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7131 "Entity.c"
 	}
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_POSITION_COMPONENT, PositionComponent);
-#line 589 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 589 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7137 "Entity.c"
 }
@@ -7140,13 +7140,13 @@ PositionComponent* bosco_ecs_entity_get_position (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasPosition (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 593 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 593 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 594 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 594 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Position);
-#line 594 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 594 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 594 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 594 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7152 "Entity.c"
 }
@@ -7157,25 +7157,25 @@ ResourceComponent* bosco_ecs_entity_get_resource (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 639 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 639 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Resource, &_inner_error_);
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7175 "Entity.c"
 	}
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_RESOURCE_COMPONENT, ResourceComponent);
-#line 640 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 640 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7181 "Entity.c"
 }
@@ -7184,13 +7184,13 @@ ResourceComponent* bosco_ecs_entity_get_resource (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasResource (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 644 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 644 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 645 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 645 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Resource);
-#line 645 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 645 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 645 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 645 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7196 "Entity.c"
 }
@@ -7201,25 +7201,25 @@ ScaleAnimationComponent* bosco_ecs_entity_get_scaleAnimation (BoscoECSEntity* se
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 694 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 694 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ScaleAnimation, &_inner_error_);
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7219 "Entity.c"
 	}
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_SCALE_ANIMATION_COMPONENT, ScaleAnimationComponent);
-#line 695 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 695 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7225 "Entity.c"
 }
@@ -7228,13 +7228,13 @@ ScaleAnimationComponent* bosco_ecs_entity_get_scaleAnimation (BoscoECSEntity* se
 gboolean bosco_ecs_entity_get_hasScaleAnimation (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 699 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 699 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 700 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 700 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_ScaleAnimation);
-#line 700 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 700 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 700 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 700 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7240 "Entity.c"
 }
@@ -7245,25 +7245,25 @@ ScaleComponent* bosco_ecs_entity_get_scale (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 757 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 757 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Scale, &_inner_error_);
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7263 "Entity.c"
 	}
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_SCALE_COMPONENT, ScaleComponent);
-#line 758 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 758 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7269 "Entity.c"
 }
@@ -7272,13 +7272,13 @@ ScaleComponent* bosco_ecs_entity_get_scale (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasScale (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 762 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 762 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 763 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 763 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Scale);
-#line 763 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 763 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 763 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 763 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7284 "Entity.c"
 }
@@ -7289,25 +7289,25 @@ ScoreComponent* bosco_ecs_entity_get_score (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 808 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 808 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Score, &_inner_error_);
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7307 "Entity.c"
 	}
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_SCORE_COMPONENT, ScoreComponent);
-#line 809 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 809 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7313 "Entity.c"
 }
@@ -7316,13 +7316,13 @@ ScoreComponent* bosco_ecs_entity_get_score (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasScore (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 813 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 813 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 814 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 814 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Score);
-#line 814 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 814 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 814 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 814 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7328 "Entity.c"
 }
@@ -7333,25 +7333,25 @@ SoundEffectComponent* bosco_ecs_entity_get_soundEffect (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 855 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 855 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_SoundEffect, &_inner_error_);
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7351 "Entity.c"
 	}
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_SOUND_EFFECT_COMPONENT, SoundEffectComponent);
-#line 856 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 856 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7357 "Entity.c"
 }
@@ -7360,13 +7360,13 @@ SoundEffectComponent* bosco_ecs_entity_get_soundEffect (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasSoundEffect (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 860 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 860 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 861 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 861 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_SoundEffect);
-#line 861 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 861 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 861 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 861 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7372 "Entity.c"
 }
@@ -7377,25 +7377,25 @@ VelocityComponent* bosco_ecs_entity_get_velocity (BoscoECSEntity* self) {
 	BoscoECSIComponent* _tmp0_ = NULL;
 	BoscoECSIComponent* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 902 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 902 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp1_ = bosco_ecs_entity_base_getComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Velocity, &_inner_error_);
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = _tmp1_;
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		g_clear_error (&_inner_error_);
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 		return NULL;
 #line 7395 "Entity.c"
 	}
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = G_TYPE_CHECK_INSTANCE_CAST (_tmp0_, TYPE_VELOCITY_COMPONENT, VelocityComponent);
-#line 903 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 903 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7401 "Entity.c"
 }
@@ -7404,31 +7404,31 @@ VelocityComponent* bosco_ecs_entity_get_velocity (BoscoECSEntity* self) {
 gboolean bosco_ecs_entity_get_hasVelocity (BoscoECSEntity* self) {
 	gboolean result;
 	gboolean _tmp0_ = FALSE;
-#line 907 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 907 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 908 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 908 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_tmp0_ = bosco_ecs_entity_base_hasComponent ((BoscoECSEntityBase*) self, (gint) COMPONENT_Velocity);
-#line 908 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 908 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	result = _tmp0_;
-#line 908 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 908 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	return result;
 #line 7416 "Entity.c"
 }
 
 
 static void bosco_ecs_entity_class_init (BoscoECSEntityClass * klass) {
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	bosco_ecs_entity_parent_class = g_type_class_peek_parent (klass);
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	((DarkMatterClass *) klass)->finalize = bosco_ecs_entity_finalize;
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	g_type_class_add_private (klass, sizeof (BoscoECSEntityPrivate));
 #line 7427 "Entity.c"
 }
 
 
 static void bosco_ecs_entity_instance_init (BoscoECSEntity * self) {
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self->priv = BOSCO_ECS_ENTITY_GET_PRIVATE (self);
 #line 7434 "Entity.c"
 }
@@ -7436,49 +7436,49 @@ static void bosco_ecs_entity_instance_init (BoscoECSEntity * self) {
 
 static void bosco_ecs_entity_finalize (DarkMatter* obj) {
 	BoscoECSEntity * self;
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, BOSCO_ECS_TYPE_ENTITY, BoscoECSEntity);
-#line 948 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 948 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_boundsComponentPool);
-#line 950 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 950 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_bulletComponent);
-#line 952 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 952 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_colorAnimationComponentPool);
-#line 954 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 954 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_destroyComponent);
-#line 956 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 956 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_enemyComponent);
-#line 958 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 958 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_expiresComponentPool);
-#line 960 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 960 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_firingComponent);
-#line 962 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 962 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_healthComponentPool);
-#line 964 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 964 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_layerComponentPool);
-#line 966 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 966 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_lifeComponentPool);
-#line 968 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 968 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_mineComponent);
-#line 970 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 970 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_mouseComponentPool);
-#line 972 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 972 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_playerComponent);
-#line 974 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 974 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_positionComponentPool);
-#line 976 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 976 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_resourceComponentPool);
-#line 978 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 978 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scaleAnimationComponentPool);
-#line 980 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 980 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scaleComponentPool);
-#line 982 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 982 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_scoreComponentPool);
-#line 984 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 984 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_soundEffectComponentPool);
-#line 986 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 986 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	_dark_matter_unref0 (self->priv->_velocityComponentPool);
-#line 12 "/home/bruce/Git/shmupwarz-vala/gen/Entity.gs"
+#line 12 "/home/bruce/Projects/shmupwarz-vala/gen/Entity.gs"
 	DARK_MATTER_CLASS (bosco_ecs_entity_parent_class)->finalize (obj);
 #line 7484 "Entity.c"
 }

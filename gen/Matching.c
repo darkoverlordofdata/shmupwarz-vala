@@ -201,16 +201,16 @@ static void bosco_ecs_matching_finalize (DarkMatter* obj);
 
 BoscoECSMatching* bosco_ecs_matching_construct (GType object_type) {
 	BoscoECSMatching* self = NULL;
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	self = (BoscoECSMatching*) dark_matter_construct (object_type);
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return self;
 #line 209 "Matching.c"
 }
 
 
 BoscoECSMatching* bosco_ecs_matching_new (void) {
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return bosco_ecs_matching_construct (BOSCO_ECS_TYPE_MATCHING);
 #line 216 "Matching.c"
 }
@@ -220,9 +220,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Bounds (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 17 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 17 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchBounds;
-#line 17 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 17 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 228 "Matching.c"
 		BoscoECSIMatcher* matchBounds = NULL;
@@ -231,31 +231,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Bounds (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Bounds;
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchBounds = _tmp4_;
-#line 17 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 17 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchBounds);
 #line 253 "Matching.c"
 	}
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchBounds;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 261 "Matching.c"
 }
@@ -265,9 +265,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Bullet (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchBullet;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 273 "Matching.c"
 		BoscoECSIMatcher* matchBullet = NULL;
@@ -276,31 +276,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Bullet (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Bullet;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 26 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 26 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchBullet = _tmp4_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchBullet);
 #line 298 "Matching.c"
 	}
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchBullet;
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 27 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 27 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 306 "Matching.c"
 }
@@ -310,9 +310,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_ColorAnimation (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchColorAnimation;
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 318 "Matching.c"
 		BoscoECSIMatcher* matchColorAnimation = NULL;
@@ -321,31 +321,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_ColorAnimation (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_ColorAnimation;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchColorAnimation = _tmp4_;
-#line 33 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 33 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchColorAnimation);
 #line 343 "Matching.c"
 	}
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchColorAnimation;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 351 "Matching.c"
 }
@@ -355,9 +355,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Destroy (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchDestroy;
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 363 "Matching.c"
 		BoscoECSIMatcher* matchDestroy = NULL;
@@ -366,31 +366,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Destroy (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Destroy;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchDestroy = _tmp4_;
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchDestroy);
 #line 388 "Matching.c"
 	}
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchDestroy;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 396 "Matching.c"
 }
@@ -400,9 +400,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Enemy (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchEnemy;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 408 "Matching.c"
 		BoscoECSIMatcher* matchEnemy = NULL;
@@ -411,31 +411,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Enemy (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Enemy;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 50 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 50 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchEnemy = _tmp4_;
-#line 49 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 49 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchEnemy);
 #line 433 "Matching.c"
 	}
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchEnemy;
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 51 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 51 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 441 "Matching.c"
 }
@@ -445,9 +445,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Expires (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchExpires;
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 453 "Matching.c"
 		BoscoECSIMatcher* matchExpires = NULL;
@@ -456,31 +456,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Expires (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Expires;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchExpires = _tmp4_;
-#line 57 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 57 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchExpires);
 #line 478 "Matching.c"
 	}
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchExpires;
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 486 "Matching.c"
 }
@@ -490,9 +490,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Firing (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchFiring;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 498 "Matching.c"
 		BoscoECSIMatcher* matchFiring = NULL;
@@ -501,31 +501,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Firing (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Firing;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchFiring = _tmp4_;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchFiring);
 #line 523 "Matching.c"
 	}
-#line 67 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 67 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchFiring;
-#line 67 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 67 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 67 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 67 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 531 "Matching.c"
 }
@@ -535,9 +535,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Health (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 73 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 73 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchHealth;
-#line 73 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 73 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 543 "Matching.c"
 		BoscoECSIMatcher* matchHealth = NULL;
@@ -546,31 +546,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Health (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Health;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchHealth = _tmp4_;
-#line 73 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 73 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchHealth);
 #line 568 "Matching.c"
 	}
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchHealth;
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 576 "Matching.c"
 }
@@ -580,9 +580,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Layer (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 81 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 81 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchLayer;
-#line 81 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 81 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 588 "Matching.c"
 		BoscoECSIMatcher* matchLayer = NULL;
@@ -591,31 +591,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Layer (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Layer;
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 82 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 82 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchLayer = _tmp4_;
-#line 81 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 81 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchLayer);
 #line 613 "Matching.c"
 	}
-#line 83 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 83 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchLayer;
-#line 83 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 83 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 83 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 83 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 621 "Matching.c"
 }
@@ -625,9 +625,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Life (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchLife;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 633 "Matching.c"
 		BoscoECSIMatcher* matchLife = NULL;
@@ -636,31 +636,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Life (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Life;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchLife = _tmp4_;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchLife);
 #line 658 "Matching.c"
 	}
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchLife;
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 666 "Matching.c"
 }
@@ -670,9 +670,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Mine (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchMine;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 678 "Matching.c"
 		BoscoECSIMatcher* matchMine = NULL;
@@ -681,31 +681,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Mine (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Mine;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchMine = _tmp4_;
-#line 97 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 97 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchMine);
 #line 703 "Matching.c"
 	}
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchMine;
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 711 "Matching.c"
 }
@@ -715,9 +715,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Mouse (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchMouse;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 723 "Matching.c"
 		BoscoECSIMatcher* matchMouse = NULL;
@@ -726,31 +726,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Mouse (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Mouse;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchMouse = _tmp4_;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchMouse);
 #line 748 "Matching.c"
 	}
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchMouse;
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 756 "Matching.c"
 }
@@ -760,9 +760,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Player (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 113 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 113 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchPlayer;
-#line 113 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 113 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 768 "Matching.c"
 		BoscoECSIMatcher* matchPlayer = NULL;
@@ -771,31 +771,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Player (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Player;
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 114 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 114 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchPlayer = _tmp4_;
-#line 113 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 113 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchPlayer);
 #line 793 "Matching.c"
 	}
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchPlayer;
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 801 "Matching.c"
 }
@@ -805,9 +805,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Position (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchPosition;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 813 "Matching.c"
 		BoscoECSIMatcher* matchPosition = NULL;
@@ -816,31 +816,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Position (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Position;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchPosition = _tmp4_;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchPosition);
 #line 838 "Matching.c"
 	}
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchPosition;
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 123 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 123 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 846 "Matching.c"
 }
@@ -850,9 +850,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Resource (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 129 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 129 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchResource;
-#line 129 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 129 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 858 "Matching.c"
 		BoscoECSIMatcher* matchResource = NULL;
@@ -861,31 +861,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Resource (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Resource;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchResource = _tmp4_;
-#line 129 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 129 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchResource);
 #line 883 "Matching.c"
 	}
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchResource;
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 131 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 131 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 891 "Matching.c"
 }
@@ -895,9 +895,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_ScaleAnimation (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 137 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 137 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchScaleAnimation;
-#line 137 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 137 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 903 "Matching.c"
 		BoscoECSIMatcher* matchScaleAnimation = NULL;
@@ -906,31 +906,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_ScaleAnimation (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_ScaleAnimation;
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 138 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 138 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchScaleAnimation = _tmp4_;
-#line 137 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 137 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchScaleAnimation);
 #line 928 "Matching.c"
 	}
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchScaleAnimation;
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 936 "Matching.c"
 }
@@ -940,9 +940,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Scale (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchScale;
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 948 "Matching.c"
 		BoscoECSIMatcher* matchScale = NULL;
@@ -951,31 +951,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Scale (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Scale;
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 146 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 146 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchScale = _tmp4_;
-#line 145 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 145 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchScale);
 #line 973 "Matching.c"
 	}
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchScale;
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 981 "Matching.c"
 }
@@ -985,9 +985,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Score (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 153 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 153 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchScore;
-#line 153 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 153 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 993 "Matching.c"
 		BoscoECSIMatcher* matchScore = NULL;
@@ -996,31 +996,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Score (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Score;
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 154 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 154 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchScore = _tmp4_;
-#line 153 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 153 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchScore);
 #line 1018 "Matching.c"
 	}
-#line 155 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 155 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchScore;
-#line 155 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 155 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 155 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 155 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 1026 "Matching.c"
 }
@@ -1030,9 +1030,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_SoundEffect (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 161 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 161 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchSoundEffect;
-#line 161 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 161 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 1038 "Matching.c"
 		BoscoECSIMatcher* matchSoundEffect = NULL;
@@ -1041,31 +1041,31 @@ BoscoECSIMatcher* bosco_ecs_matching_get_SoundEffect (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_SoundEffect;
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 162 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 162 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchSoundEffect = _tmp4_;
-#line 161 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 161 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchSoundEffect);
 #line 1063 "Matching.c"
 	}
-#line 163 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 163 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchSoundEffect;
-#line 163 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 163 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 163 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 163 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 1071 "Matching.c"
 }
@@ -1075,9 +1075,9 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Velocity (void) {
 	BoscoECSIMatcher* result;
 	BoscoECSIMatcher* _tmp0_ = NULL;
 	BoscoECSIMatcher* _tmp5_ = NULL;
-#line 169 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 169 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp0_ = bosco_ecs_matching__matchVelocity;
-#line 169 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 169 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	if (_tmp0_ == NULL) {
 #line 1083 "Matching.c"
 		BoscoECSIMatcher* matchVelocity = NULL;
@@ -1086,40 +1086,40 @@ BoscoECSIMatcher* bosco_ecs_matching_get_Velocity (void) {
 		gint _tmp2__length1 = 0;
 		BoscoECSIMatcher* _tmp3_ = NULL;
 		BoscoECSIMatcher* _tmp4_ = NULL;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_ = g_new0 (gint, 1);
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp1_[0] = (gint) COMPONENT_Velocity;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = _tmp1_;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2__length1 = 1;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp3_ = bosco_ecs_matcher_AllOf (_tmp2_, 1);
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp4_ = _tmp3_;
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_tmp2_ = (g_free (_tmp2_), NULL);
-#line 170 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 170 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		matchVelocity = _tmp4_;
-#line 169 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 169 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 		_dark_matter_unref0 (matchVelocity);
 #line 1108 "Matching.c"
 	}
-#line 171 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 171 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	_tmp5_ = bosco_ecs_matching__matchVelocity;
-#line 171 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 171 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	result = _tmp5_;
-#line 171 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 171 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	return result;
 #line 1116 "Matching.c"
 }
 
 
 static void bosco_ecs_matching_class_init (BoscoECSMatchingClass * klass) {
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	bosco_ecs_matching_parent_class = g_type_class_peek_parent (klass);
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	((DarkMatterClass *) klass)->finalize = bosco_ecs_matching_finalize;
 #line 1125 "Matching.c"
 }
@@ -1131,9 +1131,9 @@ static void bosco_ecs_matching_instance_init (BoscoECSMatching * self) {
 
 static void bosco_ecs_matching_finalize (DarkMatter* obj) {
 	BoscoECSMatching * self;
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, BOSCO_ECS_TYPE_MATCHING, BoscoECSMatching);
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/Matching.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/Matching.gs"
 	DARK_MATTER_CLASS (bosco_ecs_matching_parent_class)->finalize (obj);
 #line 1139 "Matching.c"
 }

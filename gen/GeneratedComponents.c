@@ -740,32 +740,32 @@ GType component_get_type (void) {
 
 BoundsComponent* bounds_component_construct (GType object_type) {
 	BoundsComponent* self = NULL;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (BoundsComponent*) dark_matter_construct (object_type);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 748 "GeneratedComponents.c"
 }
 
 
 BoundsComponent* bounds_component_new (void) {
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return bounds_component_construct (TYPE_BOUNDS_COMPONENT);
 #line 755 "GeneratedComponents.c"
 }
 
 
 static void bounds_component_class_init (BoundsComponentClass * klass) {
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	bounds_component_parent_class = g_type_class_peek_parent (klass);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = bounds_component_finalize;
 #line 764 "GeneratedComponents.c"
 }
 
 
 static void bounds_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	bounds_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 771 "GeneratedComponents.c"
 }
@@ -777,9 +777,9 @@ static void bounds_component_instance_init (BoundsComponent * self) {
 
 static void bounds_component_finalize (DarkMatter* obj) {
 	BoundsComponent * self;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_BOUNDS_COMPONENT, BoundsComponent);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (bounds_component_parent_class)->finalize (obj);
 #line 785 "GeneratedComponents.c"
 }
@@ -801,39 +801,39 @@ GType bounds_component_get_type (void) {
 
 BulletComponent* bullet_component_construct (GType object_type) {
 	BulletComponent* self = NULL;
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (BulletComponent*) dark_matter_construct (object_type);
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 809 "GeneratedComponents.c"
 }
 
 
 BulletComponent* bullet_component_new (void) {
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return bullet_component_construct (TYPE_BULLET_COMPONENT);
 #line 816 "GeneratedComponents.c"
 }
 
 
 static void bullet_component_class_init (BulletComponentClass * klass) {
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	bullet_component_parent_class = g_type_class_peek_parent (klass);
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = bullet_component_finalize;
 #line 825 "GeneratedComponents.c"
 }
 
 
 static void bullet_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	bullet_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 832 "GeneratedComponents.c"
 }
 
 
 static void bullet_component_instance_init (BulletComponent * self) {
-#line 63 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 63 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->bullet = TRUE;
 #line 839 "GeneratedComponents.c"
 }
@@ -841,9 +841,9 @@ static void bullet_component_instance_init (BulletComponent * self) {
 
 static void bullet_component_finalize (DarkMatter* obj) {
 	BulletComponent * self;
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_BULLET_COMPONENT, BulletComponent);
-#line 62 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 62 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (bullet_component_parent_class)->finalize (obj);
 #line 849 "GeneratedComponents.c"
 }
@@ -865,32 +865,32 @@ GType bullet_component_get_type (void) {
 
 ColorAnimationComponent* color_animation_component_construct (GType object_type) {
 	ColorAnimationComponent* self = NULL;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ColorAnimationComponent*) dark_matter_construct (object_type);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 873 "GeneratedComponents.c"
 }
 
 
 ColorAnimationComponent* color_animation_component_new (void) {
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return color_animation_component_construct (TYPE_COLOR_ANIMATION_COMPONENT);
 #line 880 "GeneratedComponents.c"
 }
 
 
 static void color_animation_component_class_init (ColorAnimationComponentClass * klass) {
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	color_animation_component_parent_class = g_type_class_peek_parent (klass);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = color_animation_component_finalize;
 #line 889 "GeneratedComponents.c"
 }
 
 
 static void color_animation_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	color_animation_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 896 "GeneratedComponents.c"
 }
@@ -902,9 +902,9 @@ static void color_animation_component_instance_init (ColorAnimationComponent * s
 
 static void color_animation_component_finalize (DarkMatter* obj) {
 	ColorAnimationComponent * self;
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_COLOR_ANIMATION_COMPONENT, ColorAnimationComponent);
-#line 66 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 66 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (color_animation_component_parent_class)->finalize (obj);
 #line 910 "GeneratedComponents.c"
 }
@@ -926,39 +926,39 @@ GType color_animation_component_get_type (void) {
 
 DestroyComponent* destroy_component_construct (GType object_type) {
 	DestroyComponent* self = NULL;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (DestroyComponent*) dark_matter_construct (object_type);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 934 "GeneratedComponents.c"
 }
 
 
 DestroyComponent* destroy_component_new (void) {
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return destroy_component_construct (TYPE_DESTROY_COMPONENT);
 #line 941 "GeneratedComponents.c"
 }
 
 
 static void destroy_component_class_init (DestroyComponentClass * klass) {
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	destroy_component_parent_class = g_type_class_peek_parent (klass);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = destroy_component_finalize;
 #line 950 "GeneratedComponents.c"
 }
 
 
 static void destroy_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	destroy_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 957 "GeneratedComponents.c"
 }
 
 
 static void destroy_component_instance_init (DestroyComponent * self) {
-#line 87 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 87 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->destroy = TRUE;
 #line 964 "GeneratedComponents.c"
 }
@@ -966,9 +966,9 @@ static void destroy_component_instance_init (DestroyComponent * self) {
 
 static void destroy_component_finalize (DarkMatter* obj) {
 	DestroyComponent * self;
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_DESTROY_COMPONENT, DestroyComponent);
-#line 86 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 86 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (destroy_component_parent_class)->finalize (obj);
 #line 974 "GeneratedComponents.c"
 }
@@ -990,39 +990,39 @@ GType destroy_component_get_type (void) {
 
 EnemyComponent* enemy_component_construct (GType object_type) {
 	EnemyComponent* self = NULL;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (EnemyComponent*) dark_matter_construct (object_type);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 998 "GeneratedComponents.c"
 }
 
 
 EnemyComponent* enemy_component_new (void) {
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return enemy_component_construct (TYPE_ENEMY_COMPONENT);
 #line 1005 "GeneratedComponents.c"
 }
 
 
 static void enemy_component_class_init (EnemyComponentClass * klass) {
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	enemy_component_parent_class = g_type_class_peek_parent (klass);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = enemy_component_finalize;
 #line 1014 "GeneratedComponents.c"
 }
 
 
 static void enemy_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	enemy_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1021 "GeneratedComponents.c"
 }
 
 
 static void enemy_component_instance_init (EnemyComponent * self) {
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->enemy = TRUE;
 #line 1028 "GeneratedComponents.c"
 }
@@ -1030,9 +1030,9 @@ static void enemy_component_instance_init (EnemyComponent * self) {
 
 static void enemy_component_finalize (DarkMatter* obj) {
 	EnemyComponent * self;
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_ENEMY_COMPONENT, EnemyComponent);
-#line 90 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 90 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (enemy_component_parent_class)->finalize (obj);
 #line 1038 "GeneratedComponents.c"
 }
@@ -1054,32 +1054,32 @@ GType enemy_component_get_type (void) {
 
 ExpiresComponent* expires_component_construct (GType object_type) {
 	ExpiresComponent* self = NULL;
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ExpiresComponent*) dark_matter_construct (object_type);
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1062 "GeneratedComponents.c"
 }
 
 
 ExpiresComponent* expires_component_new (void) {
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return expires_component_construct (TYPE_EXPIRES_COMPONENT);
 #line 1069 "GeneratedComponents.c"
 }
 
 
 static void expires_component_class_init (ExpiresComponentClass * klass) {
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	expires_component_parent_class = g_type_class_peek_parent (klass);
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = expires_component_finalize;
 #line 1078 "GeneratedComponents.c"
 }
 
 
 static void expires_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	expires_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1085 "GeneratedComponents.c"
 }
@@ -1091,9 +1091,9 @@ static void expires_component_instance_init (ExpiresComponent * self) {
 
 static void expires_component_finalize (DarkMatter* obj) {
 	ExpiresComponent * self;
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_EXPIRES_COMPONENT, ExpiresComponent);
-#line 94 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 94 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (expires_component_parent_class)->finalize (obj);
 #line 1099 "GeneratedComponents.c"
 }
@@ -1115,39 +1115,39 @@ GType expires_component_get_type (void) {
 
 FiringComponent* firing_component_construct (GType object_type) {
 	FiringComponent* self = NULL;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (FiringComponent*) dark_matter_construct (object_type);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1123 "GeneratedComponents.c"
 }
 
 
 FiringComponent* firing_component_new (void) {
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return firing_component_construct (TYPE_FIRING_COMPONENT);
 #line 1130 "GeneratedComponents.c"
 }
 
 
 static void firing_component_class_init (FiringComponentClass * klass) {
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	firing_component_parent_class = g_type_class_peek_parent (klass);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = firing_component_finalize;
 #line 1139 "GeneratedComponents.c"
 }
 
 
 static void firing_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	firing_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1146 "GeneratedComponents.c"
 }
 
 
 static void firing_component_instance_init (FiringComponent * self) {
-#line 99 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 99 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->firing = TRUE;
 #line 1153 "GeneratedComponents.c"
 }
@@ -1155,9 +1155,9 @@ static void firing_component_instance_init (FiringComponent * self) {
 
 static void firing_component_finalize (DarkMatter* obj) {
 	FiringComponent * self;
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_FIRING_COMPONENT, FiringComponent);
-#line 98 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 98 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (firing_component_parent_class)->finalize (obj);
 #line 1163 "GeneratedComponents.c"
 }
@@ -1179,32 +1179,32 @@ GType firing_component_get_type (void) {
 
 HealthComponent* health_component_construct (GType object_type) {
 	HealthComponent* self = NULL;
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (HealthComponent*) dark_matter_construct (object_type);
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1187 "GeneratedComponents.c"
 }
 
 
 HealthComponent* health_component_new (void) {
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return health_component_construct (TYPE_HEALTH_COMPONENT);
 #line 1194 "GeneratedComponents.c"
 }
 
 
 static void health_component_class_init (HealthComponentClass * klass) {
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	health_component_parent_class = g_type_class_peek_parent (klass);
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = health_component_finalize;
 #line 1203 "GeneratedComponents.c"
 }
 
 
 static void health_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	health_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1210 "GeneratedComponents.c"
 }
@@ -1216,9 +1216,9 @@ static void health_component_instance_init (HealthComponent * self) {
 
 static void health_component_finalize (DarkMatter* obj) {
 	HealthComponent * self;
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_HEALTH_COMPONENT, HealthComponent);
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (health_component_parent_class)->finalize (obj);
 #line 1224 "GeneratedComponents.c"
 }
@@ -1240,32 +1240,32 @@ GType health_component_get_type (void) {
 
 LayerComponent* layer_component_construct (GType object_type) {
 	LayerComponent* self = NULL;
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (LayerComponent*) dark_matter_construct (object_type);
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1248 "GeneratedComponents.c"
 }
 
 
 LayerComponent* layer_component_new (void) {
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return layer_component_construct (TYPE_LAYER_COMPONENT);
 #line 1255 "GeneratedComponents.c"
 }
 
 
 static void layer_component_class_init (LayerComponentClass * klass) {
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	layer_component_parent_class = g_type_class_peek_parent (klass);
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = layer_component_finalize;
 #line 1264 "GeneratedComponents.c"
 }
 
 
 static void layer_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	layer_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1271 "GeneratedComponents.c"
 }
@@ -1277,9 +1277,9 @@ static void layer_component_instance_init (LayerComponent * self) {
 
 static void layer_component_finalize (DarkMatter* obj) {
 	LayerComponent * self;
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_LAYER_COMPONENT, LayerComponent);
-#line 107 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 107 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (layer_component_parent_class)->finalize (obj);
 #line 1285 "GeneratedComponents.c"
 }
@@ -1301,32 +1301,32 @@ GType layer_component_get_type (void) {
 
 LifeComponent* life_component_construct (GType object_type) {
 	LifeComponent* self = NULL;
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (LifeComponent*) dark_matter_construct (object_type);
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1309 "GeneratedComponents.c"
 }
 
 
 LifeComponent* life_component_new (void) {
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return life_component_construct (TYPE_LIFE_COMPONENT);
 #line 1316 "GeneratedComponents.c"
 }
 
 
 static void life_component_class_init (LifeComponentClass * klass) {
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	life_component_parent_class = g_type_class_peek_parent (klass);
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = life_component_finalize;
 #line 1325 "GeneratedComponents.c"
 }
 
 
 static void life_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	life_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1332 "GeneratedComponents.c"
 }
@@ -1338,9 +1338,9 @@ static void life_component_instance_init (LifeComponent * self) {
 
 static void life_component_finalize (DarkMatter* obj) {
 	LifeComponent * self;
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_LIFE_COMPONENT, LifeComponent);
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (life_component_parent_class)->finalize (obj);
 #line 1346 "GeneratedComponents.c"
 }
@@ -1362,39 +1362,39 @@ GType life_component_get_type (void) {
 
 MineComponent* mine_component_construct (GType object_type) {
 	MineComponent* self = NULL;
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (MineComponent*) dark_matter_construct (object_type);
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1370 "GeneratedComponents.c"
 }
 
 
 MineComponent* mine_component_new (void) {
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return mine_component_construct (TYPE_MINE_COMPONENT);
 #line 1377 "GeneratedComponents.c"
 }
 
 
 static void mine_component_class_init (MineComponentClass * klass) {
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	mine_component_parent_class = g_type_class_peek_parent (klass);
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = mine_component_finalize;
 #line 1386 "GeneratedComponents.c"
 }
 
 
 static void mine_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	mine_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1393 "GeneratedComponents.c"
 }
 
 
 static void mine_component_instance_init (MineComponent * self) {
-#line 116 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 116 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->mine = TRUE;
 #line 1400 "GeneratedComponents.c"
 }
@@ -1402,9 +1402,9 @@ static void mine_component_instance_init (MineComponent * self) {
 
 static void mine_component_finalize (DarkMatter* obj) {
 	MineComponent * self;
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_MINE_COMPONENT, MineComponent);
-#line 115 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 115 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (mine_component_parent_class)->finalize (obj);
 #line 1410 "GeneratedComponents.c"
 }
@@ -1426,32 +1426,32 @@ GType mine_component_get_type (void) {
 
 MouseComponent* mouse_component_construct (GType object_type) {
 	MouseComponent* self = NULL;
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (MouseComponent*) dark_matter_construct (object_type);
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1434 "GeneratedComponents.c"
 }
 
 
 MouseComponent* mouse_component_new (void) {
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return mouse_component_construct (TYPE_MOUSE_COMPONENT);
 #line 1441 "GeneratedComponents.c"
 }
 
 
 static void mouse_component_class_init (MouseComponentClass * klass) {
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	mouse_component_parent_class = g_type_class_peek_parent (klass);
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = mouse_component_finalize;
 #line 1450 "GeneratedComponents.c"
 }
 
 
 static void mouse_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	mouse_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1457 "GeneratedComponents.c"
 }
@@ -1463,9 +1463,9 @@ static void mouse_component_instance_init (MouseComponent * self) {
 
 static void mouse_component_finalize (DarkMatter* obj) {
 	MouseComponent * self;
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_MOUSE_COMPONENT, MouseComponent);
-#line 119 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 119 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (mouse_component_parent_class)->finalize (obj);
 #line 1471 "GeneratedComponents.c"
 }
@@ -1487,39 +1487,39 @@ GType mouse_component_get_type (void) {
 
 PlayerComponent* player_component_construct (GType object_type) {
 	PlayerComponent* self = NULL;
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (PlayerComponent*) dark_matter_construct (object_type);
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1495 "GeneratedComponents.c"
 }
 
 
 PlayerComponent* player_component_new (void) {
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return player_component_construct (TYPE_PLAYER_COMPONENT);
 #line 1502 "GeneratedComponents.c"
 }
 
 
 static void player_component_class_init (PlayerComponentClass * klass) {
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	player_component_parent_class = g_type_class_peek_parent (klass);
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = player_component_finalize;
 #line 1511 "GeneratedComponents.c"
 }
 
 
 static void player_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	player_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1518 "GeneratedComponents.c"
 }
 
 
 static void player_component_instance_init (PlayerComponent * self) {
-#line 125 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 125 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->player = TRUE;
 #line 1525 "GeneratedComponents.c"
 }
@@ -1527,9 +1527,9 @@ static void player_component_instance_init (PlayerComponent * self) {
 
 static void player_component_finalize (DarkMatter* obj) {
 	PlayerComponent * self;
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_PLAYER_COMPONENT, PlayerComponent);
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (player_component_parent_class)->finalize (obj);
 #line 1535 "GeneratedComponents.c"
 }
@@ -1551,32 +1551,32 @@ GType player_component_get_type (void) {
 
 PositionComponent* position_component_construct (GType object_type) {
 	PositionComponent* self = NULL;
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (PositionComponent*) dark_matter_construct (object_type);
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1559 "GeneratedComponents.c"
 }
 
 
 PositionComponent* position_component_new (void) {
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return position_component_construct (TYPE_POSITION_COMPONENT);
 #line 1566 "GeneratedComponents.c"
 }
 
 
 static void position_component_class_init (PositionComponentClass * klass) {
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	position_component_parent_class = g_type_class_peek_parent (klass);
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = position_component_finalize;
 #line 1575 "GeneratedComponents.c"
 }
 
 
 static void position_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	position_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1582 "GeneratedComponents.c"
 }
@@ -1588,9 +1588,9 @@ static void position_component_instance_init (PositionComponent * self) {
 
 static void position_component_finalize (DarkMatter* obj) {
 	PositionComponent * self;
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_POSITION_COMPONENT, PositionComponent);
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (position_component_parent_class)->finalize (obj);
 #line 1596 "GeneratedComponents.c"
 }
@@ -1612,39 +1612,39 @@ GType position_component_get_type (void) {
 
 ResourceComponent* resource_component_construct (GType object_type) {
 	ResourceComponent* self = NULL;
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ResourceComponent*) dark_matter_construct (object_type);
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1620 "GeneratedComponents.c"
 }
 
 
 ResourceComponent* resource_component_new (void) {
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return resource_component_construct (TYPE_RESOURCE_COMPONENT);
 #line 1627 "GeneratedComponents.c"
 }
 
 
 static void resource_component_class_init (ResourceComponentClass * klass) {
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	resource_component_parent_class = g_type_class_peek_parent (klass);
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = resource_component_finalize;
 #line 1636 "GeneratedComponents.c"
 }
 
 
 static void resource_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	resource_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1643 "GeneratedComponents.c"
 }
 
 
 static void resource_component_instance_init (ResourceComponent * self) {
-#line 136 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 136 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self->bgd = FALSE;
 #line 1650 "GeneratedComponents.c"
 }
@@ -1652,13 +1652,13 @@ static void resource_component_instance_init (ResourceComponent * self) {
 
 static void resource_component_finalize (DarkMatter* obj) {
 	ResourceComponent * self;
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_RESOURCE_COMPONENT, ResourceComponent);
-#line 134 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 134 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	_g_free0 (self->path);
-#line 135 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 135 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	_dark_matter_unref0 (self->sprite);
-#line 133 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 133 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (resource_component_parent_class)->finalize (obj);
 #line 1664 "GeneratedComponents.c"
 }
@@ -1680,32 +1680,32 @@ GType resource_component_get_type (void) {
 
 ScaleAnimationComponent* scale_animation_component_construct (GType object_type) {
 	ScaleAnimationComponent* self = NULL;
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ScaleAnimationComponent*) dark_matter_construct (object_type);
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1688 "GeneratedComponents.c"
 }
 
 
 ScaleAnimationComponent* scale_animation_component_new (void) {
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return scale_animation_component_construct (TYPE_SCALE_ANIMATION_COMPONENT);
 #line 1695 "GeneratedComponents.c"
 }
 
 
 static void scale_animation_component_class_init (ScaleAnimationComponentClass * klass) {
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	scale_animation_component_parent_class = g_type_class_peek_parent (klass);
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = scale_animation_component_finalize;
 #line 1704 "GeneratedComponents.c"
 }
 
 
 static void scale_animation_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	scale_animation_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1711 "GeneratedComponents.c"
 }
@@ -1717,9 +1717,9 @@ static void scale_animation_component_instance_init (ScaleAnimationComponent * s
 
 static void scale_animation_component_finalize (DarkMatter* obj) {
 	ScaleAnimationComponent * self;
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_SCALE_ANIMATION_COMPONENT, ScaleAnimationComponent);
-#line 139 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 139 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (scale_animation_component_parent_class)->finalize (obj);
 #line 1725 "GeneratedComponents.c"
 }
@@ -1741,32 +1741,32 @@ GType scale_animation_component_get_type (void) {
 
 ScaleComponent* scale_component_construct (GType object_type) {
 	ScaleComponent* self = NULL;
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ScaleComponent*) dark_matter_construct (object_type);
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1749 "GeneratedComponents.c"
 }
 
 
 ScaleComponent* scale_component_new (void) {
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return scale_component_construct (TYPE_SCALE_COMPONENT);
 #line 1756 "GeneratedComponents.c"
 }
 
 
 static void scale_component_class_init (ScaleComponentClass * klass) {
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	scale_component_parent_class = g_type_class_peek_parent (klass);
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = scale_component_finalize;
 #line 1765 "GeneratedComponents.c"
 }
 
 
 static void scale_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	scale_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1772 "GeneratedComponents.c"
 }
@@ -1778,9 +1778,9 @@ static void scale_component_instance_init (ScaleComponent * self) {
 
 static void scale_component_finalize (DarkMatter* obj) {
 	ScaleComponent * self;
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_SCALE_COMPONENT, ScaleComponent);
-#line 147 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 147 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (scale_component_parent_class)->finalize (obj);
 #line 1786 "GeneratedComponents.c"
 }
@@ -1802,32 +1802,32 @@ GType scale_component_get_type (void) {
 
 ScoreComponent* score_component_construct (GType object_type) {
 	ScoreComponent* self = NULL;
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (ScoreComponent*) dark_matter_construct (object_type);
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1810 "GeneratedComponents.c"
 }
 
 
 ScoreComponent* score_component_new (void) {
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return score_component_construct (TYPE_SCORE_COMPONENT);
 #line 1817 "GeneratedComponents.c"
 }
 
 
 static void score_component_class_init (ScoreComponentClass * klass) {
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	score_component_parent_class = g_type_class_peek_parent (klass);
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = score_component_finalize;
 #line 1826 "GeneratedComponents.c"
 }
 
 
 static void score_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	score_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1833 "GeneratedComponents.c"
 }
@@ -1839,9 +1839,9 @@ static void score_component_instance_init (ScoreComponent * self) {
 
 static void score_component_finalize (DarkMatter* obj) {
 	ScoreComponent * self;
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_SCORE_COMPONENT, ScoreComponent);
-#line 152 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 152 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (score_component_parent_class)->finalize (obj);
 #line 1847 "GeneratedComponents.c"
 }
@@ -1863,32 +1863,32 @@ GType score_component_get_type (void) {
 
 SoundEffectComponent* sound_effect_component_construct (GType object_type) {
 	SoundEffectComponent* self = NULL;
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (SoundEffectComponent*) dark_matter_construct (object_type);
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1871 "GeneratedComponents.c"
 }
 
 
 SoundEffectComponent* sound_effect_component_new (void) {
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return sound_effect_component_construct (TYPE_SOUND_EFFECT_COMPONENT);
 #line 1878 "GeneratedComponents.c"
 }
 
 
 static void sound_effect_component_class_init (SoundEffectComponentClass * klass) {
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	sound_effect_component_parent_class = g_type_class_peek_parent (klass);
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = sound_effect_component_finalize;
 #line 1887 "GeneratedComponents.c"
 }
 
 
 static void sound_effect_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	sound_effect_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1894 "GeneratedComponents.c"
 }
@@ -1900,9 +1900,9 @@ static void sound_effect_component_instance_init (SoundEffectComponent * self) {
 
 static void sound_effect_component_finalize (DarkMatter* obj) {
 	SoundEffectComponent * self;
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_SOUND_EFFECT_COMPONENT, SoundEffectComponent);
-#line 156 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 156 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (sound_effect_component_parent_class)->finalize (obj);
 #line 1908 "GeneratedComponents.c"
 }
@@ -1924,32 +1924,32 @@ GType sound_effect_component_get_type (void) {
 
 VelocityComponent* velocity_component_construct (GType object_type) {
 	VelocityComponent* self = NULL;
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = (VelocityComponent*) dark_matter_construct (object_type);
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return self;
 #line 1932 "GeneratedComponents.c"
 }
 
 
 VelocityComponent* velocity_component_new (void) {
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	return velocity_component_construct (TYPE_VELOCITY_COMPONENT);
 #line 1939 "GeneratedComponents.c"
 }
 
 
 static void velocity_component_class_init (VelocityComponentClass * klass) {
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	velocity_component_parent_class = g_type_class_peek_parent (klass);
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	((DarkMatterClass *) klass)->finalize = velocity_component_finalize;
 #line 1948 "GeneratedComponents.c"
 }
 
 
 static void velocity_component_bosco_ecs_icomponent_interface_init (BoscoECSIComponentIface * iface) {
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	velocity_component_bosco_ecs_icomponent_parent_iface = g_type_interface_peek_parent (iface);
 #line 1955 "GeneratedComponents.c"
 }
@@ -1961,9 +1961,9 @@ static void velocity_component_instance_init (VelocityComponent * self) {
 
 static void velocity_component_finalize (DarkMatter* obj) {
 	VelocityComponent * self;
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_VELOCITY_COMPONENT, VelocityComponent);
-#line 160 "/home/bruce/Git/shmupwarz-vala/gen/GeneratedComponents.gs"
+#line 160 "/home/bruce/Projects/shmupwarz-vala/gen/GeneratedComponents.gs"
 	DARK_MATTER_CLASS (velocity_component_parent_class)->finalize (obj);
 #line 1969 "GeneratedComponents.c"
 }

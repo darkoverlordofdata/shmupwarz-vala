@@ -25,7 +25,8 @@ LIBS=--pkg glib-2.0 \
 			--pkg sdl2 \
 			--pkg SDL2_gfx \
 			--pkg SDL2_image \
-			--pkg SDL2_ttf
+			--pkg SDL2_ttf \
+			--pkg gio-2.0
 
 TST=test/src/Vunny.gs \
 		test/src/Should.gs \
@@ -129,7 +130,8 @@ default: $(BIN)/$(NAME)
 $(BIN)/$(NAME): $(SOURCES) $(APP)
 	-mkdir -p $(BIN)
 	cp -R --force $(RESOURCES) $(BIN)
-	$(VC) $(DEBUG) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
+	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
+#	$(VC) $(DEBUG) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
 # default: $(BIN)/$(NAME)
 # $(BIN)/$(NAME): $(OLD)

@@ -213,22 +213,22 @@ BoscoECSWorld* bosco_ecs_world_construct (GType object_type, gchar** componentsE
 	gchar** _tmp0_ = NULL;
 	gint _tmp0__length1 = 0;
 	gint _tmp1_ = 0;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = componentsEnum;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0__length1 = componentsEnum_length1;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = startCreationIndex;
-#line 19 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 19 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	self = (BoscoECSWorld*) bosco_ecs_world_base_construct (object_type, _tmp0_, _tmp0__length1, _tmp1_);
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return self;
 #line 227 "World.c"
 }
 
 
 BoscoECSWorld* bosco_ecs_world_new (gchar** componentsEnum, int componentsEnum_length1, gint startCreationIndex) {
-#line 18 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 18 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return bosco_ecs_world_construct (BOSCO_ECS_TYPE_WORLD, componentsEnum, componentsEnum_length1, startCreationIndex);
 #line 234 "World.c"
 }
@@ -248,43 +248,43 @@ BoscoECSEntity* bosco_ecs_world_setScore (BoscoECSWorld* self, gdouble value) {
 	BoscoECSEntity* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 41 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 41 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_hasScore (self);
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 42 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 42 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (_tmp1_) {
 #line 260 "World.c"
 		GError* _tmp2_ = NULL;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp2_ = g_error_new_literal (BOSCO_ECS_EXCEPTION, BOSCO_ECS_EXCEPTION_ECS, "SingleEntityException Matching Score");
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_inner_error_ = _tmp2_;
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 43 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 43 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return NULL;
 #line 272 "World.c"
 	}
-#line 45 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 45 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = bosco_ecs_world_base_createEntity ((BoscoECSWorldBase*) self, "Score");
-#line 45 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 45 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	entity = _tmp3_;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = value;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp5_ = bosco_ecs_entity_addScore (entity, _tmp4_);
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp6_ = _tmp5_;
-#line 46 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 46 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (_tmp6_);
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = entity;
-#line 47 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 47 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 290 "World.c"
 }
@@ -295,7 +295,7 @@ BoscoECSEntity* bosco_ecs_world_setScore (BoscoECSWorld* self, gdouble value) {
          * @returns {entitas.Entity}
          */
 static gpointer _dark_matter_ref0 (gpointer self) {
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return self ? dark_matter_ref (self) : NULL;
 #line 301 "World.c"
 }
@@ -308,30 +308,30 @@ BoscoECSEntity* bosco_ecs_world_replaceScore (BoscoECSWorld* self, gdouble value
 	BoscoECSEntity* _tmp1_ = NULL;
 	BoscoECSEntity* _tmp2_ = NULL;
 	BoscoECSEntity* _tmp3_ = NULL;
-#line 53 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 53 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_scoreEntity (self);
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 54 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 54 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	entity = _tmp2_;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = entity;
-#line 55 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 55 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (_tmp3_ == NULL) {
 #line 326 "World.c"
 		gdouble _tmp4_ = 0.0;
 		BoscoECSEntity* _tmp5_ = NULL;
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp4_ = value;
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp5_ = bosco_ecs_world_setScore (self, _tmp4_);
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_dark_matter_unref0 (entity);
-#line 56 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 56 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		entity = _tmp5_;
 #line 337 "World.c"
 	} else {
@@ -339,21 +339,21 @@ BoscoECSEntity* bosco_ecs_world_replaceScore (BoscoECSWorld* self, gdouble value
 		gdouble _tmp7_ = 0.0;
 		BoscoECSEntity* _tmp8_ = NULL;
 		BoscoECSEntity* _tmp9_ = NULL;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp6_ = entity;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp7_ = value;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp8_ = bosco_ecs_entity_replaceScore (_tmp6_, _tmp7_);
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp9_ = _tmp8_;
-#line 58 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 58 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_dark_matter_unref0 (_tmp9_);
 #line 353 "World.c"
 	}
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = entity;
-#line 59 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 59 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 359 "World.c"
 }
@@ -366,21 +366,21 @@ void bosco_ecs_world_removeScore (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp0_ = NULL;
 	BoscoECSEntity* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 64 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 64 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_if_fail (self != NULL);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_scoreEntity (self);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	bosco_ecs_world_base_destroyEntity ((BoscoECSWorldBase*) self, _tmp1_, &_inner_error_);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 65 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 65 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return;
 #line 386 "World.c"
 	}
@@ -403,45 +403,45 @@ BoscoECSEntity* bosco_ecs_world_setMouse (BoscoECSWorld* self, gdouble x, gdoubl
 	BoscoECSEntity* _tmp6_ = NULL;
 	BoscoECSEntity* _tmp7_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 87 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 87 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_hasMouse (self);
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 88 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 88 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (_tmp1_) {
 #line 415 "World.c"
 		GError* _tmp2_ = NULL;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp2_ = g_error_new_literal (BOSCO_ECS_EXCEPTION, BOSCO_ECS_EXCEPTION_ECS, "SingleEntityException Matching Mouse");
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_inner_error_ = _tmp2_;
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 89 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 89 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return NULL;
 #line 427 "World.c"
 	}
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = bosco_ecs_world_base_createEntity ((BoscoECSWorldBase*) self, "Mouse");
-#line 91 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 91 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	entity = _tmp3_;
-#line 92 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 92 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = x;
-#line 92 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 92 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp5_ = y;
-#line 92 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 92 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp6_ = bosco_ecs_entity_addMouse (entity, _tmp4_, _tmp5_);
-#line 92 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 92 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp7_ = _tmp6_;
-#line 92 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 92 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (_tmp7_);
-#line 93 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 93 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = entity;
-#line 93 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 93 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 447 "World.c"
 }
@@ -459,33 +459,33 @@ BoscoECSEntity* bosco_ecs_world_replaceMouse (BoscoECSWorld* self, gdouble x, gd
 	BoscoECSEntity* _tmp1_ = NULL;
 	BoscoECSEntity* _tmp2_ = NULL;
 	BoscoECSEntity* _tmp3_ = NULL;
-#line 100 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 100 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_mouseEntity (self);
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 101 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 101 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	entity = _tmp2_;
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = entity;
-#line 102 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 102 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (_tmp3_ == NULL) {
 #line 477 "World.c"
 		gdouble _tmp4_ = 0.0;
 		gdouble _tmp5_ = 0.0;
 		BoscoECSEntity* _tmp6_ = NULL;
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp4_ = x;
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp5_ = y;
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp6_ = bosco_ecs_world_setMouse (self, _tmp4_, _tmp5_);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_dark_matter_unref0 (entity);
-#line 103 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 103 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		entity = _tmp6_;
 #line 491 "World.c"
 	} else {
@@ -494,23 +494,23 @@ BoscoECSEntity* bosco_ecs_world_replaceMouse (BoscoECSWorld* self, gdouble x, gd
 		gdouble _tmp9_ = 0.0;
 		BoscoECSEntity* _tmp10_ = NULL;
 		BoscoECSEntity* _tmp11_ = NULL;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp7_ = entity;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp8_ = x;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp9_ = y;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp10_ = bosco_ecs_entity_replaceMouse (_tmp7_, _tmp8_, _tmp9_);
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp11_ = _tmp10_;
-#line 105 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 105 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_dark_matter_unref0 (_tmp11_);
 #line 510 "World.c"
 	}
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = entity;
-#line 106 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 106 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 516 "World.c"
 }
@@ -523,21 +523,21 @@ void bosco_ecs_world_removeMouse (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp0_ = NULL;
 	BoscoECSEntity* _tmp1_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 111 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 111 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_if_fail (self != NULL);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_mouseEntity (self);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	bosco_ecs_world_base_destroyEntity ((BoscoECSWorldBase*) self, _tmp1_, &_inner_error_);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 112 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 112 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return;
 #line 543 "World.c"
 	}
@@ -554,37 +554,37 @@ BoscoECSEntity* bosco_ecs_world_get_scoreEntity (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 24 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 24 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = bosco_ecs_matching_get_Score ();
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _tmp1_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = bosco_ecs_world_base_getGroup ((BoscoECSWorldBase*) self, _tmp2_);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = _tmp3_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp5_ = bosco_ecs_group_getSingleEntity (_tmp4_, &_inner_error_);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp6_ = _tmp5_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = _tmp6_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return NULL;
 #line 584 "World.c"
 	}
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp0_;
-#line 25 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 25 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 590 "World.c"
 }
@@ -596,19 +596,19 @@ ScoreComponent* bosco_ecs_world_get_score (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp1_ = NULL;
 	ScoreComponent* _tmp2_ = NULL;
 	ScoreComponent* _tmp3_ = NULL;
-#line 29 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 29 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_scoreEntity (self);
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = bosco_ecs_entity_get_score (_tmp1_);
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = _tmp2_;
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp3_;
-#line 30 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 30 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 614 "World.c"
 }
@@ -618,15 +618,15 @@ gboolean bosco_ecs_world_get_hasScore (BoscoECSWorld* self) {
 	gboolean result;
 	BoscoECSEntity* _tmp0_ = NULL;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 34 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 34 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_scoreEntity (self);
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp1_ != NULL;
-#line 35 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 35 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 632 "World.c"
 }
@@ -642,37 +642,37 @@ BoscoECSEntity* bosco_ecs_world_get_mouseEntity (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 69 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 69 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = bosco_ecs_matching_get_Mouse ();
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _tmp1_;
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = bosco_ecs_world_base_getGroup ((BoscoECSWorldBase*) self, _tmp2_);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = _tmp3_;
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp5_ = bosco_ecs_group_getSingleEntity (_tmp4_, &_inner_error_);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp6_ = _tmp5_;
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = _tmp6_;
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return NULL;
 #line 672 "World.c"
 	}
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp0_;
-#line 70 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 70 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 678 "World.c"
 }
@@ -684,19 +684,19 @@ MouseComponent* bosco_ecs_world_get_mouse (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp1_ = NULL;
 	MouseComponent* _tmp2_ = NULL;
 	MouseComponent* _tmp3_ = NULL;
-#line 74 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 74 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_mouseEntity (self);
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = bosco_ecs_entity_get_mouse (_tmp1_);
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = _tmp2_;
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp3_;
-#line 75 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 75 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 702 "World.c"
 }
@@ -706,15 +706,15 @@ gboolean bosco_ecs_world_get_hasMouse (BoscoECSWorld* self) {
 	gboolean result;
 	BoscoECSEntity* _tmp0_ = NULL;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 79 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 79 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 80 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 80 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_mouseEntity (self);
-#line 80 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 80 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 80 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 80 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp1_ != NULL;
-#line 80 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 80 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 720 "World.c"
 }
@@ -730,37 +730,37 @@ BoscoECSEntity* bosco_ecs_world_get_firingEntity (BoscoECSWorld* self) {
 	BoscoECSEntity* _tmp5_ = NULL;
 	BoscoECSEntity* _tmp6_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 116 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 116 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, NULL);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = bosco_ecs_matching_get_Firing ();
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _tmp1_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = bosco_ecs_world_base_getGroup ((BoscoECSWorldBase*) self, _tmp2_);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = _tmp3_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp5_ = bosco_ecs_group_getSingleEntity (_tmp4_, &_inner_error_);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp6_ = _tmp5_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (_tmp4_);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = _tmp6_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		g_clear_error (&_inner_error_);
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		return NULL;
 #line 760 "World.c"
 	}
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp0_;
-#line 117 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 117 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 766 "World.c"
 }
@@ -770,15 +770,15 @@ gboolean bosco_ecs_world_get_isFiring (BoscoECSWorld* self) {
 	gboolean result;
 	BoscoECSEntity* _tmp0_ = NULL;
 	BoscoECSEntity* _tmp1_ = NULL;
-#line 121 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 121 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_val_if_fail (self != NULL, FALSE);
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_firingEntity (self);
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	result = _tmp1_ != NULL;
-#line 122 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 122 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	return result;
 #line 784 "World.c"
 }
@@ -792,70 +792,70 @@ void bosco_ecs_world_set_isFiring (BoscoECSWorld* self, gboolean value) {
 	gboolean _tmp3_ = FALSE;
 	BoscoECSEntity* _tmp4_ = NULL;
 	GError * _inner_error_ = NULL;
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	g_return_if_fail (self != NULL);
-#line 125 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 125 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp0_ = bosco_ecs_world_get_firingEntity (self);
-#line 125 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 125 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp1_ = _tmp0_;
-#line 125 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 125 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp2_ = _dark_matter_ref0 (_tmp1_);
-#line 125 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 125 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	entity = _tmp2_;
-#line 126 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 126 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp3_ = value;
-#line 126 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 126 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_tmp4_ = entity;
-#line 126 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 126 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	if (_tmp3_ != (_tmp4_ != NULL)) {
 #line 812 "World.c"
 		gboolean _tmp5_ = FALSE;
-#line 127 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 127 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		_tmp5_ = value;
-#line 127 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 127 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 		if (_tmp5_) {
 #line 818 "World.c"
 			BoscoECSEntity* _tmp6_ = NULL;
 			BoscoECSEntity* _tmp7_ = NULL;
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			_tmp6_ = bosco_ecs_world_base_createEntity ((BoscoECSWorldBase*) self, "Firing");
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			_tmp7_ = _tmp6_;
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			bosco_ecs_entity_set_isFiring (_tmp7_, TRUE);
-#line 128 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 128 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			_dark_matter_unref0 (_tmp7_);
 #line 829 "World.c"
 		} else {
 			BoscoECSEntity* _tmp8_ = NULL;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			_tmp8_ = entity;
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			bosco_ecs_world_base_destroyEntity ((BoscoECSWorldBase*) self, _tmp8_, &_inner_error_);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 			if (G_UNLIKELY (_inner_error_ != NULL)) {
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 				_dark_matter_unref0 (entity);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 				g_clear_error (&_inner_error_);
-#line 130 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 130 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 				return;
 #line 846 "World.c"
 			}
 		}
 	}
-#line 124 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 124 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	_dark_matter_unref0 (entity);
 #line 852 "World.c"
 }
 
 
 static void bosco_ecs_world_class_init (BoscoECSWorldClass * klass) {
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	bosco_ecs_world_parent_class = g_type_class_peek_parent (klass);
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	((DarkMatterClass *) klass)->finalize = bosco_ecs_world_finalize;
 #line 861 "World.c"
 }
@@ -867,9 +867,9 @@ static void bosco_ecs_world_instance_init (BoscoECSWorld * self) {
 
 static void bosco_ecs_world_finalize (DarkMatter* obj) {
 	BoscoECSWorld * self;
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, BOSCO_ECS_TYPE_WORLD, BoscoECSWorld);
-#line 10 "/home/bruce/Git/shmupwarz-vala/gen/World.gs"
+#line 10 "/home/bruce/Projects/shmupwarz-vala/gen/World.gs"
 	DARK_MATTER_CLASS (bosco_ecs_world_parent_class)->finalize (obj);
 #line 875 "World.c"
 }

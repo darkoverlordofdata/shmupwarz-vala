@@ -1,0 +1,24 @@
+{
+  "name" : "shmupwarz-vala",
+  "projectDirectory" : "/home/bruce/Projects/shmupwarz-vala",
+  "projectType" : 0,
+  "version" : "",
+  "executablePath" : "",
+  "packages" : [
+  ],
+  "sources" : [
+  ],
+  "dependencies" : [
+  ],
+  "valaOptions" : [
+  ],
+  "buildSystem" : {
+    "cleanCmd" : "",
+    "prebuildCmd" : "",
+    "buildCmd" : "",
+    "installCmd" : "",
+    "runCmd" : ""
+  },
+  "debugSystem" : {
+  }
+}
