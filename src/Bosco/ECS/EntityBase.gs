@@ -2,7 +2,7 @@
 namespace Bosco.ECS
 
     exception Exception
-        ECS
+        ECS // the exception
 
     class abstract EntityBase : DarkMatter
 

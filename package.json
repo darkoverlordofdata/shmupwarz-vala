@@ -1,10 +1,10 @@
 {
-  "name": "gamefoo",
+  "name": "Warriors-Of-Nim",
   "version": "0.0.1",
   "description": "Demo Vala Game",
   "main": "index.js",
   "scripts": {
-    "run": "make run",
+    "entitas": "entitas generate -p vala",
     "test": "make test"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/darkoverlordofdata/game-foo/issues"
   },
-  "homepage": "https://github.com/darkoverlordofdata/game-foo#readme"
+  "homepage": "https://github.com/darkoverlordofdata/game-foo#readme",
+  "devDependencies": {
+    "entitas-cli": "^0.1.0"
+  }
 }

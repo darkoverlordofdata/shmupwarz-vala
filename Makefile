@@ -78,8 +78,9 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs
 
-ORIGINAL=src/DarkMatter.vala \
+BASELIB=src/DarkMatter.vala \
 			src/Utils/UUID.vala \
+			src/Bosco/Bag.gs \
 			src/Bosco/Events/EntityReleased.gs \
 			src/Bosco/Events/ComponentReplaced.gs \
 			src/Bosco/Events/EntityChanged.gs \
@@ -91,19 +92,40 @@ ORIGINAL=src/DarkMatter.vala \
 			src/Bosco/Interfaces/ISystem.vala \
 			src/Bosco/Interfaces/IMatcher.vala \
 			src/Bosco/ECS/EntityBase.gs \
-			src/Bosco/ECS/Entity.vala \
+			src/Bosco/ECS/CoreTest.vala \
 			src/Bosco/ECS/Group.gs \
 			src/Bosco/ECS/Matcher.gs \
 			src/Bosco/ECS/WorldBase.gs \
-			src/Bosco/ECS/World.vala \
 			src/Bosco/Timer.gs \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs
 
-OLD=src/DarkMatter.vala \
-		old/Game.vala \
-		old/AbstractGame.vala \
-		old/Texture.vala
+# ORIGINAL=src/DarkMatter.vala \
+# 			src/Utils/UUID.vala \
+# 			src/Bosco/Events/EntityReleased.gs \
+# 			src/Bosco/Events/ComponentReplaced.gs \
+# 			src/Bosco/Events/EntityChanged.gs \
+# 			src/Bosco/Events/WorldChanged.gs \
+# 			src/Bosco/Events/GroupsChanged.gs \
+# 			src/Bosco/Events/GroupChanged.gs \
+# 			src/Bosco/Events/GroupUpdated.gs \
+# 			src/Bosco/Interfaces/IComponent.vala \
+# 			src/Bosco/Interfaces/ISystem.vala \
+# 			src/Bosco/Interfaces/IMatcher.vala \
+# 			src/Bosco/ECS/EntityBase.gs \
+# 			src/Bosco/ECS/Entity.vala \
+# 			src/Bosco/ECS/Group.gs \
+# 			src/Bosco/ECS/Matcher.gs \
+# 			src/Bosco/ECS/WorldBase.gs \
+# 			src/Bosco/ECS/World.vala \
+# 			src/Bosco/Timer.gs \
+# 			src/Bosco/Sprite.gs \
+# 			src/Bosco/AbstractGame.gs
+
+# OLD=src/DarkMatter.vala \
+# 		old/Game.vala \
+# 		old/AbstractGame.vala \
+# 		old/Texture.vala
 
 #
 # c libs needed for the gcc compiler
@@ -128,24 +150,24 @@ BIN=build
 #
 RESOURCES=resources
 
+#
+# Entitas generated files
+#
+gen/%.gs: entitas.json
+	npm run entitas
+
+
 default: $(BIN)/$(NAME)
 $(BIN)/$(NAME): $(SOURCES) $(APP)
 	-mkdir -p $(BIN)
 	cp -R --force $(RESOURCES) $(BIN)
 	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
-#	$(VC) $(DEBUG) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
-
-# default: $(BIN)/$(NAME)
-# $(BIN)/$(NAME): $(OLD)
-# 	-mkdir -p $(BIN)
-# 	cp -R --force $(RESOURCES) $(BIN)
-# 	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(OLD) -o $(BIN)/$(NAME)
 
 test: test/$(BIN)/$(NAME)
-test/$(BIN)/$(NAME): $(SOURCES) $(TST)
+test/$(BIN)/$(NAME): $(BASELIB) $(TST)
 	-mkdir -p test/$(BIN)
 	cp -R --force $(RESOURCES) test/$(BIN)
-	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(TST) -o test/$(BIN)/$(NAME)
+	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(BASELIB) $(TST) -o test/$(BIN)/$(NAME)
 	test/$(BIN)/$(NAME)
 	rm --force test/$(BIN)/$(NAME)
 

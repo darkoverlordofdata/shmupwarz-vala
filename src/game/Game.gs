@@ -4,9 +4,12 @@ uses
     Bosco.ECS
     SDL
 
-const SCREEN_WIDTH:int = 640
-const SCREEN_HEIGHT:int = 480
+const SCREEN_WIDTH:int = 800
+const SCREEN_HEIGHT:int = 600
 
+/** 
+ * Start the application
+ */
 init
     var game = new Game()
     game.Run()

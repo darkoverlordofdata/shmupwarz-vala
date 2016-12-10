@@ -15,8 +15,8 @@ init
 class Game : AbstractGame
 
     const WALKING_ANIMATION_FRAMES:int = 4
-    const SCREEN_WIDTH:int = 640
-    const SCREEN_HEIGHT:int = 480
+    const SCREEN_WIDTH:int = 800
+    const SCREEN_HEIGHT:int = 600
     frame:int = 0
 
     spriteClips:array of SDL.Rectangle = new array of SDL.Rectangle[4]
