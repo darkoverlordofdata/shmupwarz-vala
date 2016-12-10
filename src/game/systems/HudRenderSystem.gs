@@ -8,9 +8,9 @@ class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
 
     const WHITE : SDL.Color = {250, 250, 250}
 
-    const ACTIVE_ENTITIES : string  = "Active entities:         %d"
-    const TOTAL_RETAINED : string   = "Total reusable:          %d"
-    const TOTAL_REUSABLE : string   = "Total retained:          %d"
+    const ACTIVE_ENTITIES : string  = "Active entities:         %3d"
+    const TOTAL_RETAINED : string   = "Total reusable:          %3d"
+    const TOTAL_REUSABLE : string   = "Total retained:          %3d"
 
     _game : Game
     _world : World

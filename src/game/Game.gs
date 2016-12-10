@@ -9,7 +9,7 @@ const SCREEN_HEIGHT:int = 480
 
 init
     var game = new Game()
-    game.OnExecute()
+    game.Run()
 
 class Game : AbstractGame
 
@@ -27,7 +27,7 @@ class Game : AbstractGame
      *
      * Process the game engine
      */
-    def override OnLoop()
+    def override Update(delta: double)
         world.execute()
 
     /**
@@ -35,8 +35,8 @@ class Game : AbstractGame
      *
      * load assets
      */
-    def override OnInit():bool
-        if super.OnInit()
+    def override Initialize():bool
+        if super.Initialize()
 
             world = new World(components)
             world.add(new MovementSystem(this))
@@ -65,9 +65,9 @@ class Game : AbstractGame
      *
      * Handle events
      */
-    def override OnEvent(e:SDL.Event)
+    def override Events(e:SDL.Event)
 
-        if currentKeyStates[SDL.Scancode.ESCAPE] != 0
+        if keys[SDL.Scancode.ESCAPE] != 0
             running = false
 
         if e.type == SDL.EventType.QUIT
@@ -86,7 +86,7 @@ class Game : AbstractGame
      *
      * release assets
      */
-    def override OnCleanup()
+    def override Dispose()
         SDL.quit()
         SDLImage.quit()
 

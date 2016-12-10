@@ -11,22 +11,13 @@ namespace Bosco
         window : Window
         renderer : Renderer
         sprites : GenericArray of Sprite
-        currentKeyStates : array of uint8
+        keys : array of uint8
 
         prop readonly delta : double
-        prop readonly ticks : int
 
         showFps : bool = true
-        _lasttick : int
-        _fpsTimes : array of int = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-        _fpsTimeLast : int = 0
-        _fpsCount : int = 0
-        _fpsValue : double = 0.0
-        _fpsTickLast : int
-        _fpsDelta : double = 0.0
         _fpsFont: SDLTTF.Font
         _fpsSprite : Sprite
-        //_delta: double = 0.0
         _currentTime: double = 0.0
         _lastTime: double = 0.0
         _currentFps: double = 0.0
@@ -37,17 +28,17 @@ namespace Bosco
         _t2: double = 0.0
         _t3: double = 0.0
 
-        def OnExecute() : int
-            if OnInit() == false
+        def Run() : int
+            if Initialize() == false
                 return -1
 
             e : Event
             _currentTime = (double)GLib.get_real_time()/1000000.0 
-            currentKeyStates = Keyboard.get_state()
+            keys = Keyboard.get_state()
             while running
                 while Event.poll(out e) != 0
-                    OnEvent(e)
-                currentKeyStates = Keyboard.get_state()
+                    Events(e)
+                keys = Keyboard.get_state()
 
 
                 _lastTime = _currentTime
@@ -56,12 +47,10 @@ namespace Bosco
 
                 //_t1 = (double)GLib.get_real_time()/1000000.0 
 
-                _ticks += (int)(60.0 * _delta)
-                _lasttick = _ticks
-                OnLoop()
+                Update(_delta)
                 //_t2 = (double)GLib.get_real_time()/1000000.0 
                 GLib.Thread.usleep(1000)
-                OnRender()
+                Draw(_delta)
                 //_t3 = (double)GLib.get_real_time()/1000000.0 
 
                 
@@ -82,16 +71,16 @@ namespace Bosco
 
                 //stdout.printf("%f -- %f \n", (_t2-_t1), (_t3-_t2))
 
-            OnCleanup()
+            Dispose()
             return 0
 
-        def virtual OnEvent(e: Event)
+        def virtual Events(e: Event)
             pass
 
-        def virtual OnLoop()
+        def virtual Update(delta: double)
             pass
 
-        def virtual OnRender()
+        def virtual Draw(delta: double)
             renderer.set_draw_color(0x0, 0x0, 0x0, SDL.Alpha.OPAQUE)
             renderer.clear()
 
@@ -102,13 +91,13 @@ namespace Bosco
             if showFps do _fpsSprite.render(renderer, 0, 0)
             renderer.present()
 
-        def virtual OnCleanup()
+        def virtual Dispose()
             pass
 
         /**
          * Initialize SDL
          */
-        def virtual OnInit() : bool
+        def virtual Initialize() : bool
 
             if SDL.init(SDL.InitFlag.VIDEO) < 0
                 print "SDL could not initialize! SDL Error: %s", SDL.get_error()
@@ -137,7 +126,6 @@ namespace Bosco
                 print "SDL_ttf could not initialize! SDL_ttf Error: %s", SDLTTF.get_error()
                 return false
 
-            _fpsTickLast = _fpsTimeLast = (int)SDL.Timer.get_ticks()
             _fpsFont = SDLTTF.Font.open("resources/Starjedi.ttf", 16)
             if _fpsFont == null
                 print "Failed to load font!, SDL_ttf Error: %s", SDLTTF.get_error()
