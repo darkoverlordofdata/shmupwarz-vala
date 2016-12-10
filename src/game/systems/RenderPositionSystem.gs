@@ -22,38 +22,10 @@ class RenderPositionSystem : DarkMatter implements ISystem, ISetWorld, IInitiali
 
     def execute()
         for var entity in _group.getEntities()
-            // TODO: Shouldn't need try/catch inside of a loop...
-            try
-                var res = (ResourceComponent)entity.getComponent(Component.Resource)
-                var pos = (PositionComponent)entity.getComponent(Component.Position)
-                res.sprite.x = (int)pos.x
-                res.sprite.y = (int)pos.y
-
-            except e:Exception
-                print e.message
+            var res = entity.resource
+            var pos = entity.position
+            res.sprite.x = (int)pos.x
+            res.sprite.y = (int)pos.y
 
 
 
-        // loop over _game.sprites
-        // for var entity in _group.getEntities()
-        //     // TODO: Shouldn't need try/catch inside of a loop...
-        //     try
-        //         var res = (ResourceComponent)entity.getComponent(Component.Resource)
-        //         var pos = (PositionComponent)entity.getComponent(Component.Position)
-        //         if res.bgd
-        //             res.sprite.render(_renderer, (int)pos.x, (int)pos.y, {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT})
-        //
-        //     except e:Exception
-        //         print e.message
-        //
-        //
-        // for var entity in _group.getEntities()
-        //     // TODO: Shouldn't need try/catch inside of a loop...
-        //     try
-        //         var res = (ResourceComponent)entity.getComponent(Component.Resource)
-        //         var pos = (PositionComponent)entity.getComponent(Component.Position)
-        //         if !res.bgd
-        //             res.sprite.render(_renderer, (int)pos.x, (int)pos.y)
-        //
-        //     except e:Exception
-        //         print e.message

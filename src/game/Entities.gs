@@ -7,6 +7,12 @@ uses
 
 const Tau : double = 2 * Math.PI
 
+enum Enemy
+    Enemy1
+    Enemy2
+    Enemy3
+
+
 enum Layer
     DEFAULT
     BACKGROUND
@@ -32,50 +38,38 @@ enum Effect
  *  Create Background
  */
 def createBackground() : Entity
-    var entity = World.instance.createEntity("background")
-    try
-        //entity.addPosition, new PositionComponent(0, 0))
-        entity.addPosition(0, 0)
-        entity.addScale(2, 1)
-        entity.addResource("res/images/BackdropBlackLittleSparkBlack.png", null, true)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("background"
+        ).addPosition(0, 0 
+        ).addScale(2, 1
+        ).addResource("res/images/BackdropBlackLittleSparkBlack.png", null, true)
 
 /**
  *  Create Player
  */
 def createPlayer() : Entity
-    var entity = World.instance.createEntity("player")
-    try
-        entity.setPlayer(true)
-        entity.addBounds(43)
-        entity.addHealth(100, 100)
-        entity.addVelocity(0, 0)
-        entity.addLayer(Layer.PLAYER)
-        entity.addPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT-80)
-        entity.addResource("res/images/fighter.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("player"
+        ).setPlayer(true
+        ).addBounds(43
+        ).addHealth(100, 100
+        ).addVelocity(0, 0
+        ).addLayer(Layer.PLAYER
+        ).addPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT-80
+        ).addResource("res/images/fighter.png", null, false)
 
 /**
  *  Create Bullet
  */
 def createBullet(x : double, y : double) : Entity
-    var entity = World.instance.createEntity("bullet")
-    try
-        entity.setBullet(true)
-        entity.addPosition(x, y)
-        entity.addVelocity(0, -800)
-        entity.addBounds(5)
-        entity.addExpires(1)
-        entity.addLayer(Layer.BULLET)
-        entity.addResource("res/images/bullet.png", null, false)
-        entity.addSoundEffect(Effect.PEW)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("bullet"
+        ).setBullet(true
+        ).addPosition(x, y
+        ).addVelocity(0, -800
+        ).addTint(0xAD, 0xFF, 0x2F, 255
+        ).addBounds(5
+        ).addExpires(1
+        ).addLayer(Layer.BULLET
+        ).addResource("res/images/bullet.png", null, false
+        ).addSoundEffect(Effect.PEW)
 
 /**
  *  Create Particle
@@ -85,80 +79,78 @@ def createParticle(x : double, y : double) : Entity
     var magnitude = UUID.random.int_range(0, 200)
     var velocityX = magnitude * Math.cos(radians)
     var velocityY = magnitude * Math.sin(radians)
-    var scale = UUID.random.double_range(0.5, 1)
-    var entity = World.instance.createEntity("particle")
-    try
-        entity.addPosition(x, y)
-        entity.addVelocity(velocityX, velocityY)
-        entity.addExpires(1)
-        entity.addLayer(Layer.PARTICLE)
-        entity.addScale(scale, scale)
-        entity.addResource("res/images/particle.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+    var scale = UUID.random.double_range(0.05, 0.25)
+    return World.instance.createEntity("particle"
+        ).addPosition(x, y
+        ).addVelocity(velocityX, velocityY
+        ).addExpires(1
+        ).addLayer(Layer.PARTICLE
+        ).addScale(scale, scale
+        ).addResource("res/images/particle.png", null, false)
 
 /**
  *  Create Explosion
  */
-def createExplosion(x: double, y: double, scale:double) : Entity
-    var entity = World.instance.createEntity("explosion")
-    try
-        entity.addPosition(x, y)
-        entity.addExpires(0.5)
-        entity.addLayer(Layer.PARTICLE)
-        entity.addScale(scale, scale)
-        entity.addSoundEffect(scale < 0.5 ? Effect.SMALLASPLODE : Effect.ASPLODE)
-        entity.addScaleAnimation(scale / 100, scale, -3, false, true)
-        entity.addResource("res/images/explosion.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+def createExplosion(x: double, y: double) : Entity
+    return World.instance.createEntity("explosion"
+        ).addPosition(x, y
+        ).addExpires(1.0
+        ).addLayer(Layer.PARTICLE
+        ).addScale(0.5, 0.5
+        ).addSoundEffect(Effect.ASPLODE
+        ).addScaleTween(0.001, 0.5, -3, false, true
+        ).addTint(0xFA, 0xFA, 0xD2, 255
+        ).addResource("res/images/explosion.png", null, false)
+
+def createBang(x: double, y: double) : Entity
+    return World.instance.createEntity("explosion"
+        ).addPosition(x, y
+        ).addExpires(1.0
+        ).addLayer(Layer.PARTICLE
+        ).addScale(1.0, 1.0
+        ).addSoundEffect(Effect.SMALLASPLODE
+        ).addScaleTween(0.001, 1.0, -3, false, true
+        ).addTint(0xEE, 0xE8, 0xAA, 255
+        ).addResource("res/images/bang.png", null, false)
 
 def createEnemy1() : Entity
     var x = UUID.random.int_range(0, SCREEN_WIDTH)
     var y = SCREEN_HEIGHT/2 - 200
-    var entity = World.instance.createEntity("enemy1")
-    try
-        entity.setEnemy(true)
-        entity.addBounds(20)
-        entity.addHealth(10, 10)
-        entity.addVelocity(0, 40)
-        entity.addLayer(Layer.ACTORS_1)
-        entity.addPosition(x, y)
-        entity.addResource("res/images/enemy1.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("enemy1"
+        ).setEnemy(true
+        ).addBounds(20
+        ).addHealth(10, 10
+        ).addVelocity(0, 40
+        ).addLayer(Layer.ACTORS_1
+        ).addPosition(x, y
+        ).addResource("res/images/enemy1.png", null, false)
+
 
 def createEnemy2() : Entity
     var x = UUID.random.int_range(0, SCREEN_WIDTH)
     var y = SCREEN_HEIGHT/2 - 100
-    var entity = World.instance.createEntity("enemy2")
-    try
-        entity.setEnemy(true)
-        entity.addBounds(40)
-        entity.addHealth(20, 20)
-        entity.addVelocity(0, 30)
-        entity.addLayer(Layer.ACTORS_2)
-        entity.addPosition(x, y)
-        entity.addResource("res/images/enemy2.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("enemy2"
+        ).setEnemy(true
+        ).addBounds(40
+        ).addHealth(20, 20
+        ).addVelocity(0, 30
+        ).addLayer(Layer.ACTORS_2
+        ).addPosition(x, y
+        ).addResource("res/images/enemy2.png", null, false)
+
 
 def createEnemy3() : Entity
     var x = UUID.random.int_range(0, SCREEN_WIDTH)
     var y = SCREEN_HEIGHT/2 - 50
-    var entity = World.instance.createEntity("enemy3")
-    try
-        entity.setEnemy(true)
-        entity.addBounds(70)
-        entity.addHealth(60, 60)
-        entity.addVelocity(0, 20)
-        entity.addLayer(Layer.ACTORS_3)
-        entity.addPosition(x, y)
-        entity.addResource("res/images/enemy3.png", null, false)
-    except e:Exception
-        print e.message
-    return entity
+    return World.instance.createEntity("enemy3"
+        ).setEnemy(true
+        ).addBounds(70
+        ).addHealth(60, 60
+        ).addVelocity(0, 20
+        ).addLayer(Layer.ACTORS_3
+        ).addPosition(x, y
+        ).addResource("res/images/enemy3.png", null, false)
+
+
+
+

@@ -10,7 +10,7 @@ uses Bosco.ECS
 const components: array of string = {
     "BoundsComponent",
     "BulletComponent",
-    "ColorTweenComponent",
+    "ColorAnimationComponent",
     "DestroyComponent",
     "EnemyComponent",
     "ExpiresComponent",
@@ -23,18 +23,17 @@ const components: array of string = {
     "PlayerComponent",
     "PositionComponent",
     "ResourceComponent",
-    "ScaleTweenComponent",
+    "ScaleAnimationComponent",
     "ScaleComponent",
     "ScoreComponent",
     "SoundEffectComponent",
-    "TintComponent",
     "VelocityComponent"
 }
 
 enum Component
     Bounds
     Bullet
-    ColorTween
+    ColorAnimation
     Destroy
     Enemy
     Expires
@@ -47,23 +46,24 @@ enum Component
     Player
     Position
     Resource
-    ScaleTween
+    ScaleAnimation
     Scale
     Score
     SoundEffect
-    Tint
     Velocity
     TotalComponents
 
 
-
+[Compact]
 class BoundsComponent : DarkMatter implements IComponent
     radius:double
 
+[Compact]
 class BulletComponent : DarkMatter implements IComponent
     bullet : bool = true
 
-class ColorTweenComponent : DarkMatter implements IComponent
+[Compact]
+class ColorAnimationComponent : DarkMatter implements IComponent
     redMin:double
     redMax:double
     redSpeed:double
@@ -82,73 +82,81 @@ class ColorTweenComponent : DarkMatter implements IComponent
     alphaAnimate:bool
     repeat:bool
 
+[Compact]
 class DestroyComponent : DarkMatter implements IComponent
     destroy : bool = true
 
+[Compact]
 class EnemyComponent : DarkMatter implements IComponent
     enemy : bool = true
 
+[Compact]
 class ExpiresComponent : DarkMatter implements IComponent
     delay:double
 
+[Compact]
 class FiringComponent : DarkMatter implements IComponent
     firing : bool = true
 
+[Compact]
 class HealthComponent : DarkMatter implements IComponent
     health:double
     maximumHealth:double
 
+[Compact]
 class LayerComponent : DarkMatter implements IComponent
     ordinal:int
 
+[Compact]
 class LifeComponent : DarkMatter implements IComponent
     count:int
 
+[Compact]
 class MineComponent : DarkMatter implements IComponent
     mine : bool = true
 
+[Compact]
 class MouseComponent : DarkMatter implements IComponent
     x:double
     y:double
 
+[Compact]
 class PlayerComponent : DarkMatter implements IComponent
     player : bool = true
 
+[Compact]
 class PositionComponent : DarkMatter implements IComponent
     x:double
     y:double
 
+[Compact]
 class ResourceComponent : DarkMatter implements IComponent
     path:string
     sprite:Sprite?
     bgd:bool=false
 
-class ScaleTweenComponent : DarkMatter implements IComponent
+[Compact]
+class ScaleAnimationComponent : DarkMatter implements IComponent
     min:double
     max:double
     speed:double
     repeat:bool
     active:bool
 
+[Compact]
 class ScaleComponent : DarkMatter implements IComponent
     x:double
     y:double
 
+[Compact]
 class ScoreComponent : DarkMatter implements IComponent
     value:double
 
+[Compact]
 class SoundEffectComponent : DarkMatter implements IComponent
     effect:int
 
-class TintComponent : DarkMatter implements IComponent
-    r:int
-    g:int
-    b:int
-    a:int
-
+[Compact]
 class VelocityComponent : DarkMatter implements IComponent
     x:double
     y:double
-
-
-

@@ -11,7 +11,6 @@ class PlayerInputSystem : DarkMatter implements ISystem, ISetWorld, IInitializeS
     _mouseDown : bool
     _mouseDefined : bool = false
     _timeToFire : double = 0
-    //_fire : bool
     FireRate : static double = 0.1
 
     construct(game : Game)
@@ -24,8 +23,7 @@ class PlayerInputSystem : DarkMatter implements ISystem, ISetWorld, IInitializeS
         _mouseDefined = true
         case e
             when EventType.MOUSEMOTION
-                if _mouseDown == true
-                    moveTo(x, y)
+                moveTo(x, y)
 
             when EventType.MOUSEBUTTONDOWN
                 moveTo(x, y)
@@ -44,44 +42,32 @@ class PlayerInputSystem : DarkMatter implements ISystem, ISetWorld, IInitializeS
      * Move the player
      */
     def moveTo(x : int, y : int)
-        try
-            var entity = _group.getSingleEntity()
-            var pos = (PositionComponent)entity.getComponent(Component.Position)
+        var entity = _group.getSingleEntity()
+        var pos = entity.position
 
-            pos.x = x
-            pos.y = y
+        pos.x = x
+        pos.y = y
 
-        except e:Exception
-            print e.message
 
     /**
      * Do the keyboard polling
      */
     def execute()
-        try
-            var entity = _group.getSingleEntity()
-            var pos = (PositionComponent)entity.getComponent(Component.Position)
-            if _game.currentKeyStates[Scancode.UP] == 1
-                pos.y -= 1
-            else if _game.currentKeyStates[Scancode.DOWN] == 1
-                pos.y += 1
-            else if _game.currentKeyStates[Scancode.LEFT] == 1
-                pos.x -= 1
-            else if _game.currentKeyStates[Scancode.RIGHT] == 1
-                pos.x += 1
+        //try
+        var entity = _group.getSingleEntity()
+        var pos = entity.position
 
-            if _mouseDefined
-                if _mouseDown
-                    if _timeToFire <= 0
-                        createBullet(pos.x - 27, pos.y + 2)
-                        createBullet(pos.x + 27, pos.y + 2)
-                        _timeToFire = FireRate
+        if _mouseDefined
+            if _mouseDown || _game.currentKeyStates[Scancode.Z] == 1
+                if _timeToFire <= 0
+                    createBullet(pos.x - 27, pos.y + 2)
+                    createBullet(pos.x + 27, pos.y + 2)
+                    _timeToFire = FireRate
 
-            if _timeToFire > 0
-                _timeToFire -= _game.delta
-                if _timeToFire < 0
-                    _timeToFire = 0
+        if _timeToFire > 0
+            _timeToFire -= _game.delta
+            if _timeToFire < 0
+                _timeToFire = 0
 
 
-        except e:Exception
-            print e.message
+

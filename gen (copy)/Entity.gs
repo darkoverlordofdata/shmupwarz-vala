@@ -19,9 +19,9 @@ namespace Bosco.ECS
             for var i=1 to POOL_SIZE
                 _boundsComponentPool.push(new BoundsComponent())
             _bulletComponent = new BulletComponent()
-            _colorTweenComponentPool = new Bag of ColorTweenComponent
+            _colorAnimationComponentPool = new Bag of ColorAnimationComponent
             for var i=1 to POOL_SIZE
-                _colorTweenComponentPool.push(new ColorTweenComponent())
+                _colorAnimationComponentPool.push(new ColorAnimationComponent())
             _destroyComponent = new DestroyComponent()
             _enemyComponent = new EnemyComponent()
             _expiresComponentPool = new Bag of ExpiresComponent
@@ -48,9 +48,9 @@ namespace Bosco.ECS
             _resourceComponentPool = new Bag of ResourceComponent
             for var i=1 to POOL_SIZE
                 _resourceComponentPool.push(new ResourceComponent())
-            _scaleTweenComponentPool = new Bag of ScaleTweenComponent
+            _scaleAnimationComponentPool = new Bag of ScaleAnimationComponent
             for var i=1 to POOL_SIZE
-                _scaleTweenComponentPool.push(new ScaleTweenComponent())
+                _scaleAnimationComponentPool.push(new ScaleAnimationComponent())
             _scaleComponentPool = new Bag of ScaleComponent
             for var i=1 to POOL_SIZE
                 _scaleComponentPool.push(new ScaleComponent())
@@ -60,15 +60,12 @@ namespace Bosco.ECS
             _soundEffectComponentPool = new Bag of SoundEffectComponent
             for var i=1 to POOL_SIZE
                 _soundEffectComponentPool.push(new SoundEffectComponent())
-            _tintComponentPool = new Bag of TintComponent
-            for var i=1 to POOL_SIZE
-                _tintComponentPool.push(new TintComponent())
             _velocityComponentPool = new Bag of VelocityComponent
             for var i=1 to POOL_SIZE
                 _velocityComponentPool.push(new VelocityComponent())
 
 
-        def clearBoundsComponentPool() 
+        def clearBoundsComponentPool()
             _boundsComponentPool.clear()
 
         /** @type {shmupwarz.BoundsComponent} */
@@ -134,18 +131,18 @@ namespace Bosco.ECS
             return this
 
 
-        def clearColorTweenComponentPool() 
-            _colorTweenComponentPool.clear()
+        def clearColorAnimationComponentPool()
+            _colorAnimationComponentPool.clear()
 
-        /** @type {shmupwarz.ColorTweenComponent} */
-        prop colorTween : ColorTweenComponent
+        /** @type {shmupwarz.ColorAnimationComponent} */
+        prop colorAnimation : ColorAnimationComponent
             get
-                return (ColorTweenComponent)getComponent(Component.ColorTween)
+                return (ColorAnimationComponent)getComponent(Component.ColorAnimation)
 
         /** @type {boolean} */
-        prop hasColorTween : bool
+        prop hasColorAnimation : bool
             get
-                return hasComponent(Component.ColorTween)
+                return hasComponent(Component.ColorAnimation)
 
         /**
          * @param {double} redMin
@@ -167,8 +164,8 @@ namespace Bosco.ECS
          * @param {bool} repeat
          * @returns {entitas.Entity}
          */
-        def addColorTween(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
-            var component = _colorTweenComponentPool.length > 0 ? _colorTweenComponentPool.pop() : new ColorTweenComponent()
+        def addColorAnimation(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
+            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop() : new ColorAnimationComponent()
             component.redMin = redMin
             component.redMax = redMax
             component.redSpeed = redSpeed
@@ -186,7 +183,7 @@ namespace Bosco.ECS
             component.blueAnimate = blueAnimate
             component.alphaAnimate = alphaAnimate
             component.repeat = repeat
-            addComponent(Component.ColorTween, component)
+            addComponent(Component.ColorAnimation, component)
             return this
 
         /**
@@ -209,9 +206,9 @@ namespace Bosco.ECS
          * @param {bool} repeat
          * @returns {entitas.Entity}
          */
-        def replaceColorTween(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
-            var previousComponent = hasColorTween ? this.colorTween : null
-            var component = _colorTweenComponentPool.length > 0 ? _colorTweenComponentPool.pop() : new ColorTweenComponent()
+        def replaceColorAnimation(redMin:double, redMax:double, redSpeed:double, greenMin:double, greenMax:double, greenSpeed:double, blueMin:double, blueMax:double, blueSpeed:double, alphaMin:double, alphaMax:double, alphaSpeed:double, redAnimate:bool, greenAnimate:bool, blueAnimate:bool, alphaAnimate:bool, repeat:bool) : Entity
+            var previousComponent = hasColorAnimation ? this.colorAnimation : null
+            var component = _colorAnimationComponentPool.length > 0 ? _colorAnimationComponentPool.pop() : new ColorAnimationComponent()
             component.redMin = redMin
             component.redMax = redMax
             component.redSpeed = redSpeed
@@ -229,19 +226,19 @@ namespace Bosco.ECS
             component.blueAnimate = blueAnimate
             component.alphaAnimate = alphaAnimate
             component.repeat = repeat
-            replaceComponent(Component.ColorTween, component)
+            replaceComponent(Component.ColorAnimation, component)
             if previousComponent != null
-                _colorTweenComponentPool.push(previousComponent)
+                _colorAnimationComponentPool.push(previousComponent)
 
             return this;
 
         /**
          * @returns {entitas.Entity}
          */
-        def removeColorTween() : Entity
-            var component = colorTween
-            removeComponent(Component.ColorTween)
-            _colorTweenComponentPool.push(component)
+        def removeColorAnimation() : Entity
+            var component = colorAnimation
+            removeComponent(Component.ColorAnimation)
+            _colorAnimationComponentPool.push(component)
             return this
 
         /** @type {boolean} */
@@ -283,7 +280,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearExpiresComponentPool() 
+        def clearExpiresComponentPool()
             _expiresComponentPool.clear()
 
         /** @type {shmupwarz.ExpiresComponent} */
@@ -349,7 +346,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearHealthComponentPool() 
+        def clearHealthComponentPool()
             _healthComponentPool.clear()
 
         /** @type {shmupwarz.HealthComponent} */
@@ -400,7 +397,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearLayerComponentPool() 
+        def clearLayerComponentPool()
             _layerComponentPool.clear()
 
         /** @type {shmupwarz.LayerComponent} */
@@ -447,7 +444,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearLifeComponentPool() 
+        def clearLifeComponentPool()
             _lifeComponentPool.clear()
 
         /** @type {shmupwarz.LifeComponent} */
@@ -513,7 +510,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearMouseComponentPool() 
+        def clearMouseComponentPool()
             _mouseComponentPool.clear()
 
         /** @type {shmupwarz.MouseComponent} */
@@ -583,7 +580,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearPositionComponentPool() 
+        def clearPositionComponentPool()
             _positionComponentPool.clear()
 
         /** @type {shmupwarz.PositionComponent} */
@@ -634,7 +631,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearResourceComponentPool() 
+        def clearResourceComponentPool()
             _resourceComponentPool.clear()
 
         /** @type {shmupwarz.ResourceComponent} */
@@ -689,18 +686,18 @@ namespace Bosco.ECS
             return this
 
 
-        def clearScaleTweenComponentPool() 
-            _scaleTweenComponentPool.clear()
+        def clearScaleAnimationComponentPool()
+            _scaleAnimationComponentPool.clear()
 
-        /** @type {shmupwarz.ScaleTweenComponent} */
-        prop scaleTween : ScaleTweenComponent
+        /** @type {shmupwarz.ScaleAnimationComponent} */
+        prop scaleAnimation : ScaleAnimationComponent
             get
-                return (ScaleTweenComponent)getComponent(Component.ScaleTween)
+                return (ScaleAnimationComponent)getComponent(Component.ScaleAnimation)
 
         /** @type {boolean} */
-        prop hasScaleTween : bool
+        prop hasScaleAnimation : bool
             get
-                return hasComponent(Component.ScaleTween)
+                return hasComponent(Component.ScaleAnimation)
 
         /**
          * @param {double} min
@@ -710,14 +707,14 @@ namespace Bosco.ECS
          * @param {bool} active
          * @returns {entitas.Entity}
          */
-        def addScaleTween(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
-            var component = _scaleTweenComponentPool.length > 0 ? _scaleTweenComponentPool.pop() : new ScaleTweenComponent()
+        def addScaleAnimation(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
+            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop() : new ScaleAnimationComponent()
             component.min = min
             component.max = max
             component.speed = speed
             component.repeat = repeat
             component.active = active
-            addComponent(Component.ScaleTween, component)
+            addComponent(Component.ScaleAnimation, component)
             return this
 
         /**
@@ -728,31 +725,31 @@ namespace Bosco.ECS
          * @param {bool} active
          * @returns {entitas.Entity}
          */
-        def replaceScaleTween(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
-            var previousComponent = hasScaleTween ? this.scaleTween : null
-            var component = _scaleTweenComponentPool.length > 0 ? _scaleTweenComponentPool.pop() : new ScaleTweenComponent()
+        def replaceScaleAnimation(min:double, max:double, speed:double, repeat:bool, active:bool) : Entity
+            var previousComponent = hasScaleAnimation ? this.scaleAnimation : null
+            var component = _scaleAnimationComponentPool.length > 0 ? _scaleAnimationComponentPool.pop() : new ScaleAnimationComponent()
             component.min = min
             component.max = max
             component.speed = speed
             component.repeat = repeat
             component.active = active
-            replaceComponent(Component.ScaleTween, component)
+            replaceComponent(Component.ScaleAnimation, component)
             if previousComponent != null
-                _scaleTweenComponentPool.push(previousComponent)
+                _scaleAnimationComponentPool.push(previousComponent)
 
             return this;
 
         /**
          * @returns {entitas.Entity}
          */
-        def removeScaleTween() : Entity
-            var component = scaleTween
-            removeComponent(Component.ScaleTween)
-            _scaleTweenComponentPool.push(component)
+        def removeScaleAnimation() : Entity
+            var component = scaleAnimation
+            removeComponent(Component.ScaleAnimation)
+            _scaleAnimationComponentPool.push(component)
             return this
 
 
-        def clearScaleComponentPool() 
+        def clearScaleComponentPool()
             _scaleComponentPool.clear()
 
         /** @type {shmupwarz.ScaleComponent} */
@@ -803,7 +800,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearScoreComponentPool() 
+        def clearScoreComponentPool()
             _scoreComponentPool.clear()
 
         /** @type {shmupwarz.ScoreComponent} */
@@ -850,7 +847,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearSoundEffectComponentPool() 
+        def clearSoundEffectComponentPool()
             _soundEffectComponentPool.clear()
 
         /** @type {shmupwarz.SoundEffectComponent} */
@@ -897,66 +894,7 @@ namespace Bosco.ECS
             return this
 
 
-        def clearTintComponentPool() 
-            _tintComponentPool.clear()
-
-        /** @type {shmupwarz.TintComponent} */
-        prop tint : TintComponent
-            get
-                return (TintComponent)getComponent(Component.Tint)
-
-        /** @type {boolean} */
-        prop hasTint : bool
-            get
-                return hasComponent(Component.Tint)
-
-        /**
-         * @param {int} r
-         * @param {int} g
-         * @param {int} b
-         * @param {int} a
-         * @returns {entitas.Entity}
-         */
-        def addTint(r:int, g:int, b:int, a:int) : Entity
-            var component = _tintComponentPool.length > 0 ? _tintComponentPool.pop() : new TintComponent()
-            component.r = r
-            component.g = g
-            component.b = b
-            component.a = a
-            addComponent(Component.Tint, component)
-            return this
-
-        /**
-         * @param {int} r
-         * @param {int} g
-         * @param {int} b
-         * @param {int} a
-         * @returns {entitas.Entity}
-         */
-        def replaceTint(r:int, g:int, b:int, a:int) : Entity
-            var previousComponent = hasTint ? this.tint : null
-            var component = _tintComponentPool.length > 0 ? _tintComponentPool.pop() : new TintComponent()
-            component.r = r
-            component.g = g
-            component.b = b
-            component.a = a
-            replaceComponent(Component.Tint, component)
-            if previousComponent != null
-                _tintComponentPool.push(previousComponent)
-
-            return this;
-
-        /**
-         * @returns {entitas.Entity}
-         */
-        def removeTint() : Entity
-            var component = tint
-            removeComponent(Component.Tint)
-            _tintComponentPool.push(component)
-            return this
-
-
-        def clearVelocityComponentPool() 
+        def clearVelocityComponentPool()
             _velocityComponentPool.clear()
 
         /** @type {shmupwarz.VelocityComponent} */
@@ -1011,7 +949,7 @@ namespace Bosco.ECS
         /** @type {shmupwarz.BulletComponent} */
         _bulletComponent : BulletComponent
         /** @type {entitas.utils.Bag} */
-        _colorTweenComponentPool : Bag of ColorTweenComponent
+        _colorAnimationComponentPool : Bag of ColorAnimationComponent
         /** @type {shmupwarz.DestroyComponent} */
         _destroyComponent : DestroyComponent
         /** @type {shmupwarz.EnemyComponent} */
@@ -1037,7 +975,7 @@ namespace Bosco.ECS
         /** @type {entitas.utils.Bag} */
         _resourceComponentPool : Bag of ResourceComponent
         /** @type {entitas.utils.Bag} */
-        _scaleTweenComponentPool : Bag of ScaleTweenComponent
+        _scaleAnimationComponentPool : Bag of ScaleAnimationComponent
         /** @type {entitas.utils.Bag} */
         _scaleComponentPool : Bag of ScaleComponent
         /** @type {entitas.utils.Bag} */
@@ -1045,7 +983,4 @@ namespace Bosco.ECS
         /** @type {entitas.utils.Bag} */
         _soundEffectComponentPool : Bag of SoundEffectComponent
         /** @type {entitas.utils.Bag} */
-        _tintComponentPool : Bag of TintComponent
-        /** @type {entitas.utils.Bag} */
         _velocityComponentPool : Bag of VelocityComponent
-

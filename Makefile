@@ -37,6 +37,7 @@ TST=test/src/Vunny.gs \
 APP=gen/GeneratedComponents.gs \
 		src/game/Entities.gs \
 		src/game/systems/DestroySystem.gs \
+		src/game/systems/ColorTweenSystem.gs \
 		src/game/systems/ExpiringSystem.gs \
 		src/game/systems/MovementSystem.gs \
 		src/game/systems/RenderPositionSystem.gs \
@@ -44,7 +45,8 @@ APP=gen/GeneratedComponents.gs \
 		src/game/systems/PlayerInputSystem.gs \
 		src/game/systems/EntitySpawningTimerSystem.gs \
 		src/game/systems/CollisionSystem.gs \
-		src/game/systems/ScaleAnimationSystem.gs \
+		src/game/systems/RemoveOffscreenShipsSystem.gs \
+		src/game/systems/ScaleTweenSystem.gs \
 		src/game/systems/HudRenderSystem.gs \
 		src/game/Game.gs
 

@@ -3,12 +3,6 @@ uses
     Bosco
     Bosco.ECS
 
-
-enum Enemy
-    Enemy1
-    Enemy2
-    Enemy3
-
 class EntitySpawningTimerSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSystem, IExecuteSystem
     _game : Game
     _world : World
@@ -51,3 +45,5 @@ class EntitySpawningTimerSystem : DarkMatter implements ISystem, ISetWorld, IIni
         else
             result = delta
         return result
+
+

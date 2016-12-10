@@ -28,11 +28,11 @@ namespace Bosco.ECS
 
 
         /** @type {entitas.Matcher} */
-        prop static ColorTween : IMatcher 
+        prop static ColorAnimation : IMatcher 
             get
-                if _matchColorTween == null
-                    var matchColorTween = Matcher.AllOf({Component.ColorTween})
-                return _matchColorTween
+                if _matchColorAnimation == null
+                    var matchColorAnimation = Matcher.AllOf({Component.ColorAnimation})
+                return _matchColorAnimation
 
 
         /** @type {entitas.Matcher} */
@@ -132,11 +132,11 @@ namespace Bosco.ECS
 
 
         /** @type {entitas.Matcher} */
-        prop static ScaleTween : IMatcher 
+        prop static ScaleAnimation : IMatcher 
             get
-                if _matchScaleTween == null
-                    var matchScaleTween = Matcher.AllOf({Component.ScaleTween})
-                return _matchScaleTween
+                if _matchScaleAnimation == null
+                    var matchScaleAnimation = Matcher.AllOf({Component.ScaleAnimation})
+                return _matchScaleAnimation
 
 
         /** @type {entitas.Matcher} */
@@ -164,14 +164,6 @@ namespace Bosco.ECS
 
 
         /** @type {entitas.Matcher} */
-        prop static Tint : IMatcher 
-            get
-                if _matchTint == null
-                    var matchTint = Matcher.AllOf({Component.Tint})
-                return _matchTint
-
-
-        /** @type {entitas.Matcher} */
         prop static Velocity : IMatcher 
             get
                 if _matchVelocity == null
@@ -183,7 +175,7 @@ namespace Bosco.ECS
         /** @type {entitas.Matching} */
         _matchBullet : static IMatcher
         /** @type {entitas.Matching} */
-        _matchColorTween : static IMatcher
+        _matchColorAnimation : static IMatcher
         /** @type {entitas.Matching} */
         _matchDestroy : static IMatcher
         /** @type {entitas.Matching} */
@@ -209,15 +201,13 @@ namespace Bosco.ECS
         /** @type {entitas.Matching} */
         _matchResource : static IMatcher
         /** @type {entitas.Matching} */
-        _matchScaleTween : static IMatcher
+        _matchScaleAnimation : static IMatcher
         /** @type {entitas.Matching} */
         _matchScale : static IMatcher
         /** @type {entitas.Matching} */
         _matchScore : static IMatcher
         /** @type {entitas.Matching} */
         _matchSoundEffect : static IMatcher
-        /** @type {entitas.Matching} */
-        _matchTint : static IMatcher
         /** @type {entitas.Matching} */
         _matchVelocity : static IMatcher
 

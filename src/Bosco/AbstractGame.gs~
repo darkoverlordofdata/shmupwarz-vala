@@ -54,31 +54,33 @@ namespace Bosco
                 _currentTime = (double)GLib.get_real_time()/1000000.0
                 _delta = _currentTime - _lastTime
 
-                //_t1 = (double)GLib.get_real_time()/1000000.0 
+                _t1 = (double)GLib.get_real_time()/1000000.0 
 
+                //_ticks = (int)SDL.Timer.get_ticks()
                 _ticks += (int)(60.0 * _delta)
+                //_delta = (_ticks - _lasttick)/1000.0
                 _lasttick = _ticks
                 OnLoop()
-                //_t2 = (double)GLib.get_real_time()/1000000.0 
+                _t2 = (double)GLib.get_real_time()/1000000.0 
+                //nap(1)
                 GLib.Thread.usleep(1000)
                 OnRender()
-                //_t3 = (double)GLib.get_real_time()/1000000.0 
+                _t3 = (double)GLib.get_real_time()/1000000.0 
 
                 
-                if showFps
-                    _frames++
-                    _elapsed = _elapsed + _delta
+                _frames++
+                _elapsed = _elapsed + _delta
 
-                    if _elapsed > 1.0
-                        _currentFps = (double)_frames / _elapsed
-                        _elapsed = 0.0
-                        _frames = 0
-                        var s = "%2.2f".printf(_currentFps)
-                        _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, s.substring(0, 5), {250, 250, 250})
-                        _fpsSprite.centered = false
-                    else
-                        _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, "60.00", {250, 250, 250})
-                        _fpsSprite.centered = false
+                if _elapsed > 1.0
+                    _currentFps = (double)_frames / _elapsed
+                    _elapsed = 0.0
+                    _frames = 0
+                    var s = "%2.2f".printf(_currentFps)
+                    _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, s.substring(0, 5), {250, 250, 250})
+                    _fpsSprite.centered = false
+                else
+                    _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, "60.00", {250, 250, 250})
+                    _fpsSprite.centered = false
 
                 //stdout.printf("%f -- %f \n", (_t2-_t1), (_t3-_t2))
 
@@ -99,7 +101,8 @@ namespace Bosco
                 var sprite = sprites[i]
                 sprite.render(renderer, sprite.x, sprite.y)
 
-            if showFps do _fpsSprite.render(renderer, 0, 0)
+            //if showFps do fpsSprite().render(renderer, 0, 0)
+            _fpsSprite.render(renderer, 0, 0)
             renderer.present()
 
         def virtual OnCleanup()

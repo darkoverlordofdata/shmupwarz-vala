@@ -19,11 +19,10 @@ class MovementSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSyst
 
     def execute()
         for var entity in _group.getEntities()
-            try
-                var pos = (PositionComponent)entity.getComponent(Component.Position)
-                var vel = (VelocityComponent)entity.getComponent(Component.Velocity)
-                pos.x += (vel.x * _game.delta);
-                pos.y += (vel.y * _game.delta);
+            var pos = entity.position
+            var vel = entity.velocity
+            pos.x += (vel.x * _game.delta)
+            pos.y += (vel.y * _game.delta)
 
-            except e:Exception
-                print e.message
+
+

@@ -12,6 +12,12 @@ namespace Bosco
         x : double
         y : double
 
+    struct Color
+        r : uint8
+        g : uint8
+        b : uint8
+        a : uint8
+
     class Sprite : DarkMatter
         uniqueId : static int = 0
 
@@ -21,8 +27,14 @@ namespace Bosco
         x : int
         y : int
         scale : Scale = Scale() {
-          x = 1.0,
-          y = 1.0
+            x = 1.0,
+            y = 1.0
+        }
+        color : Color = Color() {
+            r = 255,
+            g = 255,
+            b = 255,
+            a = 255            
         }
         centered : bool = true
         layer : int = 0
@@ -86,4 +98,9 @@ namespace Bosco
             x = centered ? x-(w/2) : x
             y = centered ? y-(h/2) : y
 
+            texture.set_color_mod(color.r, color.g, color.b)
+
             renderer.copy(texture, null, {x, y, w, h})
+
+
+

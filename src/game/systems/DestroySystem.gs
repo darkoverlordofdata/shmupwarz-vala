@@ -22,16 +22,14 @@ class DestroySystem : DarkMatter implements ISystem, ISetWorld, IInitializeSyste
     def execute()
         res : ResourceComponent
 
-        try
-            for var entity in _group.getEntities()
-                if entity.hasComponent(Component.Resource)
-                    res = (ResourceComponent)entity.getComponent(Component.Resource)
-                    for var i=0 to (_sprites.length-1)
-                        if _sprites[i].id == res.sprite.id
-                            _sprites.remove_index(i)
-                            break
+        for var entity in _group.getEntities()
+            if entity.hasResource
+                res = entity.resource
+                for var i=0 to (_sprites.length-1)
+                    if _sprites[i].id == res.sprite.id
+                        _sprites.remove_index(i)
+                        break
 
-                _world.destroyEntity(entity)
+            _world.destroyEntity(entity)
 
-        except e:Exception
-            print e.message
+

@@ -51,3 +51,5 @@ class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
 
     def setText(sprite : Sprite, text : string)
         sprite.setText(_renderer, _font, text, WHITE)
+
+

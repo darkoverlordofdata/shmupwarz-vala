@@ -53,11 +53,6 @@ class ViewManagerSystem : DarkMatter implements ISystem, IInitializeSystem, ISet
             res.sprite.layer = e.layer.ordinal
             ordinal = e.layer.ordinal
 
-        if e.hasTint
-            res.sprite.color.r = (uint8)e.tint.r
-            res.sprite.color.g = (uint8)e.tint.g
-            res.sprite.color.b = (uint8)e.tint.b
-
         if res.bgd
             res.sprite.centered = false
 

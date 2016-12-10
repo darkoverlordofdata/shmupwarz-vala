@@ -19,10 +19,7 @@ class ExpiringSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSyst
 
     def execute()
         for var entity in _group.getEntities()
-            try
-                var exp = (ExpiresComponent)entity.getComponent(Component.Expires)
-                if (exp.delay -= _game.delta) <= 0
-                    entity.addComponent(Component.Destroy, new DestroyComponent())
+            if (entity.expires.delay -= _game.delta) <= 0
+                entity.setDestroy(true)
 
-            except e:Exception
-                print e.message
+

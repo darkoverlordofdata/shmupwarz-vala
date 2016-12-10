@@ -212,3 +212,5 @@ class VelocityComponent  : DarkMatter implements  IComponent
         this.y = y
     x:double
     y:double
+
+
