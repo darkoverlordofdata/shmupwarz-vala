@@ -6,7 +6,7 @@
 NAME=shmupwarz
 
 # vala compiler
-VC=valac
+VC=valac 
 # --vapidir=./sdl2-vapi
 # mingw for windows executables
 CC=--cc=i586-mingw32msvc-gcc
@@ -28,7 +28,7 @@ LIBS=--pkg glib-2.0 \
 			--pkg sdl2-image \
 			--pkg sdl2-ttf \
 			--pkg sdl2-mixer \
-			--pkg gio-2.0
+			--pkg gio-2.0 
 
 TST=test/src/Vunny.gs \
 		test/src/Should.gs \
@@ -148,6 +148,9 @@ CFLAGS=-X -w
 BIN=build
 .PHONY: build
 
+SRC=src
+
+
 #
 # Resouce location
 #
@@ -179,6 +182,7 @@ run: $(BIN)/$(NAME)
 
 clean:
 	rm -rf $(BIN)/*.o
+	rm -rf $(SRC)/**/*.c
 
 debug: debug/$(BIN)/$(NAME)
 debug/$(BIN)/$(NAME): $(SOURCES) $(TST)

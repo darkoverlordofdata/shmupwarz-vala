@@ -1,8 +1,10 @@
 [indent=4]
 uses SDL
+uses SDL.Video
 uses SDLTTF
 
 namespace Bosco
+
     class AbstractGame : DarkMatter
 
         name : string
@@ -12,7 +14,7 @@ namespace Bosco
         window : Video.Window
         renderer : Video.Renderer
         sprites : GenericArray of Sprite
-        keys : array of bool
+        keys : array of uint8 = new array of uint8[255]
 
         prop readonly delta : double
 
@@ -35,11 +37,15 @@ namespace Bosco
 
             e : Event
             _currentTime = (double)GLib.get_real_time()/1000000.0 
-            keys = Input.Keyboard.get_state()
             while running
                 while Event.poll(out e) != 0
+                    case e.type // patch for keyboardGetState
+                        when  SDL.EventType.KEYDOWN
+                            keys[e.key.keysym.sym] = 1
+                        when  SDL.EventType.KEYUP
+                            keys[e.key.keysym.sym] = 0
+
                     Events(e)
-                //keys = Input.Keyboard.get_state()
 
 
                 _lastTime = _currentTime

@@ -70,7 +70,7 @@ class Game : AbstractGame
      */
     def override Events(e:SDL.Event)
 
-        if keys[Input.Scancode.ESCAPE]
+        if keys[Input.Keycode.ESCAPE] == 1
             running = false
 
         if e.type == SDL.EventType.QUIT

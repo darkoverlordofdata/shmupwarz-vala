@@ -58,7 +58,7 @@ class PlayerInputSystem : DarkMatter implements ISystem, ISetWorld, IInitializeS
         var pos = entity.position
 
         if _mouseDefined
-            if _mouseDown || _game.keys[Input.Scancode.Z]
+            if _mouseDown || _game.keys[Input.Keycode.z] != 0
                 if _timeToFire <= 0
                     createBullet(pos.x - 27, pos.y + 2)
                     createBullet(pos.x + 27, pos.y + 2)
