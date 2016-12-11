@@ -5,7 +5,7 @@ uses
     Bosco.ECS
 
 class RenderPositionSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSystem, IExecuteSystem
-    _renderer : unowned Renderer
+    _renderer : unowned Video.Renderer
     _group: Group
     _game : Game
     _sprites : GenericArray of Sprite

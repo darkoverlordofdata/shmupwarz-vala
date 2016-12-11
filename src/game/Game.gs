@@ -70,7 +70,7 @@ class Game : AbstractGame
      */
     def override Events(e:SDL.Event)
 
-        if keys[SDL.Scancode.ESCAPE] != 0
+        if keys[Input.Scancode.ESCAPE]
             running = false
 
         if e.type == SDL.EventType.QUIT
@@ -79,9 +79,9 @@ class Game : AbstractGame
         if e.type != EventType.MOUSEMOTION && e.type != EventType.MOUSEBUTTONDOWN && e.type != EventType.MOUSEBUTTONUP
             return
         /* Mouse Events*/
-        x:int
-        y:int
-        SDL.Cursor.get_state(out x, out y)
+        x:int = 0
+        y:int = 0
+        Input.Cursor.get_state(ref x, ref y)
         player.onMouseEvent(e.type, x, y)
 
     /**

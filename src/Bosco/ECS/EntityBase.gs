@@ -1,8 +1,6 @@
 [indent=4]
 namespace Bosco.ECS
 
-    exception Exception
-        ECS // the exception
 
     class abstract EntityBase : DarkMatter
 
@@ -127,12 +125,14 @@ namespace Bosco.ECS
           * @param entitas.IComponent component
           * @returns entitas.Entity
           */
-        def addComponent(index : int, component : IComponent) : Entity raises Exception
+        def addComponent(index : int, component : IComponent) : Entity raises EcsException
             if !_isEnabled
-                raise new Exception.ECS("EntityIsNotEnabledException - Cannot add component!")
+                //raise new Exception.ECS("EntityIsNotEnabledException - Cannot add component!")
+                raise new EcsException.EntityIsNotEnabled("Cannot add component!")
 
             if hasComponent(index)
-                raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add %s at index %d", _componentsEnum[index], index)
+                //raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add %s at index %d", _componentsEnum[index], index)
+                raise new EcsException.EntityAlreadyHasComponent("Cannot add %s at index %d", _componentsEnum[index], index)
 
             _components[ic+index] = component
             _componentsCache = null
@@ -147,12 +147,14 @@ namespace Bosco.ECS
          * @param number index
          * @returns entitas.Entity
          */
-        def removeComponent(index : int) : Entity raises Exception
+        def removeComponent(index : int) : Entity raises EcsException
             if !_isEnabled
-                raise new Exception.ECS("EntityIsNotEnabledException - Cannot remove component!")
+                //raise new Exception.ECS("EntityIsNotEnabledException - Cannot remove component!")
+                raise new EcsException.EntityIsNotEnabled("Cannot remove component!")
 
             if !hasComponent(index)
-                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove %s at index %d", _componentsEnum[index], index)
+                //raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove %s at index %d", _componentsEnum[index], index)
+                raise new EcsException.EntityDoesNotHaveComponent("Cannot remove %s at index %d", _componentsEnum[index], index)
 
             _replaceComponent(index, null)
             return (Entity)this
@@ -164,9 +166,10 @@ namespace Bosco.ECS
          * @param entitas.IComponent component
          * @returns entitas.Entity
          */
-        def replaceComponent(index : int, component : IComponent) : Entity raises Exception
+        def replaceComponent(index : int, component : IComponent) : Entity raises EcsException
             if !_isEnabled
-                raise new Exception.ECS("Exception.EntityIsNotEnabledException -Cannot replace component!")
+                // raise new Exception.ECS("Exception.EntityIsNotEnabledException -Cannot replace component!")
+                raise new EcsException.EntityIsNotEnabled("Cannot replace component!")
 
             if hasComponent(index)
                 _replaceComponent(index, component)
@@ -198,9 +201,10 @@ namespace Bosco.ECS
          * @param number index
          * @param entitas.IComponent component
          */
-        def getComponent(index : int) : unowned IComponent raises Exception
+        def getComponent(index : int) : unowned IComponent raises EcsException
             if !hasComponent(index)
-                raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get %s at index %d", _componentsEnum[index], index)
+                //raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get %s at index %d", _componentsEnum[index], index)
+                raise new EcsException.EntityDoesNotHaveComponent("Cannot get %s at index %d", _componentsEnum[index], index)
 
             return _components[ic+index]
 
@@ -325,9 +329,10 @@ namespace Bosco.ECS
          * Release
          *
          */
-        def release() raises Exception
+        def release() raises EcsException
             _refCount -= 1
             if _refCount == 0
                 _onEntityReleased.dispatch((Entity)this)
             else if _refCount < 0
-                raise new Exception.ECS("EntityIsAlreadyReleasedException")
+                //raise new Exception.ECS("EntityIsAlreadyReleasedException")
+                raise new EcsException.EntityIsAlreadyReleased("%s:%s", id, name)

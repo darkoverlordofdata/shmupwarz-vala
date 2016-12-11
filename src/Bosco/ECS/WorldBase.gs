@@ -143,9 +143,10 @@ namespace Bosco.ECS
          * Destroy an entity
          * @param entitas.Entity entity
          */
-        def destroyEntity(entity : Entity) raises Exception
+        def destroyEntity(entity : Entity) raises EcsException
             if !_entities.has_key(entity.id)
-                raise new Exception.ECS("WorldDoesNotContainEntityException - Could not destroy entity!")
+                //raise new Exception.ECS("WorldDoesNotContainEntityException - Could not destroy entity!")
+                raise new EcsException.WorldDoesNotContainEntity("Could not destroy entity!")
 
             _entities.unset(entity.id)
             _entitiesCache = new array of Entity[0]

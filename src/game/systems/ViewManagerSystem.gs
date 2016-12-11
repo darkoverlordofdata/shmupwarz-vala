@@ -6,7 +6,7 @@ uses
 
 class ViewManagerSystem : DarkMatter implements ISystem, IInitializeSystem, ISetWorld
 
-    _renderer : unowned Renderer
+    _renderer : unowned Video.Renderer
     _sprites : GenericArray of Sprite
     _group : Group
     _world : World

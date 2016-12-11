@@ -1,12 +1,13 @@
 [indent=4]
 uses
     SDL
+    SDLTTF
     Bosco
     Bosco.ECS
 
 class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSystem, IExecuteSystem
 
-    const WHITE : SDL.Color = {250, 250, 250}
+    const WHITE : Video.Color = {250, 250, 250}
 
     const ACTIVE_ENTITIES : string  = "Active entities:         %3d"
     const TOTAL_RETAINED : string   = "Total reusable:          %3d"
@@ -18,7 +19,7 @@ class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
     _activeEntities : Sprite
     _totalRetained : Sprite
     _totalReusable : Sprite
-    _renderer : unowned Renderer
+    _renderer : unowned Video.Renderer
 
     construct(game : Game)
         _game = game
@@ -28,9 +29,9 @@ class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
         _world = world
 
     def initialize()
-        _font = SDLTTF.Font.open("resources/Starjedi.ttf", 16)
+        _font = new Font("resources/Starjedi.ttf", 16)
         if _font == null
-            print "Failed to load font!, SDL_ttf Error: %s", SDLTTF.get_error()
+            print "Failed to load font"
 
         _game.sprites.add(_activeEntities = createText(0, 40, ACTIVE_ENTITIES.printf(_world.count)))
         _game.sprites.add(_totalRetained = createText(0, 60, TOTAL_RETAINED.printf(_world.reusableEntitiesCount)))

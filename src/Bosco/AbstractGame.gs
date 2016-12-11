@@ -1,5 +1,6 @@
 [indent=4]
 uses SDL
+uses SDLTTF
 
 namespace Bosco
     class AbstractGame : DarkMatter
@@ -8,10 +9,10 @@ namespace Bosco
         width : int
         height : int
         running : bool
-        window : Window
-        renderer : Renderer
+        window : Video.Window
+        renderer : Video.Renderer
         sprites : GenericArray of Sprite
-        keys : array of uint8
+        keys : array of bool
 
         prop readonly delta : double
 
@@ -34,11 +35,11 @@ namespace Bosco
 
             e : Event
             _currentTime = (double)GLib.get_real_time()/1000000.0 
-            keys = Keyboard.get_state()
+            keys = Input.Keyboard.get_state()
             while running
                 while Event.poll(out e) != 0
                     Events(e)
-                keys = Keyboard.get_state()
+                //keys = Input.Keyboard.get_state()
 
 
                 _lastTime = _currentTime
@@ -81,7 +82,7 @@ namespace Bosco
             pass
 
         def virtual Draw(delta: double)
-            renderer.set_draw_color(0x0, 0x0, 0x0, SDL.Alpha.OPAQUE)
+            renderer.set_draw_color(0x0, 0x0, 0x0, 0x0)
             renderer.clear()
 
             for var i=0 to (sprites.length-1)
@@ -104,31 +105,31 @@ namespace Bosco
                 return false
 
             if SDLImage.init(SDLImage.InitFlags.PNG) < 0
-                print "SDL_image could not initialize! SDL_image Error: %s", SDLImage.get_error()
+                print "SDL_image could not initialize"
                 return false
 
-            if !SDL.Hints.set(Hints.RENDER_SCALE_QUALITY, "1")
+            if !SDL.Hint.set_hint(Hint.RENDER_SCALE_QUALITY, "1")
                 print "Warning: Linear texture filtering not enabled!"
 
-            window = Window.create(name, Window.POS_CENTERED, Window.POS_CENTERED, width, height, Window.Flags.SHOWN)
+            window = new Video.Window(name, Video.Window.POS_CENTERED, Video.Window.POS_CENTERED, width, height, Video.WindowFlags.SHOWN)
             if window == null
                 print "Window could not be created! SDL Error: %s", SDL.get_error()
                 return false
 
-            renderer = Renderer.create_renderer(window, -1, Renderer.Flags.ACCELERATED | Renderer.Flags.PRESENTVSYNC)
+            renderer = Video.Renderer.create(window, -1, Video.RendererFlags.ACCELERATED | Video.RendererFlags.PRESENTVSYNC)
             if renderer == null
                 print "Renderer could not be created! SDL Error: %s", SDL.get_error()
                 return false
 
-            renderer.set_draw_color(0xFF, 0xFF, 0xFF, Alpha.OPAQUE)
+            renderer.set_draw_color(0xFF, 0xFF, 0xFF, 0)
 
             if SDLTTF.init() == -1
-                print "SDL_ttf could not initialize! SDL_ttf Error: %s", SDLTTF.get_error()
+                print "SDL_ttf could not initialize"
                 return false
 
-            _fpsFont = SDLTTF.Font.open("resources/Starjedi.ttf", 16)
+            _fpsFont = new Font("resources/Starjedi.ttf", 16)
             if _fpsFont == null
-                print "Failed to load font!, SDL_ttf Error: %s", SDLTTF.get_error()
+                print "Failed to load font"
 
             return true
 

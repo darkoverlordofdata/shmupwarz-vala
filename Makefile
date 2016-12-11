@@ -6,7 +6,8 @@
 NAME=shmupwarz
 
 # vala compiler
-VC=valac --vapidir=./vapi
+VC=valac
+# --vapidir=./sdl2-vapi
 # mingw for windows executables
 CC=--cc=i586-mingw32msvc-gcc
 # vala flags
@@ -23,9 +24,10 @@ LIBS=--pkg glib-2.0 \
 			--pkg gobject-2.0 \
 			--pkg gee-0.8 \
 			--pkg sdl2 \
-			--pkg SDL2_gfx \
-			--pkg SDL2_image \
-			--pkg SDL2_ttf \
+			--pkg sdl2-gfx \
+			--pkg sdl2-image \
+			--pkg sdl2-ttf \
+			--pkg sdl2-mixer \
 			--pkg gio-2.0
 
 TST=test/src/Vunny.gs \
@@ -57,6 +59,7 @@ APP=gen/GeneratedComponents.gs \
 SOURCES=src/DarkMatter.vala \
 			src/Utils/UUID.vala \
 			src/Bosco/Bag.gs \
+			src/Bosco/ECS/Exceptions.gs \
 			src/Bosco/Events/EntityReleased.gs \
 			src/Bosco/Events/ComponentReplaced.gs \
 			src/Bosco/Events/EntityChanged.gs \
@@ -130,14 +133,14 @@ BASELIB=src/DarkMatter.vala \
 #
 # c libs needed for the gcc compiler
 #
-CLIBS=-X -lm \
-			-X -lSDL_gfx
+CLIBS=-X -lm -X -lSDL2_image -X -lSDL2_ttf -X -lSDL2_mixer -X -lSDL2_gfx
 
 #
 # c flags needed for the gcc compiler
 #
-CFLAGS=-X -w \
-			-X -I/usr/include/SDL2
+CFLAGS=-X -w 
+
+#-X -I/usr/include/SDL2
 
 #
 # Folder for finished binaries

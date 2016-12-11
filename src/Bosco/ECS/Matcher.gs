@@ -174,12 +174,13 @@ namespace Bosco.ECS
          * @param Array<IMatcher> matchers
          * @returns Array<number>
          */
-        def static merge(matchers : array of IMatcher) : array of int raises Exception
+        def static merge(matchers : array of IMatcher) : array of int raises EcsException
             var indices = new list of int
 
             for var matcher in matchers
                 if matcher.indices.length != 1
-                    raise new Exception.ECS("MatcherException - %s", matcher.toString())
+                    //raise new Exception.ECS("MatcherException - %s", matcher.toString())
+                    raise new EcsException.Matcher(matcher.toString())
 
                 indices.add(matcher.indices[0])
             return listToArray(indices)
