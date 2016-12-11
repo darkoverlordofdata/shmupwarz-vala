@@ -6,7 +6,7 @@
 NAME=shmupwarz
 
 # vala compiler
-VC=valac 
+VC=valac
 # --vapidir=./sdl2-vapi
 # mingw for windows executables
 CC=--cc=i586-mingw32msvc-gcc
@@ -71,12 +71,12 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/Interfaces/ISystem.vala \
 			src/Bosco/Interfaces/IMatcher.vala \
 			src/Bosco/ECS/EntityBase.gs \
-			gen/Entity.gs \
+			src/game/generated/Entity.gs \
 			src/Bosco/ECS/Group.gs \
-			gen/Matching.gs \
+			src/game/generated/Matching.gs \
 			src/Bosco/ECS/Matcher.gs \
 			src/Bosco/ECS/WorldBase.gs \
-			gen/World.gs \
+			src/game/generated/World.gs \
 			src/Bosco/Timer.gs \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs
@@ -182,7 +182,10 @@ run: $(BIN)/$(NAME)
 
 clean:
 	rm -rf $(BIN)/*.o
-	rm -rf $(SRC)/**/*.c
+	rm -rf $(SRC)/*.c
+	rm -rf $(SRC)/Bosco/Events/*.c
+	rm -rf $(SRC)/Bosco/ECS/*.c
+	rm -rf $(SRC)/Bosco/Interfaces/*.c
 
 debug: debug/$(BIN)/$(NAME)
 debug/$(BIN)/$(NAME): $(SOURCES) $(TST)
@@ -190,11 +193,3 @@ debug/$(BIN)/$(NAME): $(SOURCES) $(TST)
 	cp -R --force $(RESOURCES) $(BIN)
 	$(VC) $(DEBUG) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
-# install:
-# 	cp -f bin/webkat /usr/local/bin
-# 	-mkdir /usr/local/share/icons
-# 	cp -fr src/icon.png /usr/local/share/icons/webkat.png
-#
-# uninstall:
-# 	rm -f /usr/local/bin/webkat
-# 	rm -f /usr/local/share/icons/webkat.png

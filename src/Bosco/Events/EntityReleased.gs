@@ -4,9 +4,9 @@ namespace Bosco.ECS
 
     delegate OnEntityReleased(e : Entity)
     
-    class EntityReleased
+    class EntityReleased : DarkMatter
 
-        class Listener
+        class Listener : DarkMatter
             prop event : unowned OnEntityReleased
             construct(event : OnEntityReleased)
                 _event = event

@@ -5,7 +5,7 @@
     "javascript": "web/src/example/generatedExtensions.js",
     "typescript": "example/src/generatedComponents.ts",
     "declaration": "example/ext/example.d.ts",
-    "vala":"gen/"
+    "vala":"src/game/generated"
   },
   "alloc": {
     "entities": 200,

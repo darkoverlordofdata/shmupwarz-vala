@@ -1,5 +1,9 @@
 [indent=4]
+/**
+ * Base class for World
+ */
 uses Utils
+uses Gee
 
 namespace Bosco.ECS
 
@@ -62,25 +66,10 @@ namespace Bosco.ECS
          * @type string */
         prop readonly name : string
 
-        // /**
-        //  * An enum of valid component types
-        //  * @type Object<string,number> */
-        // componentsEnum : static array of string
-        //
-        // /**
-        //  * Count of components
-        //  * @`type` number */
-        // totalComponents : static int = 0
-        //
-        // /**
-        //  * Global reference to pool instance
-        //  * @type entitas.Pool */
-        // instance : static World
-        //
         _entities : dict of string, Entity
         _groups : dict of string, Group
-        _groupsForIndex : array of Gee.ArrayList of Group
-        _reusableEntities : Queue of Entity
+        _groupsForIndex : array of ArrayList of Group
+        _reusableEntities : GLib.Queue of Entity
         _retainedEntities : dict of string, Entity
         _componentsEnum : array of string
         _totalComponents : int = 0
@@ -106,9 +95,9 @@ namespace Bosco.ECS
             _componentsEnum = components
             _totalComponents = components.length
             _creationIndex = startCreationIndex
-            _groupsForIndex = new array of Gee.ArrayList of Group[components.length]
+            _groupsForIndex = new array of ArrayList of Group[components.length]
 
-            _reusableEntities = new Queue of Entity
+            _reusableEntities = new GLib.Queue of Entity
             _retainedEntities = new dict of string, Entity
             _entitiesCache = new array of Entity[0]
             _entities = new dict of string, Entity
@@ -145,7 +134,6 @@ namespace Bosco.ECS
          */
         def destroyEntity(entity : Entity) raises EcsException
             if !_entities.has_key(entity.id)
-                //raise new Exception.ECS("WorldDoesNotContainEntityException - Could not destroy entity!")
                 raise new EcsException.WorldDoesNotContainEntity("Could not destroy entity!")
 
             _entities.unset(entity.id)
@@ -166,7 +154,7 @@ namespace Bosco.ECS
         /**
          * Destroy All Entities
          */
-        def destroyAllEntities() raises Exception
+        def destroyAllEntities() raises EcsException
             var entities = getEntities()
             for var entity in entities
                 destroyEntity(entity)
@@ -253,7 +241,7 @@ namespace Bosco.ECS
 
                 for var index in matcher.indices
                     if _groupsForIndex[index] == null
-                        _groupsForIndex[index] = new Gee.ArrayList of Group
+                        _groupsForIndex[index] = new ArrayList of Group
                     _groupsForIndex[index].add(group)
                 _onGroupCreated.dispatch((World)this, group)
             return group

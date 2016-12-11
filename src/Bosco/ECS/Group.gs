@@ -51,7 +51,7 @@ namespace Bosco.ECS
          * Handle adding and removing component from the entity without raising events
          * @param entity
          */
-        def handleEntitySilently(entity : Entity) raises Exception
+        def handleEntitySilently(entity : Entity) raises EcsException
             if _matcher.matches(entity)
                 addEntitySilently(entity)
             else
@@ -63,7 +63,7 @@ namespace Bosco.ECS
          * @param index
          * @param component
          */
-        def handleEntity(entity : Entity, index : int, component : IComponent) raises Exception
+        def handleEntity(entity : Entity, index : int, component : IComponent) raises EcsException
             if _matcher.matches(entity)
                 addEntity(entity, index, component)
             else
@@ -111,7 +111,7 @@ namespace Bosco.ECS
          * Remove entity without raising events
          * @param entity
          */
-        def removeEntitySilently(entity : Entity) raises Exception
+        def removeEntitySilently(entity : Entity) raises EcsException
             if _entities.has_key(entity.id)
                 _entities.unset(entity.id)
                 _entitiesCache = null
@@ -124,7 +124,7 @@ namespace Bosco.ECS
          * @param index
          * @param component
          */
-        def removeEntity(entity : Entity, index : int, component : IComponent) raises Exception
+        def removeEntity(entity : Entity, index : int, component : IComponent) raises EcsException
             if _entities.has_key(entity.id)
                 _entities.unset(entity.id)
                 _entitiesCache = null
@@ -171,7 +171,6 @@ namespace Bosco.ECS
                 else if c == 0
                     return null
                 else
-                    //raise new Exception.ECS("SingleEntityException %s", _matcher.toString())
                     raise new EcsException.SingleEntity(_matcher.toString())
             return _singleEntityCache
 

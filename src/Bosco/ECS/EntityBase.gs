@@ -1,4 +1,7 @@
 [indent=4]
+/**
+ * Base class for Entitities
+ */
 namespace Bosco.ECS
 
 
@@ -127,11 +130,9 @@ namespace Bosco.ECS
           */
         def addComponent(index : int, component : IComponent) : Entity raises EcsException
             if !_isEnabled
-                //raise new Exception.ECS("EntityIsNotEnabledException - Cannot add component!")
                 raise new EcsException.EntityIsNotEnabled("Cannot add component!")
 
             if hasComponent(index)
-                //raise new Exception.ECS("EntityAlreadyHasComponentException - Cannot add %s at index %d", _componentsEnum[index], index)
                 raise new EcsException.EntityAlreadyHasComponent("Cannot add %s at index %d", _componentsEnum[index], index)
 
             _components[ic+index] = component
@@ -149,11 +150,9 @@ namespace Bosco.ECS
          */
         def removeComponent(index : int) : Entity raises EcsException
             if !_isEnabled
-                //raise new Exception.ECS("EntityIsNotEnabledException - Cannot remove component!")
                 raise new EcsException.EntityIsNotEnabled("Cannot remove component!")
 
             if !hasComponent(index)
-                //raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot remove %s at index %d", _componentsEnum[index], index)
                 raise new EcsException.EntityDoesNotHaveComponent("Cannot remove %s at index %d", _componentsEnum[index], index)
 
             _replaceComponent(index, null)
@@ -168,7 +167,6 @@ namespace Bosco.ECS
          */
         def replaceComponent(index : int, component : IComponent) : Entity raises EcsException
             if !_isEnabled
-                // raise new Exception.ECS("Exception.EntityIsNotEnabledException -Cannot replace component!")
                 raise new EcsException.EntityIsNotEnabled("Cannot replace component!")
 
             if hasComponent(index)
@@ -203,7 +201,6 @@ namespace Bosco.ECS
          */
         def getComponent(index : int) : unowned IComponent raises EcsException
             if !hasComponent(index)
-                //raise new Exception.ECS("EntityDoesNotHaveComponentException - Cannot get %s at index %d", _componentsEnum[index], index)
                 raise new EcsException.EntityDoesNotHaveComponent("Cannot get %s at index %d", _componentsEnum[index], index)
 
             return _components[ic+index]
@@ -334,5 +331,4 @@ namespace Bosco.ECS
             if _refCount == 0
                 _onEntityReleased.dispatch((Entity)this)
             else if _refCount < 0
-                //raise new Exception.ECS("EntityIsAlreadyReleasedException")
                 raise new EcsException.EntityIsAlreadyReleased("%s:%s", id, name)

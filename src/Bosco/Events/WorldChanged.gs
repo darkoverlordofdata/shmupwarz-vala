@@ -4,9 +4,9 @@ namespace Bosco.ECS
 
     delegate OnWorldChanged(w : World, e : Entity)
 
-    class WorldChanged
+    class WorldChanged : DarkMatter
 
-        class Listener
+        class Listener : DarkMatter
             prop event : unowned OnWorldChanged
             construct(event : OnWorldChanged)
                 _event = event

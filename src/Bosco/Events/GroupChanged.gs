@@ -4,9 +4,9 @@ namespace Bosco.ECS
 
     delegate OnGroupChanged(g : Group, e : Entity, i : int, c : IComponent)
 
-    class GroupChanged
+    class GroupChanged : DarkMatter
 
-        class Listener
+        class Listener : DarkMatter
             prop event : unowned OnGroupChanged
             construct(event : OnGroupChanged)
                 _event = event

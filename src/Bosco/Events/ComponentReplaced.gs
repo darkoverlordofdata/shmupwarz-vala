@@ -4,11 +4,11 @@ namespace Bosco.ECS
 
     delegate OnComponentReplaced(e : Entity, index : int, component : IComponent, replacement : IComponent)
 
-    class ComponentReplaced
+    class ComponentReplaced : DarkMatter
 
         _listeners : list of Listener = new list of Listener
 
-        class Listener
+        class Listener : DarkMatter
             prop event : unowned OnComponentReplaced
             construct(event : OnComponentReplaced)
                 _event = event

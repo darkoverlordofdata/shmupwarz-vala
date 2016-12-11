@@ -72,7 +72,7 @@ namespace Bosco
             else
                 this.texture = Video.Texture.create_from_surface(renderer, textSurface)
                 if this.texture == null
-                    print "Unable to create texture from rendered text"
+                    print "Unable to create texture from rendered text! SDL Error: %s", SDL.get_error()
                 else
                     this.width = textSurface.w
                     this.height = textSurface.h
@@ -83,7 +83,7 @@ namespace Bosco
             var loadedSurface = SDLImage.load(path)
 
             if loadedSurface == null
-                print "Unable to load image"
+                print "Unable to load image! SDL Error: %s", SDL.get_error()
                 return null
              else
                 loadedSurface.set_colorkey(1, loadedSurface.format.map_rgb(0, 0xFF, 0xFF))

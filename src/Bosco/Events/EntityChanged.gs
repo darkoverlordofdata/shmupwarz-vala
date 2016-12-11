@@ -4,9 +4,9 @@ namespace Bosco.ECS
 
     delegate OnEntityChanged(e : Entity, index : int, component : IComponent)
 
-    class EntityChanged
+    class EntityChanged : DarkMatter
 
-        class Listener
+        class Listener : DarkMatter
             prop event : unowned OnEntityChanged
             construct(event : OnEntityChanged)
                 _event = event
