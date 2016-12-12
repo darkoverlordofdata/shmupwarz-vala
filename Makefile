@@ -135,8 +135,8 @@ RESOURCES=res
 #
 # Entitas generated files
 #
-gen/%.gs: entitas.json
-	npm run entitas
+# gen/%.gs: entitas.json
+# 	npm run entitas
 
 
 default: $(BIN)/$(NAME)
