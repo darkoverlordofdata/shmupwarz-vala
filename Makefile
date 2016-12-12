@@ -156,7 +156,9 @@ test/$(BIN)/$(NAME): $(BASELIB) $(TST)
 	rm --force test/$(BIN)/$(NAME)
 
 run: $(BIN)/$(NAME)
+	cd $(BIN)
 	$(BIN)/$(NAME)
+	cd ..
 
 clean:
 	rm -rf $(BIN)/*.o
@@ -173,3 +175,5 @@ debug/$(BIN)/$(NAME): $(SOURCES) $(TST)
 	cp -R --force $(RESOURCES) $(BIN)
 	$(VC) $(DEBUG) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
+
+	

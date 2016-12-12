@@ -76,7 +76,7 @@ namespace Bosco
                         _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, "60.00", {250, 250, 250})
                         _fpsSprite.centered = false
 
-                stdout.printf("%f\n", (_t2-_t1))
+                //stdout.printf("%f\n", (_t2-_t1))
 
             Dispose()
             return 0
