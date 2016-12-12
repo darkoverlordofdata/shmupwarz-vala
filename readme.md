@@ -13,6 +13,6 @@ $ cd shmupwarz-vala
 $ make run
 ```
 
-![screenshot](https://github.com/darkoverlordofdata/efing/raw/master/shmupwarz-vala/Screenshot from 2016-12-11 23:50:37.png)
+![screenshot](https://github.com/darkoverlordofdata/shmupwarz-vala/blob/master/Screenshot%20from%202016-12-11%2023:50:37.png)
 
 
