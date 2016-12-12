@@ -7,9 +7,10 @@ NAME=shmupwarz
 
 # vala compiler
 VC=valac
+
 # --vapidir=./sdl2-vapi
 # mingw for windows executables
-CC=--cc=i586-mingw32msvc-gcc
+CC=--cc=x86_64-w64-mingw32-gcc
 # vala flags
 # -g debug
 # -w
@@ -169,6 +170,16 @@ $(BIN)/$(NAME): $(SOURCES) $(APP)
 	cp -R --force $(RESOURCES) $(BIN)
 	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
+
+
+#valac --cc=i586-mingw32msvc-gcc --pkg gtk+-2.0 -o testGTK2.exe testGTK2.vala
+# exe: $(BIN)/$(NAME)
+# $(BIN)/$(NAME): $(SOURCES) $(APP)
+# 	-mkdir -p $(BIN)
+# 	cp -R --force $(RESOURCES) $(BIN)
+# 	$(VC) $(CC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME).exe
+
+
 test: test/$(BIN)/$(NAME)
 test/$(BIN)/$(NAME): $(BASELIB) $(TST)
 	-mkdir -p test/$(BIN)
@@ -183,6 +194,8 @@ run: $(BIN)/$(NAME)
 clean:
 	rm -rf $(BIN)/*.o
 	rm -rf $(SRC)/*.c
+	rm -rf $(SRC)/game/*.c
+	rm -rf $(SRC)/game/systems/*.c
 	rm -rf $(SRC)/Bosco/Events/*.c
 	rm -rf $(SRC)/Bosco/ECS/*.c
 	rm -rf $(SRC)/Bosco/Interfaces/*.c

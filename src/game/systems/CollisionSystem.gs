@@ -7,7 +7,8 @@ uses
 class CollisionSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSystem, IExecuteSystem
     _world : World
     _game : Game
-    _collisionPairs: array of CollisionPair
+    _bullets : Group
+    _enemies : Group
 
     construct(game : Game)
         _game = game
@@ -16,55 +17,13 @@ class CollisionSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
         _world = world
 
     def initialize()
-        _collisionPairs = {
-            new CollisionPair(
-                _world.getGroup(Matcher.AllOf({Component.Bullet})),
-                _world.getGroup(Matcher.AllOf({Component.Enemy}))
-            )
-        }
+        _bullets = _world.getGroup(Matcher.AllOf({Component.Bullet}))
+        _enemies = _world.getGroup(Matcher.AllOf({Component.Enemy}))
 
 
     def execute()
-        for var pair in  _collisionPairs
-          pair.checkForCollisions()
-
-
-class CollisionPair : CollisionHandler
-    prop groupEntitiesA : Group
-    prop groupEntitiesB : Group
-    construct(group1 : Group, group2 : Group)
-        _groupEntitiesA = group1
-        _groupEntitiesB = group2
-
-    def handleCollision(bullet: Entity, ship: Entity)
-        var bp = bullet.position
-        var health = ship.health
-        var position = ship.position
-        var x = bp.x
-        var y = bp.y
-
-        createBang(x, y)
-        var i = 5
-        while --i > 0 do createParticle(x, y)
-
-        if !bullet.isDestroy do bullet.setDestroy(true)
-        health.health -= 1
-        if health.health < 0
-            if !ship.isDestroy do ship.setDestroy(true)
-            createExplosion(position.x, position.y)
-
-
-
-interface CollisionHandler
-
-    prop abstract groupEntitiesA : Group
-    prop abstract groupEntitiesB : Group
-
-    def abstract handleCollision(a: Entity, b: Entity)
-
-    def checkForCollisions()
-        for var entityA in groupEntitiesA.getEntities()
-            for var entityB in groupEntitiesB.getEntities()
+        for var entityA in _bullets.getEntities()
+            for var entityB in _enemies.getEntities()
                 if collisionExists(entityA, entityB)
                     handleCollision(entityA, entityB)
 
@@ -84,5 +43,22 @@ interface CollisionHandler
         result = Math.sqrt(a * a + b * b) - (b1.radius) < (b2.radius)
 
         return result
+
+    def handleCollision(bullet: Entity, ship: Entity)
+        var bp = bullet.position
+        var health = ship.health
+        var position = ship.position
+        var x = bp.x
+        var y = bp.y
+
+        createBang(x, y)
+        var i = 5
+        //while --i > 0 do createParticle(x, y)
+
+        if !bullet.isDestroy do bullet.setDestroy(true)
+        health.health -= 1
+        if health.health < 0
+            if !ship.isDestroy do ship.setDestroy(true)
+            createExplosion(position.x, position.y)
 
 

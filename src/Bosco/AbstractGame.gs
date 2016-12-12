@@ -16,7 +16,6 @@ namespace Bosco
         sprites : GenericArray of Sprite
         keys : array of uint8 = new array of uint8[255]
         
-
         prop readonly delta : double
 
         showFps : bool = true
@@ -53,13 +52,13 @@ namespace Bosco
                 _currentTime = (double)GLib.get_real_time()/1000000.0
                 _delta = _currentTime - _lastTime
 
-                //_t1 = (double)GLib.get_real_time()/1000000.0 
+                _t1 = (double)GLib.get_real_time()/1000000.0 
 
                 Update(_delta)
-                //_t2 = (double)GLib.get_real_time()/1000000.0 
+                _t2 = (double)GLib.get_real_time()/1000000.0 
                 GLib.Thread.usleep(1000)
                 Draw(_delta)
-                //_t3 = (double)GLib.get_real_time()/1000000.0 
+                _t3 = (double)GLib.get_real_time()/1000000.0 
 
                 
                 if showFps
@@ -77,7 +76,7 @@ namespace Bosco
                         _fpsSprite = Sprite.fromRenderedText(renderer, _fpsFont, "60.00", {250, 250, 250})
                         _fpsSprite.centered = false
 
-                //stdout.printf("%f -- %f \n", (_t2-_t1), (_t3-_t2))
+                stdout.printf("%f\n", (_t2-_t1))
 
             Dispose()
             return 0
