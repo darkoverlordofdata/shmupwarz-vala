@@ -26,11 +26,6 @@ For windows, I manually copied all of the dlls, libs, inludes, etc to the approp
 rename ./.vscode/*.windows.json to ./.vscode/*.json 
 Then use vscode ctrl-b to build, f5 to debug
 
-```
-$ cd ~/Applications
-$ git clone git@github.com:darkoverlordofdata/shmupwarz-vala.git
-$ cd shmupwarz-vala
-```
 
 
 
