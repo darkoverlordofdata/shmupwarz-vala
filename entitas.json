@@ -1,0 +1,101 @@
+{
+  "namespace": "shmupwarz",
+  "src": "src",
+  "output": {
+    "vala":"src/game/generated"
+  },
+  "alloc": {
+    "entities": 200,
+    "components": 128
+  },
+  "components": {
+    "Bounds": [
+      "radius:double"
+    ],
+    "Bullet": false,
+    "ColorTween": [
+      "redMin:double",
+      "redMax:double",
+      "redSpeed:double",
+      "greenMin:double",
+      "greenMax:double",
+      "greenSpeed:double",
+      "blueMin:double",
+      "blueMax:double",
+      "blueSpeed:double",
+      "alphaMin:double",
+      "alphaMax:double",
+      "alphaSpeed:double",
+      "redAnimate:bool",
+      "greenAnimate:bool",
+      "blueAnimate:bool",
+      "alphaAnimate:bool",
+      "repeat:bool"
+    ],
+    "Destroy": false,
+    "Enemy": false,
+    "Expires": [
+      "delay:double"
+    ],
+    "Firing": false,
+    "Health": [
+      "health:double",
+      "maximumHealth:double"
+    ],
+    "Layer": [
+      "ordinal:int"
+    ],
+    "Life": [
+      "count:int"
+    ],
+    "Mine" : false,
+    "Mouse": [
+      "x:double",
+      "y:double"
+    ],
+    "Player": false,
+    "Position": [
+      "x:double",
+      "y:double"
+    ],
+    "Resource": [
+      "path:string",
+      "sprite:Sprite?",
+      "bgd:bool=false"
+    ],
+    "ScaleTween": [
+      "min:double",
+      "max:double",
+      "speed:double",
+      "repeat:bool",
+      "active:bool"
+    ],
+    "Scale": [
+      "x:double",
+      "y:double"
+    ],
+    "Score": [
+      "value:double"
+    ],
+    "SoundEffect": [
+      "effect:int"
+    ],
+    "Tint": [
+        "r:int",
+        "g:int",
+        "b:int",
+        "a:int"
+    ],
+    "Velocity": [
+      "x:double",
+      "y:double"
+    ]
+  },
+  "systems": {},
+  "entities": {
+    "Score": true,
+    "Mouse": true,
+    "Firing": true
+  },
+  "extensions": {}
+}
