@@ -115,7 +115,7 @@ class TestExample : Bunny.Vunny
             player.addComponent(Components.MovementComponent, mov)
             player.addComponent(Components.ResourceComponent, res)
 
-        except e:Exception
+        except e:EcsException
             print e.message
 
         finally

@@ -85,6 +85,7 @@ SOURCES=src/DarkMatter.vala \
 BASELIB=src/DarkMatter.vala \
 			src/Utils/UUID.vala \
 			src/Bosco/Bag.gs \
+			src/Bosco/ECS/Exceptions.gs \
 			src/Bosco/Events/EntityReleased.gs \
 			src/Bosco/Events/ComponentReplaced.gs \
 			src/Bosco/Events/EntityChanged.gs \
@@ -104,32 +105,6 @@ BASELIB=src/DarkMatter.vala \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs
 
-# ORIGINAL=src/DarkMatter.vala \
-# 			src/Utils/UUID.vala \
-# 			src/Bosco/Events/EntityReleased.gs \
-# 			src/Bosco/Events/ComponentReplaced.gs \
-# 			src/Bosco/Events/EntityChanged.gs \
-# 			src/Bosco/Events/WorldChanged.gs \
-# 			src/Bosco/Events/GroupsChanged.gs \
-# 			src/Bosco/Events/GroupChanged.gs \
-# 			src/Bosco/Events/GroupUpdated.gs \
-# 			src/Bosco/Interfaces/IComponent.vala \
-# 			src/Bosco/Interfaces/ISystem.vala \
-# 			src/Bosco/Interfaces/IMatcher.vala \
-# 			src/Bosco/ECS/EntityBase.gs \
-# 			src/Bosco/ECS/Entity.vala \
-# 			src/Bosco/ECS/Group.gs \
-# 			src/Bosco/ECS/Matcher.gs \
-# 			src/Bosco/ECS/WorldBase.gs \
-# 			src/Bosco/ECS/World.vala \
-# 			src/Bosco/Timer.gs \
-# 			src/Bosco/Sprite.gs \
-# 			src/Bosco/AbstractGame.gs
-
-# OLD=src/DarkMatter.vala \
-# 		old/Game.vala \
-# 		old/AbstractGame.vala \
-# 		old/Texture.vala
 
 #
 # c libs needed for the gcc compiler
@@ -155,7 +130,7 @@ SRC=src
 #
 # Resouce location
 #
-RESOURCES=resources
+RESOURCES=res
 
 #
 # Entitas generated files
@@ -170,14 +145,6 @@ $(BIN)/$(NAME): $(SOURCES) $(APP)
 	cp -R --force $(RESOURCES) $(BIN)
 	$(VC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME)
 
-
-
-#valac --cc=i586-mingw32msvc-gcc --pkg gtk+-2.0 -o testGTK2.exe testGTK2.vala
-# exe: $(BIN)/$(NAME)
-# $(BIN)/$(NAME): $(SOURCES) $(APP)
-# 	-mkdir -p $(BIN)
-# 	cp -R --force $(RESOURCES) $(BIN)
-# 	$(VC) $(CC) $(FLAGS) $(LIBS) $(CLIBS) $(CFLAGS) $(SOURCES) $(APP) -o $(BIN)/$(NAME).exe
 
 
 test: test/$(BIN)/$(NAME)
