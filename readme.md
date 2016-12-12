@@ -23,10 +23,10 @@ $ make run
 ### Windows 10
 For windows, I manually copied all of the dlls, libs, inludes, etc to the appropriate folder in C:\Program Files\Vala for Windows\local
 
+You'll also need to create a ./build folder, and copy ./res to ./build
+
 rename ./.vscode/*.windows.json to ./.vscode/*.json 
 Then use vscode ctrl-b to build, f5 to debug
-
-
 
 
 
