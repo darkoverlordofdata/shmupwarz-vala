@@ -37,7 +37,7 @@ TST=test/src/Vunny.gs \
 		test/src/To.gs \
 		test/TestFX.gs
 
-APP=gen/GeneratedComponents.gs \
+APP=src/game/generated/GeneratedComponents.gs \
 		src/game/Entities.gs \
 		src/game/systems/DestroySystem.gs \
 		src/game/systems/ColorTweenSystem.gs \
