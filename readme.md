@@ -34,3 +34,5 @@ Then use vscode ctrl-b to build, f5 to debug
 ![screenshot](https://github.com/darkoverlordofdata/shmupwarz-vala/blob/master/Screenshot.png)
 
 
+sdl2-mixer.vapi patched to play sound effect *.wav of the year
+

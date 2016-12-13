@@ -44,7 +44,7 @@ class Game : AbstractGame
             world = new World(components)
             world.add(new MovementSystem(this))
             world.add(player = new PlayerInputSystem(this))
-            // world.add(new SoundEffectSystem())
+            world.add(new SoundEffectSystem(this))
             world.add(new CollisionSystem(this))
             world.add(new ExpiringSystem(this))
             world.add(new EntitySpawningTimerSystem(this))

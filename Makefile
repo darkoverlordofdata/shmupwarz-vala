@@ -6,7 +6,7 @@
 NAME=shmupwarz
 
 # vala compiler
-VC=valac
+VC=valac --vapidir=./src/vapi
 
 # --vapidir=./sdl2-vapi
 # mingw for windows executables
@@ -50,6 +50,7 @@ APP=src/game/generated/GeneratedComponents.gs \
 		src/game/systems/CollisionSystem.gs \
 		src/game/systems/RemoveOffscreenShipsSystem.gs \
 		src/game/systems/ScaleTweenSystem.gs \
+		src/game/systems/SoundEffectSystem.gs \
 		src/game/systems/HudRenderSystem.gs \
 		src/game/Game.gs
 

@@ -20,6 +20,7 @@
         "-X",       "-lSDL2_image",
         "-X",       "-lSDL2_mixer",
         "-o",       "build/shmupwarz.exe",
+        "--vapidir=./src/vapi",
         "src/DarkMatter.vala",
         "src/Utils/UUID.vala",
         "src/Bosco/Bag.gs",
