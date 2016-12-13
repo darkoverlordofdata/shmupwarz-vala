@@ -53,7 +53,7 @@ class CollisionSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
 
         createBang(x, y)
         var i = 5
-        //while --i > 0 do createParticle(x, y)
+        while --i > 0 do createParticle(x, y)
 
         if !bullet.isDestroy do bullet.setDestroy(true)
         health.health -= 1

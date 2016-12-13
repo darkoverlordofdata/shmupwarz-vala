@@ -79,7 +79,7 @@ def createParticle(x : double, y : double) : Entity
     var magnitude = UUID.random.int_range(0, 200)
     var velocityX = magnitude * Math.cos(radians)
     var velocityY = magnitude * Math.sin(radians)
-    var scale = UUID.random.double_range(0.1, 0.25)
+    var scale = UUID.random.double_range(0.1, 1.0)
     return World.instance.createEntity("particle"
         ).addPosition(x, y
         ).addVelocity(velocityX, velocityY
@@ -87,7 +87,7 @@ def createParticle(x : double, y : double) : Entity
         ).addLayer(Layer.PARTICLE
         ).addScale(scale, scale
         ).addTint(0xFA, 0xFA, 0xD2, 255
-        ).addResource("res/images/particle.png", null, false)
+        ).addResource("res/images/star.png", null, false)
 
 /**
  *  Create Explosion
