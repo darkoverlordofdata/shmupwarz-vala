@@ -12,9 +12,7 @@
             "isBuildCommand": true,
             "isWatching": false,
             "problemMatcher": [
-                "$lessCompile",
-                "$tsc",
-                "$jshint"
+                "$msCompile"
             ]
         },
         {
@@ -23,9 +21,7 @@
             "isTestCommand": true,
             "isWatching": false,
             "problemMatcher": [
-                "$lessCompile",
-                "$tsc",
-                "$jshint"
+                "$msCompile"
             ]
         }
     ]
