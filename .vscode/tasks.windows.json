@@ -26,7 +26,7 @@
         "-X",       "-lSDL2_image",
         "-X",       "-lSDL2_mixer",
         // output
-        "-o",       "build/${workspaceRootFolderName}",
+        "-o",       "build/${workspaceRootFolderName}.exe",
         // source
         "src/Bosco/AbstractGame.gs",
         "src/Bosco/Bag.gs",

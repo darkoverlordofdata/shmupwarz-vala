@@ -30,8 +30,10 @@ $ sudo make install
 For windows, I manually downloaded all the bits from https://www.libsdl.org/, and
 copied the dlls, libs, inludes, etc to the appropriate folder in C:\Program Files\Vala for Windows\local
 
-todo: update for windows10
-
+I use vscode
+ren .vscode/tasks.windows.json .vscode/tasks.json
+ren .vscode/launch.windows.json .vscode/launch.json
+Use ctrl-b to build, f5 to run
 
 
 ![screenshot](https://github.com/darkoverlordofdata/shmupwarz-vala/blob/master/Screenshot.png)
@@ -40,4 +42,4 @@ todo: update for windows10
 ### notes
 
 * sdl2-mixer.vapi patched to play sound effect *.wav 
-* Use vscode ctrl-b to build, f5 to debug
+* Use vscode ctrl-b to build, f5 to run

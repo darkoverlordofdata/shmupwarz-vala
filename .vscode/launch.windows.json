@@ -6,7 +6,7 @@
             "type": "lldb",
             "request": "launch",
             "cwd": "${workspaceRoot}/build",
-            "program": "${workspaceRoot}/build/${workspaceRootFolderName}",
+            "program": "${workspaceRoot}/build/${workspaceRootFolderName}.exe",
             "args": []
         }
     ]
