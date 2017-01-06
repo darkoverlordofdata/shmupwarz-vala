@@ -29,7 +29,7 @@ class HudRenderSystem : DarkMatter implements ISystem, ISetWorld, IInitializeSys
         _world = world
 
     def initialize()
-        _font = new Font(Constants.PKGDATADIR+"/TitanOne-Regular.ttf", 16)
+        _font = new Font(RES+"/TitanOne-Regular.ttf", 16)
         if _font == null
             print "Failed to load font"
 

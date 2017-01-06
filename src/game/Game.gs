@@ -4,8 +4,18 @@ uses
     Bosco.ECS
     SDL
 
-const SCREEN_WIDTH:int = 800
-const SCREEN_HEIGHT:int = 600
+const SCREEN_WIDTH: int = 800
+const SCREEN_HEIGHT: int = 600
+
+
+#if WINDOWS
+const RES: string = "./res" 
+#endif
+#if !WINDOWS
+const RES: string = Constants.PKGDATADIR
+#endif
+
+
 
 /** 
  * Start the application
