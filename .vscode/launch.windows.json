@@ -3,11 +3,11 @@
     "configurations": [
         {
             "name": "Debug",
-            "type": "lldb",
+            "type": "gdb",
             "request": "launch",
-            "cwd": "${workspaceRoot}/build",
-            "program": "${workspaceRoot}/build/${workspaceRootFolderName}.exe",
-            "args": []
+            "target": "${workspaceRoot}/build/${workspaceRootFolderName}.exe",
+            "cwd": "${workspaceRoot}/build"
+            
         }
     ]
 }
