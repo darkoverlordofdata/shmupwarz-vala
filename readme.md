@@ -1,5 +1,7 @@
 # ShmupWars - Vala
 
+Converted to autovala, so cmake is required.
+
 ## install
 
 ### Linux (ElementaryOS)
@@ -17,22 +19,25 @@ Now the application
 $ cd ~/Applications
 $ git clone git@github.com:darkoverlordofdata/shmupwarz-vala.git
 $ cd shmupwarz-vala
-$ make run
+$ mkdir install
+$ cd install
+$ cmake ..
+$ make
+$ sudo make install
 ```
 
 ### Windows 10
 For windows, I manually downloaded all the bits from https://www.libsdl.org/, and
 copied the dlls, libs, inludes, etc to the appropriate folder in C:\Program Files\Vala for Windows\local
 
-You'll also need to create a ./build folder, and copy ./res to ./build
-
-rename ./.vscode/*.windows.json to ./.vscode/*.json 
-Then use vscode ctrl-b to build, f5 to debug
+todo: update for windows10
 
 
 
 ![screenshot](https://github.com/darkoverlordofdata/shmupwarz-vala/blob/master/Screenshot.png)
 
 
-sdl2-mixer.vapi patched to play sound effect *.wav 
+### notes
 
+* sdl2-mixer.vapi patched to play sound effect *.wav 
+* Use vscode ctrl-b to build, f5 to debug

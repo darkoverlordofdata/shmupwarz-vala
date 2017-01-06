@@ -1,8 +1,8 @@
 {
   "namespace": "shmupwarz",
-  "src": "src",
+  "src": "src/game",
   "output": {
-    "vala":"src/game/generated"
+    "systems": "systems"
   },
   "alloc": {
     "entities": 200,

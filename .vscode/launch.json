@@ -3,10 +3,11 @@
     "configurations": [
         {
             "name": "Debug",
-            "type": "gdb",
+            "type": "lldb",
             "request": "launch",
-            "target": "./build/shmupwarz.exe",
-            "cwd": "${workspaceRoot}"
+            "cwd": "${workspaceRoot}/install/src",
+            "program": "${workspaceRoot}/install/src/${workspaceRootFolderName}",
+            "args": []
         }
     ]
 }

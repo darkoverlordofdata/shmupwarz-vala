@@ -37,8 +37,8 @@ TST=test/src/Vunny.gs \
 		test/src/To.gs \
 		test/TestFX.gs
 
-APP=src/game/generated/GeneratedComponents.gs \
-		src/game/Entities.gs \
+APP=src/game/Entities.gs \
+		src/game/Components.gs \
 		src/game/systems/DestroySystem.gs \
 		src/game/systems/ColorTweenSystem.gs \
 		src/game/systems/ExpiringSystem.gs \
@@ -73,12 +73,9 @@ SOURCES=src/DarkMatter.vala \
 			src/Bosco/Interfaces/ISystem.vala \
 			src/Bosco/Interfaces/IMatcher.vala \
 			src/Bosco/ECS/EntityBase.gs \
-			src/game/generated/Entity.gs \
 			src/Bosco/ECS/Group.gs \
-			src/game/generated/Matching.gs \
 			src/Bosco/ECS/Matcher.gs \
 			src/Bosco/ECS/WorldBase.gs \
-			src/game/generated/World.gs \
 			src/Bosco/Timer.gs \
 			src/Bosco/Sprite.gs \
 			src/Bosco/AbstractGame.gs

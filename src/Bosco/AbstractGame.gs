@@ -134,7 +134,7 @@ namespace Bosco
                 print "SDL_ttf could not initialize! SDL Error: %s", SDL.get_error()
                 return false
 
-            _fpsFont = new Font("res/fonts/TitanOne-Regular.ttf", 16)
+            _fpsFont = new Font(Constants.PKGDATADIR+"/TitanOne-Regular.ttf", 16)
             if _fpsFont == null
                 print "Failed to load font! SDL Error: %s", SDL.get_error()
 

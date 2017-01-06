@@ -10,7 +10,6 @@
 uses SDL
 uses SDLImage
 uses SDLTTF
-//uses SDLGraphics
 
 namespace Bosco
 

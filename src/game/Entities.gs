@@ -41,7 +41,7 @@ def createBackground() : Entity
     return World.instance.createEntity("background"
         ).addPosition(0, 0 
         ).addScale(2, 1
-        ).addResource("res/images/BackdropBlackLittleSparkBlack.png", null, true)
+        ).addResource(Constants.PKGDATADIR+"/BackdropBlackLittleSparkBlack.png", null, true)
 
 /**
  *  Create Player
@@ -54,7 +54,7 @@ def createPlayer() : Entity
         ).addVelocity(0, 0
         ).addLayer(Layer.PLAYER
         ).addPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT-80
-        ).addResource("res/images/fighter.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/fighter.png", null, false)
 
 /**
  *  Create Bullet
@@ -68,7 +68,7 @@ def createBullet(x : double, y : double) : Entity
         ).addBounds(5
         ).addExpires(1
         ).addLayer(Layer.BULLET
-        ).addResource("res/images/bullet.png", null, false
+        ).addResource(Constants.PKGDATADIR+"/bullet.png", null, false
         ).addSoundEffect(Effect.PEW)
 
 /**
@@ -87,7 +87,7 @@ def createParticle(x : double, y : double) : Entity
         ).addLayer(Layer.PARTICLE
         ).addScale(scale, scale
         ).addTint(0xFA, 0xFA, 0xD2, 255
-        ).addResource("res/images/star.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/star.png", null, false)
 
 /**
  *  Create Explosion
@@ -101,7 +101,7 @@ def createExplosion(x: double, y: double) : Entity
         ).addSoundEffect(Effect.ASPLODE
         ).addScaleTween(0.001, 0.5, -3, false, true
         ).addTint(0xFA, 0xFA, 0xD2, 255
-        ).addResource("res/images/explosion.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/explosion.png", null, false)
 
 def createBang(x: double, y: double) : Entity
     return World.instance.createEntity("explosion"
@@ -112,7 +112,7 @@ def createBang(x: double, y: double) : Entity
         ).addSoundEffect(Effect.SMALLASPLODE
         ).addScaleTween(0.001, 1.0, -3, false, true
         ).addTint(0xEE, 0xE8, 0xAA, 255
-        ).addResource("res/images/bang.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/bang.png", null, false)
 
 def createEnemy1() : Entity
     var x = UUID.random.int_range(0, SCREEN_WIDTH)
@@ -124,7 +124,7 @@ def createEnemy1() : Entity
         ).addVelocity(0, 40
         ).addLayer(Layer.ACTORS_1
         ).addPosition(x, y
-        ).addResource("res/images/enemy1.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/enemy1.png", null, false)
 
 
 def createEnemy2() : Entity
@@ -137,7 +137,7 @@ def createEnemy2() : Entity
         ).addVelocity(0, 30
         ).addLayer(Layer.ACTORS_2
         ).addPosition(x, y
-        ).addResource("res/images/enemy2.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/enemy2.png", null, false)
 
 
 def createEnemy3() : Entity
@@ -150,7 +150,7 @@ def createEnemy3() : Entity
         ).addVelocity(0, 20
         ).addLayer(Layer.ACTORS_3
         ).addPosition(x, y
-        ).addResource("res/images/enemy3.png", null, false)
+        ).addResource(Constants.PKGDATADIR+"/enemy3.png", null, false)
 
 
 

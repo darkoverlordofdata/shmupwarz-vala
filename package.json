@@ -4,7 +4,7 @@
   "description": "Demo Vala Game",
   "main": "index.js",
   "scripts": {
-    "entitas": "entitas generate -p vala",
+    "entitas": "entitas",
     "test": "make test"
   },
   "repository": {
