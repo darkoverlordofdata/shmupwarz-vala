@@ -2,6 +2,10 @@
 
 Converted to autovala, so cmake is required.
 
+## status
+on hiatus until Gnome can be more positive about the future of Vala
+https://mail.gnome.org/archives/vala-list/2016-September/msg00001.html 
+
 ## install
 
 ### Linux (ElementaryOS)
@@ -43,3 +47,20 @@ Use ctrl-b to build, f5 to run
 
 * sdl2-mixer.vapi patched to play sound effect *.wav 
 * Use vscode ctrl-b to build, f5 to run
+
+### rebuild
+
+git clone git@github.com:darkoverlordofdata/shmupwarz-vala.git
+cd shmupwarz-vala
+npm install entitas-cli
+npm run entitas -- generate -p gs -t src/template
+rm -rf install
+mkdir install
+autovala clear
+autovala refresh
+sed -i 's/\*vala_check_package: [Bb]osco//g' shmupwarz-vala.avprj
+autovala cmake
+cd install
+cmake ..
+make
+sudo make install
